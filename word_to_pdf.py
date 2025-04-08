@@ -318,7 +318,37 @@ def process_file(file_path, output_dir, input_dir, rename_with_pid=True, country
             else:
                 logging.warning(f"No project ID found in PDF or filename: {pdf_path}")
                 
-                # *** NEW CODE: Secondary match based on country name ***
+                # *** SECONDARY MATCH SECTION - ENHANCED WITH OCR DETECTION ***
+                # First, check if this is an OCR/scanned document
+                language_suffix = detect_language(pdf_path)
+                
+                if language_suffix == "OCR":
+                    # This is an OCR/scanned document with no text
+                    ocr_filename = f"SCAN_OCR_DOCUMENT.pdf"
+                    ocr_path = os.path.join(target_dir, ocr_filename)
+                    
+                    # Handle duplicate filenames
+                    if os.path.exists(ocr_path):
+                        counter = 1
+                        while True:
+                            temp_name = f"SCAN_OCR_DOCUMENT_{counter:02d}.pdf"
+                            temp_path = os.path.join(target_dir, temp_name)
+                            if not os.path.exists(temp_path):
+                                ocr_path = temp_path
+                                ocr_filename = temp_name
+                                break
+                            counter += 1
+                    
+                    # Rename the file
+                    try:
+                        os.rename(pdf_path, ocr_path)
+                        logging.info(f"Renamed as OCR document: {ocr_filename}")
+                        return (file_path, True, None, "SCAN_OCR_DOCUMENT")
+                    except Exception as e:
+                        logging.error(f"Error renaming as OCR document: {str(e)}")
+                        return (file_path, True, None, None)
+                
+                # If not OCR, continue with country-based matching
                 if country_mapping:
                     # Extract unique country names from mapping
                     unique_countries = extract_unique_countries(country_mapping)
@@ -327,9 +357,6 @@ def process_file(file_path, output_dir, input_dir, rename_with_pid=True, country
                     country = extract_country_from_pdf(pdf_path, unique_countries)
                     
                     if country:
-                        # Detect language
-                        language_suffix = detect_language(pdf_path)
-                        
                         # Create filename with country and language
                         country_filename = f"COUNTRY_{country}_{language_suffix}.pdf"
                         country_path = os.path.join(target_dir, country_filename)
@@ -346,17 +373,40 @@ def process_file(file_path, output_dir, input_dir, rename_with_pid=True, country
                                     break
                                 counter += 1
                         
-                        # Rename the file
+                        # Copy the file
                         try:
-                            os.rename(pdf_path, country_path)
-                            logging.info(f"Renamed by country to: {country_filename}")
+                            shutil.copy2(pdf_path, country_path)
+                            logging.info(f"Copied with country match: {country_filename}")
                             return (file_path, True, None, f"COUNTRY_{country}")
                         except Exception as e:
-                            logging.error(f"Error renaming by country: {str(e)}")
+                            logging.error(f"Error copying with country match: {str(e)}")
                             return (file_path, True, None, None)
                 
-                # If we reach here, neither project ID nor country was found
-                return (file_path, True, None, None)
+                # If we reach here, neither project ID nor country was found, and it's not OCR
+                # Just mark with language tag
+                unknown_filename = f"UNKNOWN_{language_suffix}.pdf"
+                unknown_path = os.path.join(target_dir, unknown_filename)
+                
+                # Handle duplicate filenames
+                if os.path.exists(unknown_path):
+                    counter = 1
+                    while True:
+                        temp_name = f"UNKNOWN_{language_suffix}_{counter:02d}.pdf"
+                        temp_path = os.path.join(target_dir, temp_name)
+                        if not os.path.exists(temp_path):
+                            unknown_path = temp_path
+                            unknown_filename = temp_name
+                            break
+                        counter += 1
+                
+                # Rename the file
+                try:
+                    os.rename(pdf_path, unknown_path)
+                    logging.info(f"Renamed as unknown document: {unknown_filename}")
+                    return (file_path, True, None, f"UNKNOWN_{language_suffix}")
+                except Exception as e:
+                    logging.error(f"Error renaming as unknown document: {str(e)}")
+                    return (file_path, True, None, None)
         
         return (file_path, True, None, None)
     except Exception as e:
@@ -458,50 +508,91 @@ def copy_existing_pdfs(input_dir, output_dir, overwrite=False, rename_with_pid=T
                         copied += 1
                         pid_mapping[dest_file] = project_id
                     else:
-                        # *** NEW CODE: Secondary match based on country name ***
-                        country = None
-                        if unique_countries:
-                            # Try to find country in the PDF
-                            country = extract_country_from_pdf(pdf_file, unique_countries)
+                        # *** SECONDARY MATCH SECTION - ENHANCED WITH OCR DETECTION ***
+                        # First, check if this is an OCR/scanned document
+                        language_suffix = detect_language(pdf_file)
                         
-                        if country:
-                            # Detect language
-                            language_suffix = detect_language(pdf_file)
-                            
-                            # Create filename with country and language
-                            country_filename = f"COUNTRY_{country}_{language_suffix}.pdf"
-                            country_path = os.path.join(target_dir, country_filename)
+                        if language_suffix == "OCR":
+                            # This is an OCR/scanned document with no text
+                            ocr_filename = f"SCAN_OCR_DOCUMENT.pdf"
+                            ocr_path = os.path.join(target_dir, ocr_filename)
                             
                             # Handle duplicate filenames
-                            if os.path.exists(country_path):
+                            if os.path.exists(ocr_path):
                                 counter = 1
                                 while True:
-                                    temp_name = f"COUNTRY_{country}_{language_suffix}_{counter:02d}.pdf"
+                                    temp_name = f"SCAN_OCR_DOCUMENT_{counter:02d}.pdf"
                                     temp_path = os.path.join(target_dir, temp_name)
                                     if not os.path.exists(temp_path):
-                                        country_path = temp_path
-                                        country_filename = temp_name
+                                        ocr_path = temp_path
+                                        ocr_filename = temp_name
                                         break
                                     counter += 1
                             
-                            # Copy the file with country-based name
-                            logging.debug(f"Copying with country: {pdf_file} -> {country_path}")
-                            shutil.copy2(pdf_file, country_path)
-                            copied += 1
-                            pid_mapping[country_path] = f"COUNTRY_{country}"
+                            # Copy the file - CHANGED: use copy instead of rename & removed return statements
+                            try:
+                                shutil.copy2(pdf_file, ocr_path)
+                                logging.info(f"Copied as OCR document: {ocr_filename}")
+                                copied += 1
+                                pid_mapping[ocr_path] = "SCAN_OCR_DOCUMENT"
+                            except Exception as e:
+                                logging.error(f"Error copying as OCR document: {str(e)}")
+                                skipped += 1
                         else:
-                            # No project ID or country found, use original filename
-                            logging.warning(f"No project ID or country found in PDF or filename: {pdf_file}")
-                            # Check if file already exists
-                            if os.path.exists(dest_file):
-                                unique_dest = get_unique_filename(dest_file)
-                                shutil.copy2(pdf_file, unique_dest)
-                                logging.debug(f"Created unique filename: {unique_dest}")
-                                copied += 1
+                            # If not OCR, continue with country-based matching
+                            country = None
+                            if unique_countries:
+                                # Try to find country in the PDF
+                                country = extract_country_from_pdf(pdf_file, unique_countries)
+                            
+                            if country:
+                                # Create filename with country and language
+                                country_filename = f"COUNTRY_{country}_{language_suffix}.pdf"
+                                country_path = os.path.join(target_dir, country_filename)
+                                
+                                # Handle duplicate filenames
+                                if os.path.exists(country_path):
+                                    counter = 1
+                                    while True:
+                                        temp_name = f"COUNTRY_{country}_{language_suffix}_{counter:02d}.pdf"
+                                        temp_path = os.path.join(target_dir, temp_name)
+                                        if not os.path.exists(temp_path):
+                                            country_path = temp_path
+                                            country_filename = temp_name
+                                            break
+                                        counter += 1
+                                
+                                # Copy the file
+                                try:
+                                    shutil.copy2(pdf_file, country_path)
+                                    logging.info(f"Copied with country match: {country_filename}")
+                                    copied += 1
+                                    pid_mapping[country_path] = f"COUNTRY_{country}"
+                                except Exception as e:
+                                    logging.error(f"Error copying with country match: {str(e)}")
+                                    skipped += 1
                             else:
-                                # No conflict, copy normally
-                                shutil.copy2(pdf_file, dest_file)
+                                # Just mark with language tag
+                                unknown_filename = f"UNKNOWN_{language_suffix}.pdf"
+                                unknown_path = os.path.join(target_dir, unknown_filename)
+                                
+                                # Handle duplicate filenames
+                                if os.path.exists(unknown_path):
+                                    counter = 1
+                                    while True:
+                                        temp_name = f"UNKNOWN_{language_suffix}_{counter:02d}.pdf"
+                                        temp_path = os.path.join(target_dir, temp_name)
+                                        if not os.path.exists(temp_path):
+                                            unknown_path = temp_path
+                                            unknown_filename = temp_name
+                                            break
+                                        counter += 1
+                                
+                                # Copy the file
+                                logging.debug(f"Copying as unknown document: {pdf_file} -> {unknown_path}")
+                                shutil.copy2(pdf_file, unknown_path)
                                 copied += 1
+                                pid_mapping[unknown_path] = f"UNKNOWN_{language_suffix}"
                 else:
                     # Standard copy without PID renaming
                     # Check if file already exists
@@ -714,9 +805,11 @@ def convert_folder_to_pdf(rename_with_pid=True, country_mapping=None, workers=No
     if rename_with_pid:
         project_ids = list(set(project_id_mappings.values()))
         
-        # Count how many are project IDs vs country-based
-        regular_pids = [pid for pid in project_ids if not pid.startswith("COUNTRY_")]
+        # Count how many are project IDs vs country-based vs OCR vs unknown
+        regular_pids = [pid for pid in project_ids if not pid.startswith(("COUNTRY_", "SCAN_", "UNKNOWN_"))]
         country_based = [pid for pid in project_ids if pid.startswith("COUNTRY_")]
+        ocr_documents = [pid for pid in project_ids if pid.startswith("SCAN_OCR")]
+        unknown_docs = [pid for pid in project_ids if pid.startswith("UNKNOWN_")]
         
         print(f"\nFound {len(regular_pids)} files with unique project IDs")
         if regular_pids:
@@ -733,6 +826,12 @@ def convert_folder_to_pdf(rename_with_pid=True, country_mapping=None, workers=No
                 print(f"  - {country_pid}")
             if len(country_based) > 5:
                 print(f"  ...and {len(country_based) - 5} more")
+        
+        if ocr_documents:
+            print(f"\nFound {len(ocr_documents)} scanned/OCR documents with no extractable text")
+        
+        if unknown_docs:
+            print(f"\nFound {len(unknown_docs)} documents with no identifiable project ID or country")
     
     print("\nLanguage suffix explanation:")
     print("  EN: Document is primarily in English")
@@ -743,6 +842,8 @@ def convert_folder_to_pdf(rename_with_pid=True, country_mapping=None, workers=No
     print("\nFilename format explanation:")
     print("  PROJECT_ID_COUNTRY_LANGUAGE.pdf: Files with detected project IDs")
     print("  COUNTRY_COUNTRYNAME_LANGUAGE.pdf: Files with no project ID but detected country")
+    print("  SCAN_OCR_DOCUMENT_##.pdf: Scanned documents with no extractable text")
+    print("  UNKNOWN_LANGUAGE_##.pdf: Files with no identifiable project ID or country")
     
     return 0
 
@@ -1094,19 +1195,26 @@ def is_selectable_text_pdf(pdf_path):
 
 def extract_unique_countries(country_mapping):
     """
-    Extract all unique country names from the project ID to country mapping
+    Extract all unique country names from the project ID to country mapping,
+    excluding 'World' from the results
     
     Args:
         country_mapping: Dictionary mapping project IDs to country names
         
     Returns:
-        Set of unique country names
+        Set of unique country names (excluding 'World')
     """
     if not country_mapping:
         return set()
         
     # Extract all unique country names from the mapping
-    return set(country_mapping.values())
+    countries = set()
+    for country in country_mapping.values():
+        # Skip any variant of "World" (case-insensitive)
+        if country.lower().strip() != "world":
+            countries.add(country)
+    
+    return countries
 
 def extract_country_from_pdf(pdf_path, country_names, max_pages=10):
     """
