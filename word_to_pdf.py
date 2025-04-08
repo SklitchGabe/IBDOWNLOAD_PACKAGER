@@ -221,6 +221,13 @@ def get_unique_filename(base_path):
 
 def process_file(file_path, output_dir, input_dir, rename_with_pid=True, country_mapping=None):
     """Process a single file conversion with error handling and optional PID renaming"""
+    # Initialize COM for this thread - critical for worker processes
+    try:
+        import pythoncom
+        pythoncom.CoInitialize()
+    except Exception as e:
+        logging.error(f"COM initialization failed: {str(e)}")
+    
     try:
         input_path = os.path.abspath(file_path)
         
@@ -310,11 +317,58 @@ def process_file(file_path, output_dir, input_dir, rename_with_pid=True, country
                     return (file_path, True, None, None)
             else:
                 logging.warning(f"No project ID found in PDF or filename: {pdf_path}")
+                
+                # *** NEW CODE: Secondary match based on country name ***
+                if country_mapping:
+                    # Extract unique country names from mapping
+                    unique_countries = extract_unique_countries(country_mapping)
+                    
+                    # Try to find country in the PDF
+                    country = extract_country_from_pdf(pdf_path, unique_countries)
+                    
+                    if country:
+                        # Detect language
+                        language_suffix = detect_language(pdf_path)
+                        
+                        # Create filename with country and language
+                        country_filename = f"COUNTRY_{country}_{language_suffix}.pdf"
+                        country_path = os.path.join(target_dir, country_filename)
+                        
+                        # Handle duplicate filenames
+                        if os.path.exists(country_path):
+                            counter = 1
+                            while True:
+                                temp_name = f"COUNTRY_{country}_{language_suffix}_{counter:02d}.pdf"
+                                temp_path = os.path.join(target_dir, temp_name)
+                                if not os.path.exists(temp_path):
+                                    country_path = temp_path
+                                    country_filename = temp_name
+                                    break
+                                counter += 1
+                        
+                        # Rename the file
+                        try:
+                            os.rename(pdf_path, country_path)
+                            logging.info(f"Renamed by country to: {country_filename}")
+                            return (file_path, True, None, f"COUNTRY_{country}")
+                        except Exception as e:
+                            logging.error(f"Error renaming by country: {str(e)}")
+                            return (file_path, True, None, None)
+                
+                # If we reach here, neither project ID nor country was found
                 return (file_path, True, None, None)
         
         return (file_path, True, None, None)
     except Exception as e:
+        logging.error(f"Process file error: {str(e)}")
         return (file_path, False, str(e), None)
+    finally:
+        # Always uninitialize COM before exiting
+        try:
+            import pythoncom
+            pythoncom.CoUninitialize()
+        except:
+            pass
 
 def copy_existing_pdfs(input_dir, output_dir, overwrite=False, rename_with_pid=True, country_mapping=None):
     """Copy all existing PDF files from input directory to output directory"""
@@ -333,6 +387,9 @@ def copy_existing_pdfs(input_dir, output_dir, overwrite=False, rename_with_pid=T
     copied = 0
     skipped = 0
     pid_mapping = {}  # To store file -> project ID mapping
+    
+    # Extract unique country names from mapping (do this once)
+    unique_countries = extract_unique_countries(country_mapping) if country_mapping else set()
     
     with tqdm(total=len(pdf_files), unit="file", desc="Copying PDFs", ncols=100, bar_format='{l_bar}{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}]') as pbar:
         for pdf_file in pdf_files:
@@ -401,18 +458,50 @@ def copy_existing_pdfs(input_dir, output_dir, overwrite=False, rename_with_pid=T
                         copied += 1
                         pid_mapping[dest_file] = project_id
                     else:
-                        # No project ID found, use original filename
-                        logging.warning(f"No project ID found in PDF or filename: {pdf_file}")
-                        # Check if file already exists
-                        if os.path.exists(dest_file):
-                            unique_dest = get_unique_filename(dest_file)
-                            shutil.copy2(pdf_file, unique_dest)
-                            logging.debug(f"Created unique filename: {unique_dest}")
+                        # *** NEW CODE: Secondary match based on country name ***
+                        country = None
+                        if unique_countries:
+                            # Try to find country in the PDF
+                            country = extract_country_from_pdf(pdf_file, unique_countries)
+                        
+                        if country:
+                            # Detect language
+                            language_suffix = detect_language(pdf_file)
+                            
+                            # Create filename with country and language
+                            country_filename = f"COUNTRY_{country}_{language_suffix}.pdf"
+                            country_path = os.path.join(target_dir, country_filename)
+                            
+                            # Handle duplicate filenames
+                            if os.path.exists(country_path):
+                                counter = 1
+                                while True:
+                                    temp_name = f"COUNTRY_{country}_{language_suffix}_{counter:02d}.pdf"
+                                    temp_path = os.path.join(target_dir, temp_name)
+                                    if not os.path.exists(temp_path):
+                                        country_path = temp_path
+                                        country_filename = temp_name
+                                        break
+                                    counter += 1
+                            
+                            # Copy the file with country-based name
+                            logging.debug(f"Copying with country: {pdf_file} -> {country_path}")
+                            shutil.copy2(pdf_file, country_path)
                             copied += 1
+                            pid_mapping[country_path] = f"COUNTRY_{country}"
                         else:
-                            # No conflict, copy normally
-                            shutil.copy2(pdf_file, dest_file)
-                            copied += 1
+                            # No project ID or country found, use original filename
+                            logging.warning(f"No project ID or country found in PDF or filename: {pdf_file}")
+                            # Check if file already exists
+                            if os.path.exists(dest_file):
+                                unique_dest = get_unique_filename(dest_file)
+                                shutil.copy2(pdf_file, unique_dest)
+                                logging.debug(f"Created unique filename: {unique_dest}")
+                                copied += 1
+                            else:
+                                # No conflict, copy normally
+                                shutil.copy2(pdf_file, dest_file)
+                                copied += 1
                 else:
                     # Standard copy without PID renaming
                     # Check if file already exists
@@ -437,7 +526,7 @@ def copy_existing_pdfs(input_dir, output_dir, overwrite=False, rename_with_pid=T
     print(f"PDF copying complete. Copied: {copied}, Skipped: {skipped}")
     return copied, pid_mapping
 
-def convert_folder_to_pdf(rename_with_pid=True, country_mapping=None):
+def convert_folder_to_pdf(rename_with_pid=True, country_mapping=None, workers=None):
     """Convert all Word documents in a folder to PDF"""
     # Check if we're on Windows
     if platform.system() != "Windows":
@@ -501,24 +590,28 @@ def convert_folder_to_pdf(rename_with_pid=True, country_mapping=None):
     # Dictionary to store project ID mappings
     project_id_mappings = {}
     
+    # Initialize counters BEFORE the conditional block
+    successful = 0
+    failed = 0
+    
     if not word_files:
         print("No Word documents (.doc or .docx) found in the input directory")
         # Even if no Word files are found, we'll still copy PDFs
     else:
-        # Get maximum number of workers for optimal performance
-        # Use all available CPU cores
-        max_workers = min(os.cpu_count(), 4)  # Limit to 4 processes to avoid overwhelming Word
+        # Use provided worker count or determine optimal count
+        if workers is not None:
+            max_workers = workers
+        else:
+            max_workers = get_optimal_worker_count(len(word_files))
         
         print(f"Found {len(word_files)} Word documents to convert")
         print(f"Using Microsoft Word for conversion with {max_workers} worker processes")
         
-        # Initialize counters and timing
+        # Initialize timing
         start_time = time.time()
-        successful = 0
-        failed = 0
         
-        # Determine batch size based on system memory
-        batch_size = get_optimal_batch_size()
+        # Determine batch size based on worker count and system memory
+        batch_size = get_optimal_batch_size(max_workers)
         
         print(f"Using batch size: {batch_size}")
         
@@ -540,9 +633,15 @@ def convert_folder_to_pdf(rename_with_pid=True, country_mapping=None):
                 time.sleep(1)  # Give system time to close Word
             except:
                 pass
-                    
-            # Process the current batch
-            with concurrent.futures.ProcessPoolExecutor(max_workers=max_workers) as executor:
+            
+            # Add a check for available memory before starting a new batch
+            mem = psutil.virtual_memory()
+            if mem.percent > 90:  # If memory usage is very high
+                print("System memory usage high ({}%). Waiting for 10 seconds before continuing...".format(mem.percent))
+                time.sleep(10)  # Wait for memory to potentially free up
+            
+            # Use ThreadPoolExecutor instead for better COM compatibility
+            with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
                 # Submit jobs for this batch with input_dir as an additional argument
                 future_to_file = {
                     executor.submit(process_file, file, output_dir, input_dir, rename_with_pid, country_mapping): file
@@ -552,15 +651,30 @@ def convert_folder_to_pdf(rename_with_pid=True, country_mapping=None):
                 # Process results
                 with tqdm(total=len(batch), unit="file", desc="Converting", ncols=100, bar_format='{l_bar}{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}]') as pbar:
                     for future in concurrent.futures.as_completed(future_to_file):
-                        file_path, success, error, project_id = future.result()
-                        if success:
-                            successful += 1
-                            if project_id:
-                                project_id_mappings[file_path] = project_id
-                        else:
+                        try:
+                            file_path, success, error, project_id = future.result()
+                            if success:
+                                successful += 1
+                                if project_id:
+                                    project_id_mappings[file_path] = project_id
+                            else:
+                                failed += 1
+                                logging.error(f"Error converting {file_path}: {error}")
+                        except Exception as exc:
                             failed += 1
-                            logging.error(f"Error converting {file_path}: {error}")
-                        pbar.update(1)
+                            file_path = future_to_file[future]
+                            logging.error(f"Exception during conversion of {file_path}: {str(exc)}")
+                        finally:
+                            pbar.update(1)
+            
+            # Clean up after batch
+            try:
+                subprocess.run(["taskkill", "/f", "/im", "WINWORD.EXE"], 
+                             stdout=subprocess.DEVNULL, 
+                             stderr=subprocess.DEVNULL)
+                time.sleep(1)
+            except:
+                pass
         
         # Report results
         elapsed_time = time.time() - start_time
@@ -599,13 +713,36 @@ def convert_folder_to_pdf(rename_with_pid=True, country_mapping=None):
     # Create a summary of project IDs found
     if rename_with_pid:
         project_ids = list(set(project_id_mappings.values()))
-        print(f"\nFound {len(project_ids)} unique project IDs")
-        if project_ids:
+        
+        # Count how many are project IDs vs country-based
+        regular_pids = [pid for pid in project_ids if not pid.startswith("COUNTRY_")]
+        country_based = [pid for pid in project_ids if pid.startswith("COUNTRY_")]
+        
+        print(f"\nFound {len(regular_pids)} files with unique project IDs")
+        if regular_pids:
             print("Sample of project IDs found:")
-            for pid in project_ids[:5]:  # Show first 5
+            for pid in regular_pids[:5]:  # Show first 5
                 print(f"  - {pid}")
-            if len(project_ids) > 5:
-                print(f"  ...and {len(project_ids) - 5} more")
+            if len(regular_pids) > 5:
+                print(f"  ...and {len(regular_pids) - 5} more")
+        
+        if country_based:
+            print(f"\nFound {len(country_based)} files renamed by country match (no project ID)")
+            print("Sample of country-based names:")
+            for country_pid in country_based[:5]:  # Show first 5
+                print(f"  - {country_pid}")
+            if len(country_based) > 5:
+                print(f"  ...and {len(country_based) - 5} more")
+    
+    print("\nLanguage suffix explanation:")
+    print("  EN: Document is primarily in English")
+    print("  NON: Document is primarily in a non-English language")
+    print("  UNK: Language could not be determined (insufficient text for detection)")
+    print("  OCR: Document appears to be scanned/image-based with no selectable text")
+    
+    print("\nFilename format explanation:")
+    print("  PROJECT_ID_COUNTRY_LANGUAGE.pdf: Files with detected project IDs")
+    print("  COUNTRY_COUNTRYNAME_LANGUAGE.pdf: Files with no project ID but detected country")
     
     return 0
 
@@ -634,16 +771,30 @@ def is_file_locked(file_path):
     except IOError:
         return True
 
-def get_optimal_batch_size():
-    """Determine optimal batch size based on available system memory"""
+def get_optimal_batch_size(worker_count=4):
+    """Determine optimal batch size based on available system memory and CPU cores
+    
+    Args:
+        worker_count: Number of concurrent worker processes
+        
+    Returns:
+        Optimal batch size for processing
+    """
     mem = psutil.virtual_memory()
-    # Use a smaller batch size for systems with less RAM
+    
+    # Base batch size on available memory
     if mem.total < 8 * 1024 * 1024 * 1024:  # 8 GB
-        return 5
+        base_batch = 5
     elif mem.total < 16 * 1024 * 1024 * 1024:  # 16 GB
-        return 10
+        base_batch = 10
     else:
-        return 15
+        base_batch = 20
+    
+    # Scale batch size inversely with worker count to avoid memory pressure
+    # More workers = smaller batches per worker
+    adjusted_batch = max(5, int(base_batch * (4 / max(1, worker_count))))
+    
+    return adjusted_batch
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Convert Word documents to PDF and rename with Project IDs')
@@ -651,6 +802,7 @@ def parse_args():
     parser.add_argument('--output', '-o', help='Output directory for PDF files')
     parser.add_argument('--rename', '-r', action='store_true', help='Rename files with project IDs', default=True)
     parser.add_argument('--no-rename', action='store_false', dest='rename', help="Don't rename files with project IDs")
+    parser.add_argument('--workers', '-w', type=int, help='Number of worker processes to use (default: auto)', default=None)
     return parser.parse_args()
 
 def normalize_path(path):
@@ -694,13 +846,17 @@ def extract_project_id_from_filename(filename):
 def detect_language(pdf_path, pages_to_check=3):
     """
     Detect if a PDF document is primarily in English or not.
+    Also detect if the document has no selectable text (scanned).
     
     Args:
         pdf_path: Path to the PDF file
         pages_to_check: Number of pages to analyze for language detection
         
     Returns:
-        "EN" if English is detected, "NON" otherwise
+        "EN" if English is detected
+        "NON" if a non-English language is detected
+        "UNK" if language could not be determined
+        "OCR" if the document appears to be scanned/image-based with no selectable text
     """
     try:
         with open(pdf_path, 'rb') as file:
@@ -720,6 +876,12 @@ def detect_language(pdf_path, pages_to_check=3):
                     if len(all_text) > 1000:
                         break
             
+            # Check if document appears to be scanned (no selectable text)
+            if len(all_text.strip()) < 50 and len(reader.pages) > 0:
+                # Document has pages but very little text - likely scanned/image-based
+                logging.info(f"Document appears to be scanned or image-based: {pdf_path}")
+                return "OCR"
+            
             # If we have enough text to detect language
             if len(all_text) > 100:
                 try:
@@ -727,14 +889,19 @@ def detect_language(pdf_path, pages_to_check=3):
                     return "EN" if lang == "en" else "NON"
                 except LangDetectException:
                     logging.warning(f"Could not detect language in {pdf_path}")
-                    return "NON"  # Default to non-English if detection fails
+                    return "UNK"  # Unknown language
             else:
-                logging.warning(f"Not enough text for language detection in {pdf_path}")
-                return "NON"  # Default to non-English if not enough text
+                if len(all_text) > 0:
+                    # Some text, but not enough for confident detection
+                    logging.warning(f"Not enough text for language detection in {pdf_path}")
+                    return "UNK"  # Unknown due to insufficient text
+                else:
+                    # No text at all
+                    return "OCR"  # Likely scanned
                     
     except Exception as e:
         logging.error(f"Error detecting language in {pdf_path}: {str(e)}")
-        return "NON"  # Default to non-English on error
+        return "UNK"  # Unknown due to error
 
 def load_project_country_mapping(spreadsheet_path, pid_column=None, country_column=None):
     """
@@ -843,10 +1010,165 @@ def load_project_country_mapping(spreadsheet_path, pid_column=None, country_colu
         print(f"Error loading spreadsheet: {str(e)}")
         return {}
 
+def get_optimal_worker_count(file_count):
+    """Determine the optimal number of worker processes based on system resources
+    
+    Args:
+        file_count: Number of files to be processed
+        
+    Returns:
+        Optimal number of worker processes
+    """
+    # Get system information
+    cpu_count = os.cpu_count() or 4  # Default to 4 if we can't determine
+    mem = psutil.virtual_memory()
+    
+    # Base worker count on CPU cores
+    # Start with a base value of CPU cores with some headroom for system
+    base_workers = max(1, cpu_count - 1)
+    
+    # Adjust for memory constraints - Word can use significant memory
+    # For systems with less memory, reduce worker count
+    if mem.total < 8 * 1024 * 1024 * 1024:  # 8 GB
+        mem_factor = 0.5
+    elif mem.total < 16 * 1024 * 1024 * 1024:  # 16 GB
+        mem_factor = 0.75
+    else:
+        mem_factor = 1.0
+    
+    # Consider the number of files - no need for many workers with few files
+    # Don't create more workers than there are files to process
+    file_limit = max(1, file_count // 2)
+    
+    # Calculate final worker count, ensuring we have at least 1
+    worker_count = max(1, min(base_workers, file_limit, int(base_workers * mem_factor)))
+    
+    # Cap at a reasonable maximum to prevent system overload
+    # Word processing can be very resource-intensive
+    return min(worker_count, 8)
+
+def is_selectable_text_pdf(pdf_path):
+    """
+    Check if a PDF has selectable text or is a scanned/image document
+    
+    Args:
+        pdf_path: Path to the PDF file
+        
+    Returns:
+        True if the PDF has selectable text, False if it appears to be scanned/image-based
+    """
+    try:
+        with open(pdf_path, 'rb') as file:
+            reader = PyPDF2.PdfReader(file)
+            
+            # Check up to 3 pages or all pages if fewer
+            pages_to_check = min(len(reader.pages), 3)
+            
+            # If document has no pages, return True (not our concern)
+            if pages_to_check == 0:
+                return True
+                
+            # Keep track of text content
+            total_text = 0
+            
+            # Check each page for text content
+            for i in range(pages_to_check):
+                page = reader.pages[i]
+                text = page.extract_text()
+                
+                if text and len(text.strip()) > 50:  # A reasonable text page should have more than 50 chars
+                    return True  # Found a page with significant text
+                    
+                total_text += len(text.strip())
+            
+            # If we checked multiple pages and found very little text, it's likely a scanned document
+            if total_text < 100 and pages_to_check > 0:
+                return False
+                
+            # Default to True if we can't be sure
+            return True
+            
+    except Exception as e:
+        logging.error(f"Error checking if PDF has selectable text: {str(e)}")
+        return True  # Default to True on error
+
+def extract_unique_countries(country_mapping):
+    """
+    Extract all unique country names from the project ID to country mapping
+    
+    Args:
+        country_mapping: Dictionary mapping project IDs to country names
+        
+    Returns:
+        Set of unique country names
+    """
+    if not country_mapping:
+        return set()
+        
+    # Extract all unique country names from the mapping
+    return set(country_mapping.values())
+
+def extract_country_from_pdf(pdf_path, country_names, max_pages=10):
+    """
+    Search for country names in a PDF file.
+    
+    Args:
+        pdf_path: Path to the PDF file
+        country_names: Set of country names to search for
+        max_pages: Maximum number of pages to search
+        
+    Returns:
+        The country name if found, None otherwise
+    """
+    if not country_names:
+        return None
+        
+    try:
+        with open(pdf_path, 'rb') as file:
+            reader = PyPDF2.PdfReader(file)
+            pages_to_search = min(len(reader.pages), max_pages)
+            
+            # Create a list of country names sorted by length (descending)
+            # This prioritizes longer names (e.g., "United States" over "States")
+            sorted_countries = sorted(country_names, key=len, reverse=True)
+            
+            # Create patterns for each country name
+            # This handles case-insensitive matching and boundary detection
+            country_patterns = {}
+            for country in sorted_countries:
+                # Create regex pattern with word boundaries
+                pattern = r'\b' + re.escape(country) + r'\b'
+                country_patterns[country] = re.compile(pattern, re.IGNORECASE)
+                
+                # Also add pattern with underscores replaced by spaces
+                space_country = country.replace('_', ' ')
+                if space_country != country:
+                    pattern = r'\b' + re.escape(space_country) + r'\b'
+                    country_patterns[country] = re.compile(pattern, re.IGNORECASE)
+            
+            # Search through pages
+            for page_num in range(pages_to_search):
+                page = reader.pages[page_num]
+                text = page.extract_text()
+                if not text:
+                    continue
+                    
+                # Check each country pattern
+                for country, pattern in country_patterns.items():
+                    if pattern.search(text):
+                        logging.info(f"Found country: {country} in document: {pdf_path}")
+                        return country
+                        
+        return None
+        
+    except Exception as e:
+        logging.error(f"Error searching for country in {pdf_path}: {str(e)}")
+        return None
+
 if __name__ == "__main__":
     args = parse_args()
     if args.input and args.output:
         # TODO: Add command-line mode implementation
         pass
     else:
-        sys.exit(convert_folder_to_pdf(rename_with_pid=True)) 
+        sys.exit(convert_folder_to_pdf(rename_with_pid=True, workers=args.workers)) 
