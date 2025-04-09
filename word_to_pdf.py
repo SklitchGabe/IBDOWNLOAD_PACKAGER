@@ -14,6 +14,7 @@ import re
 import PyPDF2
 from langdetect import detect, LangDetectException
 import pandas as pd
+import unicodedata
 
 # Set up logging
 logging.basicConfig(
@@ -529,10 +530,10 @@ def copy_existing_pdfs(input_dir, output_dir, overwrite=False, rename_with_pid=T
                                         break
                                     counter += 1
                             
-                            # Copy the file - CHANGED: use copy instead of rename & removed return statements
+                            # Rename the file
                             try:
-                                shutil.copy2(pdf_file, ocr_path)
-                                logging.info(f"Copied as OCR document: {ocr_filename}")
+                                os.rename(pdf_file, ocr_path)
+                                logging.info(f"Renamed as OCR document: {ocr_filename}")
                                 copied += 1
                                 pid_mapping[ocr_path] = "SCAN_OCR_DOCUMENT"
                             except Exception as e:
@@ -832,6 +833,10 @@ def convert_folder_to_pdf(rename_with_pid=True, country_mapping=None, workers=No
         
         if unknown_docs:
             print(f"\nFound {len(unknown_docs)} documents with no identifiable project ID or country")
+    
+    # Add this section to call the organize function
+    print("\nStarting post-processing organization...")
+    moved_with_country, moved_no_country, skipped = organize_output_files(output_dir)
     
     print("\nLanguage suffix explanation:")
     print("  EN: Document is primarily in English")
@@ -1196,29 +1201,118 @@ def is_selectable_text_pdf(pdf_path):
 def extract_unique_countries(country_mapping):
     """
     Extract all unique country names from the project ID to country mapping,
-    excluding 'World' from the results
+    excluding regional/continental designations.
     
     Args:
         country_mapping: Dictionary mapping project IDs to country names
         
     Returns:
-        Set of unique country names (excluding 'World')
+        Set of unique country names (excluding regions)
     """
     if not country_mapping:
         return set()
-        
-    # Extract all unique country names from the mapping
+    
+    # List of regions/continents to exclude
+    regions_to_exclude = {
+        "africa", "asia", "europe", "north america", "south america", 
+        "latin america", "caribbean", "middle east", "oceania", 
+        "central america", "european union", "mena", "sub-saharan africa",
+        "central asia", "south asia", "east asia", "southeast asia", 
+        "pacific islands", "global", "world", "regional", "western africa",
+        "eastern africa", "southern africa", "northern africa", "west africa",
+        "east africa", "south africa", "north africa", "americas", "arab world",
+        "gcc", "gulf", "latin", "nordic", "scandinavia", "mediterranean",
+        "balkan", "balkans", "caucasus", "indochina", "australasia"
+    }
+    
+    # Extract all unique country names from the mapping, filtering out regions
     countries = set()
     for country in country_mapping.values():
-        # Skip any variant of "World" (case-insensitive)
-        if country.lower().strip() != "world":
+        # Skip if the country name is a region (case-insensitive)
+        if normalize_text(country) not in regions_to_exclude:
             countries.add(country)
     
     return countries
 
+def normalize_text(text):
+    """
+    Normalize text by removing accents and converting to lowercase
+    """
+    if not text:
+        return ""
+    # Normalize to decomposed form and then remove diacritical marks (accents)
+    normalized = unicodedata.normalize('NFKD', text)
+    normalized = ''.join([c for c in normalized if not unicodedata.combining(c)])
+    return normalized.lower()
+
+def create_country_aliases():
+    """
+    Create a dictionary of alternative country names and their standard forms.
+    This helps match variations like accented versions, adjective forms, etc.
+    """
+    aliases = {
+        # Mexico variations
+        "mexico": "Mexico",
+        "mexicanos": "Mexico",
+        "méxico": "Mexico",
+        "mexican": "Mexico",
+        "mexicano": "Mexico",
+        "mexique": "Mexico",
+        
+        # Congo variations
+        "congo": "Congo",
+        "république du congo": "Congo",
+        "republic of congo": "Congo",
+        "republique du congo": "Congo",
+        "democratic republic of congo": "Congo",
+        "république démocratique du congo": "Congo",
+        "republic democratique du congo": "Congo",
+        "republique democratique du congo": "Congo",
+        "drc": "Congo",
+        "congo, rep.": "Congo",
+        "congo, dem. rep.": "Congo",
+        
+        # Brazil variations
+        "brazil": "Brazil",
+        "brasil": "Brazil",
+        "brasileira": "Brazil", 
+        "brasília": "Brazil",
+        "brasilia": "Brazil",
+        "brazilian": "Brazil",
+        "brésil": "Brazil",
+        
+        # Lao variations - enhanced
+        "lao": "Lao",
+        "laos": "Lao",
+        "lao people's democratic republic": "Lao",
+        "lao peoples democratic republic": "Lao",
+        "lao people democratic republic": "Lao",
+        "lao pdr": "Lao",
+        "lao p.d.r.": "Lao",
+        "lao people's democratic republic": "Lao",
+        "lao peoples' democratic republic": "Lao",
+        "lao people's republic": "Lao",
+        
+        # Philippines variations
+        "philippines": "Philippines",
+        "philippine": "Philippines",
+        "filipino": "Philippines",
+        "filipina": "Philippines",
+        "pilipinas": "Philippines",
+        "philippinen": "Philippines",
+        "filipinas": "Philippines",
+        
+        # Cameroon variations - added
+        "cameroon": "Cameroon",
+        "cameroun": "Cameroon",
+        "camerounais": "Cameroon",
+        "camerounaise": "Cameroon",
+    }
+    return aliases
+
 def extract_country_from_pdf(pdf_path, country_names, max_pages=10):
     """
-    Search for country names in a PDF file.
+    Search for country names in a PDF file with enhanced matching.
     
     Args:
         pdf_path: Path to the PDF file
@@ -1230,29 +1324,39 @@ def extract_country_from_pdf(pdf_path, country_names, max_pages=10):
     """
     if not country_names:
         return None
-        
+    
+    # Create aliases mapping
+    country_aliases = create_country_aliases()
+    
+    # Create normalized country name mapping
+    normalized_country_map = {}
+    
+    # Process standard country names from the mapping first
+    for country in country_names:
+        normalized = normalize_text(country)
+        normalized_country_map[normalized] = country
+    
+    # Add all aliases to the normalized mapping
+    for alias, standard_name in country_aliases.items():
+        # Only add the alias if the standard name is in our country list
+        normalized_standard = normalize_text(standard_name)
+        if normalized_standard in normalized_country_map:
+            standard_country = normalized_country_map[normalized_standard]
+            normalized_country_map[normalize_text(alias)] = standard_country
+    
     try:
         with open(pdf_path, 'rb') as file:
             reader = PyPDF2.PdfReader(file)
             pages_to_search = min(len(reader.pages), max_pages)
             
-            # Create a list of country names sorted by length (descending)
-            # This prioritizes longer names (e.g., "United States" over "States")
-            sorted_countries = sorted(country_names, key=len, reverse=True)
+            # Create patterns for country names and aliases
+            patterns = {}
             
-            # Create patterns for each country name
-            # This handles case-insensitive matching and boundary detection
-            country_patterns = {}
-            for country in sorted_countries:
+            # Build regex patterns for all normalized country forms
+            for normalized_name, original_name in normalized_country_map.items():
                 # Create regex pattern with word boundaries
-                pattern = r'\b' + re.escape(country) + r'\b'
-                country_patterns[country] = re.compile(pattern, re.IGNORECASE)
-                
-                # Also add pattern with underscores replaced by spaces
-                space_country = country.replace('_', ' ')
-                if space_country != country:
-                    pattern = r'\b' + re.escape(space_country) + r'\b'
-                    country_patterns[country] = re.compile(pattern, re.IGNORECASE)
+                pattern = r'\b' + re.escape(normalized_name) + r'\b'
+                patterns[normalized_name] = (re.compile(pattern, re.IGNORECASE), original_name)
             
             # Search through pages
             for page_num in range(pages_to_search):
@@ -1260,18 +1364,145 @@ def extract_country_from_pdf(pdf_path, country_names, max_pages=10):
                 text = page.extract_text()
                 if not text:
                     continue
-                    
+                
+                # Normalize the page text for matching
+                normalized_text = normalize_text(text)
+                
                 # Check each country pattern
-                for country, pattern in country_patterns.items():
-                    if pattern.search(text):
-                        logging.info(f"Found country: {country} in document: {pdf_path}")
-                        return country
+                for norm_name, (pattern, original_name) in patterns.items():
+                    if pattern.search(normalized_text):
+                        logging.info(f"Found country: {original_name} (matched: {norm_name}) in document: {pdf_path}")
+                        return original_name
+                        
+            # If direct pattern matching didn't work and we have text, try more fuzzy approaches
+            if len(normalized_text) > 100:  # Only try this on docs with sufficient text
+                # Extract potential country mentions from the text (words that might be countries)
+                words = re.findall(r'\b\w{3,}\b', normalized_text)
+                
+                # Skip common words to improve performance
+                common_words = {"the", "and", "for", "that", "this", "with", "from", "have", "will"}
+                potential_country_words = [w for w in words if len(w) > 3 and w not in common_words]
+                
+                # Check if any words closely match our normalized country names
+                for word in potential_country_words:
+                    for norm_name, original_name in normalized_country_map.items():
+                        # Only consider longer country names for partial matching
+                        if len(norm_name) >= 5 and len(word) >= 5:
+                            # Check for substantial partial matches (country name within word or vice versa)
+                            if norm_name in word or (len(norm_name) > 7 and word in norm_name):
+                                logging.info(f"Found partial country match: {original_name} (matched: {norm_name} with {word}) in document: {pdf_path}")
+                                return original_name
                         
         return None
         
     except Exception as e:
         logging.error(f"Error searching for country in {pdf_path}: {str(e)}")
         return None
+
+def organize_output_files(output_dir):
+    """
+    Organize converted files into subfolders based on whether they have country information.
+    This should be called after all file naming operations are complete.
+    
+    Args:
+        output_dir: Path to the output directory containing all processed files
+    """
+    print("\nOrganizing output files into category folders...")
+    
+    # Create subfolders for organization
+    no_country_folder = os.path.join(output_dir, "No_Country_Info")
+    country_folder = os.path.join(output_dir, "Doctype_All_Pids")
+    
+    # Create folders
+    os.makedirs(no_country_folder, exist_ok=True)
+    os.makedirs(country_folder, exist_ok=True)
+    
+    # Count files processed
+    moved_with_country = 0
+    moved_no_country = 0
+    skipped_files = 0
+    
+    # Find all PDF files in the output directory
+    pdf_files = []
+    for root, _, files in os.walk(output_dir):
+        # Skip files that are already in the organization folders
+        if no_country_folder in root or country_folder in root:
+            continue
+            
+        for file in files:
+            if file.lower().endswith('.pdf'):
+                pdf_files.append(os.path.join(root, file))
+    
+    if not pdf_files:
+        print("No PDF files found in output directory")
+        return 0, 0, 0
+    
+    with tqdm(total=len(pdf_files), unit="file", desc="Organizing files", ncols=100) as pbar:
+        for pdf_file in pdf_files:
+            try:
+                filename = os.path.basename(pdf_file)
+                # Check if the file name indicates it has country info
+                
+                # First check: If filename contains "COUNTRY_" prefix, it has country info via secondary match
+                has_country_info = "COUNTRY_" in filename
+                
+                # Second check: If filename contains an underscore followed by text and language code
+                # This is for files with PROJECT_ID_COUNTRY_LANGUAGE format (from primary match)
+                if not has_country_info:
+                    parts = filename.split('_')
+                    # If we have at least 3 parts (PID_COUNTRY_LANG) and the last part starts with a language code
+                    if (len(parts) >= 3 and 
+                       (parts[-1].startswith(('EN.', 'NON.', 'UNK.', 'OCR.')) or 
+                        parts[-2] in ('EN', 'NON', 'UNK', 'OCR'))):
+                        # It has the PROJECT_ID_COUNTRY_LANGUAGE format
+                        has_country_info = True
+                
+                # Determine target folder based on country info
+                if has_country_info and not filename.startswith(("SCAN_OCR", "UNKNOWN_")):
+                    # Has country info - move to country folder
+                    target_folder = country_folder
+                    move_counter = moved_with_country
+                else:
+                    # No country info or special doc - move to no country folder
+                    target_folder = no_country_folder
+                    move_counter = moved_no_country
+                
+                # Maintain subfolder structure relative to output_dir
+                rel_path = os.path.dirname(os.path.relpath(pdf_file, output_dir))
+                if rel_path and rel_path != '.':
+                    target_dir = os.path.join(target_folder, rel_path)
+                    os.makedirs(target_dir, exist_ok=True)
+                else:
+                    target_dir = target_folder
+                
+                # Create destination path
+                dest_file = os.path.join(target_dir, filename)
+                
+                # Handle duplicates
+                if os.path.exists(dest_file):
+                    dest_file = get_unique_filename(dest_file)
+                
+                # Move the file
+                shutil.move(pdf_file, dest_file)
+                
+                # Update appropriate counter
+                if target_folder == country_folder:
+                    moved_with_country += 1
+                else:
+                    moved_no_country += 1
+                
+            except Exception as e:
+                logging.error(f"Error organizing file {pdf_file}: {str(e)}")
+                skipped_files += 1
+            
+            pbar.update(1)
+    
+    print(f"Organization complete:")
+    print(f"  - Moved {moved_with_country} files to Doctype_All_Pids folder")
+    print(f"  - Moved {moved_no_country} files to No_Country_Info folder")
+    print(f"  - Skipped {skipped_files} files due to errors")
+    
+    return moved_with_country, moved_no_country, skipped_files
 
 if __name__ == "__main__":
     args = parse_args()
