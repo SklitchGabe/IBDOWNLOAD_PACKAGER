@@ -455,11 +455,16 @@ def copy_existing_pdfs(input_dir, output_dir, overwrite=False, rename_with_pid=T
             file_processed = False
             
             try:
+                # ALWAYS process through the renaming pipeline, regardless of rename_with_pid setting
+                # Only use rename_with_pid to determine if we should try to extract project IDs
+                
+                # PRIORITY 1: Extract project ID (only if rename_with_pid is True)
                 if rename_with_pid:
-                    # PRIORITY 1: Extract project ID from the PDF or filename
+                    # Extract project ID from the PDF or filename
                     project_id = extract_project_id(pdf_file)
                     
                     if not project_id:
+                        # Check filename if not found in content
                         project_id = extract_project_id_from_filename(os.path.basename(pdf_file))
                     
                     if project_id:
@@ -501,104 +506,89 @@ def copy_existing_pdfs(input_dir, output_dir, overwrite=False, rename_with_pid=T
                         copied += 1
                         pid_mapping[new_path] = project_id
                         file_processed = True
+                
+                # PRIORITY 2: If no project ID or rename_with_pid is False, check if it's an OCR document
+                if not file_processed:
+                    language_suffix = detect_language(pdf_file)
                     
-                    # PRIORITY 2: If no project ID, check if it's an OCR document
-                    if not file_processed:
-                        language_suffix = detect_language(pdf_file)
-                        
-                        if language_suffix == "OCR":
-                            # This is an OCR document with no selectable text
-                            ocr_filename = "SCAN_OCR_DOCUMENT.pdf"
-                            ocr_path = os.path.join(target_dir, ocr_filename)
-                            
-                            # Handle duplicate filenames
-                            if os.path.exists(ocr_path):
-                                counter = 1
-                                while True:
-                                    temp_name = f"SCAN_OCR_DOCUMENT_{counter:02d}.pdf"
-                                    temp_path = os.path.join(target_dir, temp_name)
-                                    if not os.path.exists(temp_path):
-                                        ocr_path = temp_path
-                                        ocr_filename = temp_name
-                                        break
-                                    counter += 1
-                            
-                            # Copy the file
-                            shutil.copy2(pdf_file, ocr_path)
-                            logging.info(f"Copied as OCR document: {ocr_filename}")
-                            copied += 1
-                            pid_mapping[ocr_path] = "SCAN_OCR_DOCUMENT"
-                            file_processed = True
-                    
-                    # PRIORITY 3: If not OCR, check for country match
-                    if not file_processed and unique_countries:
-                        country = extract_country_from_pdf(pdf_file, unique_countries)
-                        
-                        if country:
-                            language_suffix = detect_language(pdf_file)
-                            # Create filename with country and language
-                            country_filename = f"COUNTRY_{country}_{language_suffix}.pdf"
-                            country_path = os.path.join(target_dir, country_filename)
-                            
-                            # Handle duplicate filenames
-                            if os.path.exists(country_path):
-                                counter = 1
-                                while True:
-                                    temp_name = f"COUNTRY_{country}_{language_suffix}_{counter:02d}.pdf"
-                                    temp_path = os.path.join(target_dir, temp_name)
-                                    if not os.path.exists(temp_path):
-                                        country_path = temp_path
-                                        country_filename = temp_name
-                                        break
-                                    counter += 1
-                            
-                            # Copy the file
-                            shutil.copy2(pdf_file, country_path)
-                            logging.info(f"Copied with country match: {country_filename}")
-                            copied += 1
-                            pid_mapping[country_path] = f"COUNTRY_{country}"
-                            file_processed = True
-                    
-                    # PRIORITY 4: Last resort - mark as unknown
-                    if not file_processed:
-                        language_suffix = detect_language(pdf_file) if language_suffix not in ["EN", "NON", "UNK"] else language_suffix
-                        unknown_filename = f"UNKNOWN_{language_suffix}.pdf"
-                        unknown_path = os.path.join(target_dir, unknown_filename)
+                    if language_suffix == "OCR":
+                        # This is an OCR document with no selectable text
+                        ocr_filename = "SCAN_OCR_DOCUMENT.pdf"
+                        ocr_path = os.path.join(target_dir, ocr_filename)
                         
                         # Handle duplicate filenames
-                        if os.path.exists(unknown_path):
+                        if os.path.exists(ocr_path):
                             counter = 1
                             while True:
-                                temp_name = f"UNKNOWN_{language_suffix}_{counter:02d}.pdf"
+                                temp_name = f"SCAN_OCR_DOCUMENT_{counter:02d}.pdf"
                                 temp_path = os.path.join(target_dir, temp_name)
                                 if not os.path.exists(temp_path):
-                                    unknown_path = temp_path
-                                    unknown_filename = temp_name
+                                    ocr_path = temp_path
+                                    ocr_filename = temp_name
                                     break
                                 counter += 1
                         
                         # Copy the file
-                        shutil.copy2(pdf_file, unknown_path)
-                        logging.info(f"Copied as unknown document: {unknown_filename}")
+                        shutil.copy2(pdf_file, ocr_path)
+                        logging.info(f"Copied as OCR document: {ocr_filename}")
                         copied += 1
-                        pid_mapping[unknown_path] = f"UNKNOWN_{language_suffix}"
+                        pid_mapping[ocr_path] = "SCAN_OCR_DOCUMENT"
                         file_processed = True
-                else:
-                    # Standard copy without PID renaming
-                    dest_file = os.path.join(target_dir, os.path.basename(pdf_file))
+                
+                # PRIORITY 3: If not OCR, check for country match (only if we have country mappings)
+                if not file_processed and unique_countries:
+                    country = extract_country_from_pdf(pdf_file, unique_countries)
                     
-                    # Check if file already exists
-                    if os.path.exists(dest_file):
-                        unique_dest = get_unique_filename(dest_file)
-                        shutil.copy2(pdf_file, unique_dest)
-                        logging.debug(f"Created unique filename: {unique_dest}")
+                    if country:
+                        language_suffix = detect_language(pdf_file)
+                        # Create filename with country and language
+                        country_filename = f"COUNTRY_{country}_{language_suffix}.pdf"
+                        country_path = os.path.join(target_dir, country_filename)
+                        
+                        # Handle duplicate filenames
+                        if os.path.exists(country_path):
+                            counter = 1
+                            while True:
+                                temp_name = f"COUNTRY_{country}_{language_suffix}_{counter:02d}.pdf"
+                                temp_path = os.path.join(target_dir, temp_name)
+                                if not os.path.exists(temp_path):
+                                    country_path = temp_path
+                                    country_filename = temp_name
+                                    break
+                                counter += 1
+                        
+                        # Copy the file
+                        shutil.copy2(pdf_file, country_path)
+                        logging.info(f"Copied with country match: {country_filename}")
                         copied += 1
+                        pid_mapping[country_path] = f"COUNTRY_{country}"
                         file_processed = True
-                    else:
-                        # No conflict, copy normally
-                        shutil.copy2(pdf_file, dest_file)
-                        copied += 1
-                        file_processed = True
+                
+                # PRIORITY 4: Last resort - mark as unknown
+                if not file_processed:
+                    language_suffix = detect_language(pdf_file) if language_suffix not in ["EN", "NON", "UNK", "OCR"] else language_suffix
+                    unknown_filename = f"UNKNOWN_{language_suffix}.pdf"
+                    unknown_path = os.path.join(target_dir, unknown_filename)
+                    
+                    # Handle duplicate filenames
+                    if os.path.exists(unknown_path):
+                        counter = 1
+                        while True:
+                            temp_name = f"UNKNOWN_{language_suffix}_{counter:02d}.pdf"
+                            temp_path = os.path.join(target_dir, temp_name)
+                            if not os.path.exists(temp_path):
+                                unknown_path = temp_path
+                                unknown_filename = temp_name
+                                break
+                            counter += 1
+                    
+                    # Copy the file
+                    shutil.copy2(pdf_file, unknown_path)
+                    logging.info(f"Copied as unknown document: {unknown_filename}")
+                    copied += 1
+                    pid_mapping[unknown_path] = f"UNKNOWN_{language_suffix}"
+                    file_processed = True
+                
             except Exception as e:
                 error_msg = f"Error copying {pdf_file}: {str(e)}"
                 logging.error(error_msg)
@@ -837,7 +827,7 @@ def convert_folder_to_pdf(rename_with_pid=True, country_mapping=None, workers=No
     print("  SCAN_OCR_DOCUMENT_##.pdf: Scanned documents with no extractable text")
     print("  UNKNOWN_LANGUAGE_##.pdf: Files with no identifiable project ID or country")
     
-    return 0
+    return 0, output_dir  # Return tuple with exit code and output directory
 
 def verify_pdf(pdf_path):
     """Verify that the created PDF is valid"""
@@ -1267,8 +1257,25 @@ def extract_country_from_pdf(pdf_path, country_names, max_pages=10):
 
 if __name__ == "__main__":
     args = parse_args()
+    exit_code = 0
+    output_dir = None  # Initialize output_dir variable
+    
     if args.input and args.output:
         # TODO: Add command-line mode implementation
-        pass
+        output_dir = args.output  # Use output directory from command line arguments
     else:
-        sys.exit(convert_folder_to_pdf(rename_with_pid=True, workers=args.workers)) 
+        # Modify convert_folder_to_pdf to return both exit_code and output_dir
+        exit_code, output_dir = convert_folder_to_pdf(rename_with_pid=True, workers=args.workers)
+    
+    # After all conversion is done, reorganize the output folder
+    try:
+        import reorganize_output
+        if output_dir and os.path.exists(output_dir):
+            print("\nStarting file reorganization...")
+            reorganize_output.reorganize_output_folder(output_dir)
+        else:
+            print("\nSkipping reorganization - output directory not available")
+    except Exception as e:
+        print(f"Error during reorganization: {str(e)}")
+    
+    sys.exit(exit_code) 
