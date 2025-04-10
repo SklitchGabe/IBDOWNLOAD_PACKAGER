@@ -15,7 +15,7 @@ logging.basicConfig(
     ]
 )
 
-def reorganize_output_folder(output_dir):
+def reorganize_output_folder(output_dir, document_type=None):
     """
     Reorganize PDF files in the output directory into categorized subfolders:
     - Country Associated Documents: Files with COUNTRY_ prefix or project ID (P######)
@@ -24,29 +24,11 @@ def reorganize_output_folder(output_dir):
     
     Args:
         output_dir: Path to the output directory containing PDF files
+        document_type: Type of document (e.g., icrr, aidememoire, pad) to add to filenames
     """
     if not os.path.exists(output_dir):
         logging.error(f"Output directory does not exist: {output_dir}")
         return
-    
-    # Prompt user for the original file type
-    print("\n" + "-"*80)
-    print(" ORIGINAL FILE TYPE ".center(80, "-"))
-    print("-"*80)
-    print("What was the original file type of all input documents?")
-    print("Examples: docx, xlsx, ppt, txt, etc.")
-    print("This will be added to the filenames for better tracking.")
-    original_file_type = input("Enter file type (without dot): ").strip().lower()
-    
-    # Remove dot if user included it
-    if original_file_type.startswith('.'):
-        original_file_type = original_file_type[1:]
-    
-    # Validate input - ensure we have a valid file type
-    if not original_file_type:
-        print("No file type entered. Proceeding without adding file type to filenames.")
-    else:
-        print(f"Using '{original_file_type}' as the original file type.")
     
     print("\n" + "="*80)
     print(" REORGANIZING OUTPUT FILES INTO CATEGORIES ".center(80, "="))
@@ -91,21 +73,21 @@ def reorganize_output_folder(output_dir):
         # Get just the filename
         filename = os.path.basename(pdf_file)
         
-        # Add file type information if provided
-        if original_file_type:
+        # Add document type information if provided
+        if document_type:
             # Split the filename into base and extension
             base, ext = os.path.splitext(filename)
             
             # Check if the base already has a numeric suffix (like _01)
             if re.search(r'_\d+$', base):
-                # Insert the file type before the numeric suffix
+                # Insert the document type before the numeric suffix
                 match = re.search(r'(_\d+)$', base)
                 suffix = match.group(1)
                 base = base[:-len(suffix)]
-                new_filename = f"{base}_{original_file_type}{suffix}{ext}"
+                new_filename = f"{base}_{document_type}{suffix}{ext}"
             else:
-                # Just append the file type to the base
-                new_filename = f"{base}_{original_file_type}{ext}"
+                # Just append the document type to the base
+                new_filename = f"{base}_{document_type}{ext}"
                 
             # Create a temporary path for the renamed file
             temp_path = os.path.join(os.path.dirname(pdf_file), new_filename)
@@ -116,9 +98,9 @@ def reorganize_output_folder(output_dir):
                 # Update pdf_file to point to the renamed file
                 pdf_file = temp_path
                 filename = new_filename
-                logging.info(f"Added file type to filename: {filename}")
+                logging.info(f"Added document type to filename: {filename}")
             except Exception as e:
-                logging.error(f"Error adding file type to filename: {filename} - {str(e)}")
+                logging.error(f"Error adding document type to filename: {filename} - {str(e)}")
         
         # Determine the target folder
         if filename.startswith("COUNTRY_") or pid_pattern.match(filename):
@@ -165,8 +147,8 @@ def reorganize_output_folder(output_dir):
     print(f"Files in 'Country Associated Documents': {country_count}")
     print(f"Files in 'Unknown Countries': {unknown_count}")
     print(f"Files in 'Failed Conversions and Renaming': {failed_count}")
-    if original_file_type:
-        print(f"Added original file type '{original_file_type}' to all filenames")
+    if document_type:
+        print(f"Added document type '{document_type}' to all filenames")
     print("-"*80 + "\n")
     
     # Further organize the Country Associated Documents folder by country
@@ -231,11 +213,11 @@ def organize_by_country(country_folder):
     country_docs = {}
     
     # Define improved regex patterns that handle numeric suffixes and special characters
-    # For Project ID filenames
-    pid_pattern = re.compile(r'^P\d{6}_(.+?)_(EN|NON|UNK|OCR)(?:_\d+)?\.pdf$')
+    # For Project ID filenames with potential document type
+    pid_pattern = re.compile(r'^P\d{6}_(.+?)_(EN|NON|UNK|OCR)(?:_[^_]+)?(?:_\d+)?\.pdf$')
     
-    # For Country prefix filenames
-    country_prefix_pattern = re.compile(r'^COUNTRY_(.+?)_(EN|NON|UNK|OCR)(?:_\d+)?\.pdf$')
+    # For Country prefix filenames with potential document type
+    country_prefix_pattern = re.compile(r'^COUNTRY_(.+?)_(EN|NON|UNK|OCR)(?:_[^_]+)?(?:_\d+)?\.pdf$')
     
     # First pass - identify countries and count documents
     for pdf_file in pdf_files:
@@ -318,7 +300,8 @@ if __name__ == "__main__":
     # If called directly, check for output directory argument
     if len(sys.argv) > 1:
         output_dir = sys.argv[1]
-        reorganize_output_folder(output_dir)
+        document_type = sys.argv[2] if len(sys.argv) > 2 else None
+        reorganize_output_folder(output_dir, document_type)
     else:
-        print("Please provide the output directory as an argument.")
-        print("Usage: python reorganize_output.py <output_directory>")
+        print("Please provide the output directory and document type as arguments.")
+        print("Usage: python reorganize_output.py <output_directory> <document_type>")

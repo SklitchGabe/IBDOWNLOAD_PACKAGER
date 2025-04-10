@@ -1260,6 +1260,21 @@ if __name__ == "__main__":
     exit_code = 0
     output_dir = None  # Initialize output_dir variable
     
+    # Prompt for document type at the beginning
+    print("\n" + "-"*80)
+    print(" DOCUMENT TYPE ".center(80, "-"))
+    print("-"*80)
+    print("What type of documents are being processed?")
+    print("Examples: icrr, aidememoire, pad, esrs, etc.")
+    print("This will be added to the filenames for better tracking.")
+    document_type = input("Enter document type: ").strip().lower()
+    
+    # Validate input
+    if not document_type:
+        print("No document type entered. Proceeding without adding document type to filenames.")
+    else:
+        print(f"Using '{document_type}' as the document type identifier.")
+    
     if args.input and args.output:
         # TODO: Add command-line mode implementation
         output_dir = args.output  # Use output directory from command line arguments
@@ -1267,12 +1282,12 @@ if __name__ == "__main__":
         # Modify convert_folder_to_pdf to return both exit_code and output_dir
         exit_code, output_dir = convert_folder_to_pdf(rename_with_pid=True, workers=args.workers)
     
-    # After all conversion is done, reorganize the output folder
     try:
         import reorganize_output
         if output_dir and os.path.exists(output_dir):
             print("\nStarting file reorganization...")
-            reorganize_output.reorganize_output_folder(output_dir)
+            # Pass document_type to reorganize_output_folder
+            reorganize_output.reorganize_output_folder(output_dir, document_type)
         else:
             print("\nSkipping reorganization - output directory not available")
     except Exception as e:
