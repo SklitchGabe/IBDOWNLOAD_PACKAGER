@@ -119,7 +119,117 @@ def reorganize_output_folder(output_dir):
     print(f"Files in 'Failed Conversions and Renaming': {failed_count}")
     print("-"*80 + "\n")
     
+    # Further organize the Country Associated Documents folder by country
+    if country_count > 0:
+        organize_by_country(country_folder)
+    
     return country_count, unknown_count, failed_count
+
+def organize_by_country(country_folder):
+    """
+    Further organize the "Country Associated Documents" folder into country-specific subfolders.
+    Handles countries with multiple words and special characters.
+    
+    Args:
+        country_folder: Path to the "Country Associated Documents" folder
+    """
+    if not os.path.exists(country_folder):
+        logging.error(f"Country Associated Documents folder does not exist: {country_folder}")
+        return
+    
+    print("\n" + "="*80)
+    print(" ORGANIZING DOCUMENTS BY COUNTRY ".center(80, "="))
+    print("="*80 + "\n")
+    
+    # Get all PDF files
+    pdf_files = []
+    for file in os.listdir(country_folder):
+        file_path = os.path.join(country_folder, file)
+        if file.lower().endswith('.pdf') and os.path.isfile(file_path):
+            pdf_files.append(file_path)
+    
+    if not pdf_files:
+        print("No PDF files found in Country Associated Documents folder")
+        return
+    
+    print(f"Found {len(pdf_files)} PDF files to organize by country")
+    
+    # Track countries and their document counts
+    country_docs = {}
+    
+    # Define improved regex patterns that handle numeric suffixes and special characters
+    # For Project ID filenames
+    pid_pattern = re.compile(r'^P\d{6}_(.+?)_(EN|NON|UNK|OCR)(?:_\d+)?\.pdf$')
+    
+    # For Country prefix filenames
+    country_prefix_pattern = re.compile(r'^COUNTRY_(.+?)_(EN|NON|UNK|OCR)(?:_\d+)?\.pdf$')
+    
+    # First pass - identify countries and count documents
+    for pdf_file in pdf_files:
+        filename = os.path.basename(pdf_file)
+        country = None
+        
+        # Extract country from filename
+        if filename.startswith('P'):
+            match = pid_pattern.search(filename)
+            if match:
+                country = match.group(1)
+        elif filename.startswith('COUNTRY_'):
+            match = country_prefix_pattern.search(filename)
+            if match:
+                country = match.group(1)
+        
+        if country:
+            # Store with original formatting including special characters
+            if country not in country_docs:
+                country_docs[country] = []
+            country_docs[country].append(pdf_file)
+    
+    if not country_docs:
+        print("Could not identify countries from filenames")
+        return
+    
+    print(f"Identified {len(country_docs)} countries with documents")
+    
+    # Create country folders and move files
+    processed = 0
+    for country, files in country_docs.items():
+        # Create a safe folder name - replace problematic characters with underscores
+        safe_folder_name = re.sub(r'[\\/*?:"<>|,]', '_', country)
+        country_subfolder = os.path.join(country_folder, safe_folder_name)
+        
+        # Create country subfolder
+        os.makedirs(country_subfolder, exist_ok=True)
+        
+        # Display the original country name
+        display_country = country
+        
+        # Move files to country subfolder
+        for pdf_file in files:
+            filename = os.path.basename(pdf_file)
+            dest_path = os.path.join(country_subfolder, filename)
+            
+            # Handle potential filename conflicts
+            if os.path.exists(dest_path):
+                base, ext = os.path.splitext(filename)
+                counter = 1
+                while True:
+                    new_filename = f"{base}_{counter:02d}{ext}"
+                    dest_path = os.path.join(country_subfolder, new_filename)
+                    if not os.path.exists(dest_path):
+                        break
+                    counter += 1
+            
+            # Move the file
+            try:
+                shutil.move(pdf_file, dest_path)
+                processed += 1
+            except Exception as e:
+                logging.error(f"Error moving file to country folder: {pdf_file} - {str(e)}")
+        
+        print(f"Created '{display_country}' folder with {len(files)} documents")
+    
+    print(f"\nSuccessfully organized {processed} documents into {len(country_docs)} country folders")
 
 if __name__ == "__main__":
     # If called directly, check for output directory argument
