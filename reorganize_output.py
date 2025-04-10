@@ -129,6 +129,7 @@ def organize_by_country(country_folder):
     """
     Further organize the "Country Associated Documents" folder into country-specific subfolders.
     Handles countries with multiple words and special characters.
+    Consolidates similar country names (with spaces vs underscores).
     
     Args:
         country_folder: Path to the "Country Associated Documents" folder
@@ -154,7 +155,29 @@ def organize_by_country(country_folder):
     
     print(f"Found {len(pdf_files)} PDF files to organize by country")
     
+    # Function to standardize country names
+    def standardize_country_name(country_name):
+        """Standardize country name format for consistent folder naming"""
+        if not country_name:
+            return country_name
+            
+        # 1. Replace underscores with spaces for standardization
+        standardized = country_name.replace('_', ' ')
+        # 2. Normalize spaces (remove extra spaces)
+        standardized = ' '.join(standardized.split())
+        # 3. Capitalize each word for consistency
+        standardized = standardized.title()
+        
+        return standardized
+    
+    # Function to create a filesystem-safe folder name
+    def safe_folder_name(country_name):
+        """Create a filesystem-safe folder name from a country name"""
+        # Replace spaces with underscores and remove problematic characters
+        return re.sub(r'[\\/*?:"<>|,]', '_', country_name.replace(' ', '_'))
+    
     # Track countries and their document counts
+    # We'll use a dict where key=standardized name, value=dict of original names and files
     country_docs = {}
     
     # Define improved regex patterns that handle numeric suffixes and special characters
@@ -180,10 +203,18 @@ def organize_by_country(country_folder):
                 country = match.group(1)
         
         if country:
-            # Store with original formatting including special characters
-            if country not in country_docs:
-                country_docs[country] = []
-            country_docs[country].append(pdf_file)
+            # Standardize the country name
+            standard_country = standardize_country_name(country)
+            
+            # Store with standardized formatting 
+            if standard_country not in country_docs:
+                country_docs[standard_country] = {
+                    'original_names': set(),  # Track original variants
+                    'files': []  # Track files for this country
+                }
+            
+            country_docs[standard_country]['original_names'].add(country)
+            country_docs[standard_country]['files'].append(pdf_file)
     
     if not country_docs:
         print("Could not identify countries from filenames")
@@ -191,21 +222,23 @@ def organize_by_country(country_folder):
     
     print(f"Identified {len(country_docs)} countries with documents")
     
+    # Show any countries that had multiple name variants
+    for country, data in country_docs.items():
+        if len(data['original_names']) > 1:
+            print(f"Consolidated country variants: {data['original_names']} → '{country}'")
+    
     # Create country folders and move files
     processed = 0
-    for country, files in country_docs.items():
-        # Create a safe folder name - replace problematic characters with underscores
-        safe_folder_name = re.sub(r'[\\/*?:"<>|,]', '_', country)
-        country_subfolder = os.path.join(country_folder, safe_folder_name)
+    for country, data in country_docs.items():
+        # Create a safe folder name
+        folder_name = safe_folder_name(country)
+        country_subfolder = os.path.join(country_folder, folder_name)
         
         # Create country subfolder
         os.makedirs(country_subfolder, exist_ok=True)
         
-        # Display the original country name
-        display_country = country
-        
         # Move files to country subfolder
-        for pdf_file in files:
+        for pdf_file in data['files']:
             filename = os.path.basename(pdf_file)
             dest_path = os.path.join(country_subfolder, filename)
             
@@ -227,7 +260,7 @@ def organize_by_country(country_folder):
             except Exception as e:
                 logging.error(f"Error moving file to country folder: {pdf_file} - {str(e)}")
         
-        print(f"Created '{display_country}' folder with {len(files)} documents")
+        print(f"Created '{country}' folder with {len(data['files'])} documents")
     
     print(f"\nSuccessfully organized {processed} documents into {len(country_docs)} country folders")
 
