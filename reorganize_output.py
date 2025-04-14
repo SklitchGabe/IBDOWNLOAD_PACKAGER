@@ -295,6 +295,117 @@ def organize_by_country(country_folder):
         print(f"Created '{country}' folder with {len(data['files'])} documents")
     
     print(f"\nSuccessfully organized {processed} documents into {len(country_docs)} country folders")
+    
+    # Now organize by document type within each country folder
+    organize_by_document_type(country_folder)
+
+def organize_by_document_type(country_folder):
+    """
+    Further organize files within each country folder into document type subfolders.
+    
+    Args:
+        country_folder: Path to the "Country Associated Documents" folder
+    """
+    if not os.path.exists(country_folder):
+        logging.error(f"Country folder does not exist: {country_folder}")
+        return
+    
+    print("\n" + "="*80)
+    print(" ORGANIZING COUNTRY DOCUMENTS BY TYPE ".center(80, "="))
+    print("="*80 + "\n")
+    
+    # Get all country subfolders
+    country_subfolders = []
+    for item in os.listdir(country_folder):
+        item_path = os.path.join(country_folder, item)
+        if os.path.isdir(item_path):
+            country_subfolders.append(item_path)
+    
+    if not country_subfolders:
+        print("No country subfolders found to organize")
+        return
+    
+    print(f"Found {len(country_subfolders)} country folders to organize by document type")
+    
+    # Track document types and counts
+    doc_type_pattern = re.compile(r'.*?_([a-z]+)(?:_\d+)?\.pdf$', re.IGNORECASE)
+    total_organized = 0
+    country_organized = 0
+    
+    # Process each country folder
+    for country_subfolder in country_subfolders:
+        country_name = os.path.basename(country_subfolder)
+        
+        # Get all PDF files in this country folder
+        pdf_files = []
+        for file in os.listdir(country_subfolder):
+            file_path = os.path.join(country_subfolder, file)
+            if file.lower().endswith('.pdf') and os.path.isfile(file_path):
+                pdf_files.append(file_path)
+        
+        if not pdf_files:
+            continue
+        
+        # Track document types for this country
+        country_doc_types = {}
+        
+        # First pass - identify document types
+        for pdf_file in pdf_files:
+            filename = os.path.basename(pdf_file)
+            
+            # Try to extract document type from filename
+            match = doc_type_pattern.search(filename.lower())
+            if match:
+                doc_type = match.group(1)
+                # Don't treat language markers as document types
+                if doc_type not in ['en', 'non', 'unk', 'ocr']:
+                    if doc_type not in country_doc_types:
+                        country_doc_types[doc_type] = []
+                    country_doc_types[doc_type].append(pdf_file)
+        
+        # Only create doc type folders if we found multiple document types
+        if len(country_doc_types) > 1:
+            print(f"Organizing '{country_name}' into {len(country_doc_types)} document types")
+            
+            # Create document type folders and move files
+            country_file_count = 0
+            for doc_type, files in country_doc_types.items():
+                # Create document type subfolder with proper casing
+                doc_type_folder = os.path.join(country_subfolder, doc_type.upper())
+                os.makedirs(doc_type_folder, exist_ok=True)
+                
+                # Move files to document type subfolder
+                for pdf_file in files:
+                    filename = os.path.basename(pdf_file)
+                    dest_path = os.path.join(doc_type_folder, filename)
+                    
+                    # Handle potential filename conflicts
+                    if os.path.exists(dest_path):
+                        base, ext = os.path.splitext(filename)
+                        counter = 1
+                        while True:
+                            new_filename = f"{base}_{counter:02d}{ext}"
+                            dest_path = os.path.join(doc_type_folder, new_filename)
+                            if not os.path.exists(dest_path):
+                                break
+                            counter += 1
+                    
+                    # Move the file
+                    try:
+                        shutil.move(pdf_file, dest_path)
+                        country_file_count += 1
+                    except Exception as e:
+                        logging.error(f"Error moving file to document type folder: {pdf_file} - {str(e)}")
+                
+                print(f"  - Created '{doc_type.upper()}' folder with {len(files)} documents")
+            
+            total_organized += country_file_count
+            country_organized += 1
+        else:
+            print(f"Skipping '{country_name}' - only one document type found")
+    
+    print(f"\nSuccessfully organized {total_organized} documents into document type folders")
+    print(f"Created document type folders in {country_organized} of {len(country_subfolders)} countries")
 
 if __name__ == "__main__":
     # If called directly, check for output directory argument

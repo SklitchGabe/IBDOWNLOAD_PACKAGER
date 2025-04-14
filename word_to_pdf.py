@@ -15,6 +15,7 @@ import PyPDF2
 from langdetect import detect, LangDetectException
 import pandas as pd
 import country_variants
+import generate_reports
 
 # Set up logging
 logging.basicConfig(
@@ -233,7 +234,7 @@ def process_file(file_path, output_dir, input_dir, rename_with_pid=True, country
         input_path = os.path.abspath(file_path)
         
         # Get the relative path more carefully
-        rel_path = os.path.dirname(os.path.relpath(input_path, input_dir))
+        rel_path = os.path.relpath(input_path, input_dir)
         
         if rel_path and rel_path != '.':
             target_dir = os.path.join(output_dir, rel_path)
@@ -892,10 +893,19 @@ def convert_folder_to_pdf(rename_with_pid=True, country_mapping=None, workers=No
             print("\nStarting file reorganization...")
             # Pass document_type to reorganize_output_folder
             reorganize_output.reorganize_output_folder(output_dir, document_type)
+            
+            # Add report generation after reorganization
+            print("\nGenerating document reports...")
+            portfolio_path = None
+            for var_name in globals():
+                if var_name == 'spreadsheet_path' and 'spreadsheet_path' in globals():
+                    portfolio_path = globals()['spreadsheet_path']
+                    break
+            generate_reports.generate_reports(output_dir, portfolio_path)
         else:
             print("\nSkipping reorganization - output directory not available")
     except Exception as e:
-        print(f"Error during reorganization: {str(e)}")
+        print(f"Error during reorganization or report generation: {str(e)}")
     
     return 0, output_dir  # Return tuple with exit code and output directory
 
@@ -1629,6 +1639,25 @@ def merge_all_country_folders(processed_outputs, main_output_dir):
     print(f"Total unknown files: {stats['unknown_files']}")
     print(f"Total failed files: {stats['failed_files']}")
     
+    # Organize by document type within country folders
+    try:
+        import reorganize_output
+        if os.path.exists(final_country_folder):
+            reorganize_output.organize_by_document_type(final_country_folder)
+            
+            # Add report generation after document type organization
+            import generate_reports
+            print("\nGenerating document reports...")
+            # Try to find the portfolio spreadsheet path from earlier in the process
+            portfolio_path = None
+            if 'country_mapping' in locals() and locals()['country_mapping'] is not None:
+                # If we have a country mapping, we might have the path
+                if 'spreadsheet_path' in globals():
+                    portfolio_path = globals()['spreadsheet_path']
+            generate_reports.generate_reports(main_output_dir, portfolio_path)
+    except Exception as e:
+        print(f"Error during document type organization or report generation: {str(e)}")
+    
     # Optionally, remove temp folders after successful merge
     for output_dir, _ in processed_outputs:
         if output_dir.startswith(main_output_dir) and "temp_" in output_dir:
@@ -1681,9 +1710,18 @@ if __name__ == "__main__":
                 print("\nStarting file reorganization...")
                 # Pass document_type to reorganize_output_folder
                 reorganize_output.reorganize_output_folder(output_dir, document_type)
+                
+                # Add report generation after reorganization
+                print("\nGenerating document reports...")
+                portfolio_path = None
+                for var_name in globals():
+                    if var_name == 'spreadsheet_path' and 'spreadsheet_path' in globals():
+                        portfolio_path = globals()['spreadsheet_path']
+                        break
+                generate_reports.generate_reports(output_dir, portfolio_path)
             else:
                 print("\nSkipping reorganization - output directory not available")
         except Exception as e:
-            print(f"Error during reorganization: {str(e)}")
+            print(f"Error during reorganization or report generation: {str(e)}")
     
     sys.exit(exit_code) 
