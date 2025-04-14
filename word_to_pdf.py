@@ -14,6 +14,7 @@ import re
 import PyPDF2
 from langdetect import detect, LangDetectException
 import pandas as pd
+import country_variants
 
 # Set up logging
 logging.basicConfig(
@@ -353,8 +354,25 @@ def process_file(file_path, output_dir, input_dir, rename_with_pid=True, country
                     # Extract unique country names from mapping
                     unique_countries = extract_unique_countries(country_mapping)
                     
+                    # Import country variants directly
+                    try:
+                        from country_variants import COUNTRY_VARIANTS
+                        # Create variant to standard mapping
+                        variant_to_standard = {}
+                        for standard_name, variants in COUNTRY_VARIANTS.items():
+                            # Map each variant back to the standard name
+                            for variant in variants:
+                                variant_to_standard[variant.lower()] = standard_name
+                            # Also add the standard name itself
+                            variant_to_standard[standard_name.lower()] = standard_name
+                        
+                        print(f"Loaded {len(variant_to_standard)} country name variants for improved matching")
+                    except ImportError:
+                        print("Country variants module not found, continuing without variants")
+                        variant_to_standard = {}
+                    
                     # Try to find country in the PDF
-                    country = extract_country_from_pdf(pdf_path, unique_countries)
+                    country = extract_country_from_pdf(pdf_path, unique_countries, country_variants=variant_to_standard)
                     
                     if country:
                         # Create filename with country and language
@@ -666,6 +684,21 @@ def convert_folder_to_pdf(rename_with_pid=True, country_mapping=None, workers=No
     # Initialize counters BEFORE the conditional block
     successful = 0
     failed = 0
+    
+    # Import country variants directly
+    try:
+        from country_variants import COUNTRY_VARIANTS
+        # Create variant to standard mapping
+        variant_to_standard = {}
+        for standard_name, variants in COUNTRY_VARIANTS.items():
+            # Map each variant back to the standard name
+            for variant in variants:
+                variant_to_standard[variant.lower()] = standard_name
+            # Also add the standard name itself
+            variant_to_standard[standard_name.lower()] = standard_name
+    except ImportError:
+        print("Country variants module not found, continuing without variants")
+        variant_to_standard = {}
     
     if not word_files:
         print("No Word documents (.doc or .docx) found in the input directory")
@@ -1198,7 +1231,7 @@ def extract_unique_countries(country_mapping):
     
     return countries
 
-def extract_country_from_pdf(pdf_path, country_names, max_pages=10):
+def extract_country_from_pdf(pdf_path, country_names, max_pages=10, country_variants=None):
     """
     Search for country names in a PDF file.
     
@@ -1206,54 +1239,115 @@ def extract_country_from_pdf(pdf_path, country_names, max_pages=10):
         pdf_path: Path to the PDF file
         country_names: Set of country names to search for
         max_pages: Maximum number of pages to search
+        country_variants: Dictionary mapping variant names to standard English names
         
     Returns:
-        The country name if found, None otherwise
+        The standard country name if found, None otherwise
     """
     if not country_names:
         return None
+    
+    # Combine standard names with variants
+    all_country_patterns = {}
+    variant_to_standard = {}
+    
+    # First add all standard country names
+    sorted_countries = sorted(country_names, key=len, reverse=True)
+    for country in sorted_countries:
+        pattern = r'\b' + re.escape(country) + r'\b'
+        all_country_patterns[country] = re.compile(pattern, re.IGNORECASE)
         
+        # Add space variant
+        space_country = country.replace('_', ' ')
+        if space_country != country:
+            pattern = r'\b' + re.escape(space_country) + r'\b'
+            all_country_patterns[space_country] = re.compile(pattern, re.IGNORECASE)
+            variant_to_standard[space_country.lower()] = country
+    
+    # Add all variants if provided
+    if country_variants:
+        for variant, standard in country_variants.items():
+            if variant.lower() not in variant_to_standard:  # Avoid duplicates
+                pattern = r'\b' + re.escape(variant) + r'\b'
+                all_country_patterns[variant] = re.compile(pattern, re.IGNORECASE)
+                variant_to_standard[variant.lower()] = standard
+    
+    # Now search the PDF using all patterns
     try:
         with open(pdf_path, 'rb') as file:
             reader = PyPDF2.PdfReader(file)
             pages_to_search = min(len(reader.pages), max_pages)
             
-            # Create a list of country names sorted by length (descending)
-            # This prioritizes longer names (e.g., "United States" over "States")
-            sorted_countries = sorted(country_names, key=len, reverse=True)
-            
-            # Create patterns for each country name
-            # This handles case-insensitive matching and boundary detection
-            country_patterns = {}
-            for country in sorted_countries:
-                # Create regex pattern with word boundaries
-                pattern = r'\b' + re.escape(country) + r'\b'
-                country_patterns[country] = re.compile(pattern, re.IGNORECASE)
-                
-                # Also add pattern with underscores replaced by spaces
-                space_country = country.replace('_', ' ')
-                if space_country != country:
-                    pattern = r'\b' + re.escape(space_country) + r'\b'
-                    country_patterns[country] = re.compile(pattern, re.IGNORECASE)
-            
-            # Search through pages
             for page_num in range(pages_to_search):
                 page = reader.pages[page_num]
                 text = page.extract_text()
                 if not text:
                     continue
-                    
-                # Check each country pattern
-                for country, pattern in country_patterns.items():
+                
+                # Check each pattern
+                for name, pattern in all_country_patterns.items():
                     if pattern.search(text):
-                        logging.info(f"Found country: {country} in document: {pdf_path}")
-                        return country
+                        # Map variant back to standard name if needed
+                        standard_name = variant_to_standard.get(name.lower(), name)
+                        logging.info(f"Found country: {name} (standard: {standard_name}) in document: {pdf_path}")
+                        return standard_name
                         
         return None
         
     except Exception as e:
         logging.error(f"Error searching for country in {pdf_path}: {str(e)}")
         return None
+
+def load_country_variants(variants_file):
+    """
+    Load country name variants from a text file.
+    
+    Args:
+        variants_file: Path to the variants file
+        
+    Returns:
+        A dictionary mapping variant names to standard English names
+    """
+    if not os.path.exists(variants_file):
+        logging.error(f"Country variants file not found: {variants_file}")
+        return {}
+    
+    # Dictionary to store standard name → variants mapping
+    standard_to_variants = {}
+    # Dictionary to store variant → standard name mapping
+    variant_to_standard = {}
+    
+    try:
+        with open(variants_file, 'r', encoding='utf-8') as f:
+            content = f.read()
+            
+            # Extract the dictionary content from the file
+            # Remove the "COUNTRY_VARIANTS = {" at the beginning and the "}" at the end
+            if content.strip().startswith("COUNTRY_VARIANTS = {"):
+                # Remove the variable assignment and parse just the dictionary
+                dict_start = content.find("{") + 1
+                dict_end = content.rfind("}")
+                content = content[dict_start:dict_end].strip()
+                content = "{" + content + "}"
+                
+            # Parse the dictionary
+            data = eval(content)  # Note: Using eval is safe here if you control the file
+            
+            # Process the dictionary
+            for standard_name, variants in data.items():
+                standard_to_variants[standard_name] = variants
+                # Map each variant back to the standard name
+                for variant in variants:
+                    variant_to_standard[variant.lower()] = standard_name
+                # Also add the standard name itself
+                variant_to_standard[standard_name.lower()] = standard_name
+                
+        logging.info(f"Loaded {len(standard_to_variants)} countries with {len(variant_to_standard)} name variants")
+        return variant_to_standard
+            
+    except Exception as e:
+        logging.error(f"Error loading country variants file: {str(e)}")
+        return {}
 
 if __name__ == "__main__":
     args = parse_args()
