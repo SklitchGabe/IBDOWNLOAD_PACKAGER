@@ -617,24 +617,29 @@ def copy_existing_pdfs(input_dir, output_dir, overwrite=False, rename_with_pid=T
     print(f"PDF copying complete. Copied: {copied}, Skipped: {skipped}")
     return copied, pid_mapping
 
-def convert_folder_to_pdf(rename_with_pid=True, country_mapping=None, workers=None):
+def convert_folder_to_pdf(rename_with_pid=True, country_mapping=None, workers=None, 
+                         input_directory=None, output_directory=None, doc_type=None):
     """Convert all Word documents in a folder to PDF"""
     # Check if we're on Windows
     if platform.system() != "Windows":
         print("Error: This script requires Windows with Microsoft Word installed")
-        return 1
+        return 1, None
     
-    # Prompt user for the input folder path
-    print("Please enter the path to the folder containing Word documents:")
-    input_dir = input().strip()
-    
-    # Strip quotes if the user included them
-    input_dir = input_dir.strip('"\'')
+    # Use provided input directory or prompt user
+    if input_directory is None:
+        # Prompt user for the input folder path
+        print("Please enter the path to the folder containing Word documents:")
+        input_dir = input().strip()
+        
+        # Strip quotes if the user included them
+        input_dir = input_dir.strip('"\'')
+    else:
+        input_dir = input_directory
     
     # Validate input directory
     if not os.path.isdir(input_dir):
         print(f"Error: '{input_dir}' is not a valid directory")
-        return 1
+        return 1, None
     
     # Prompt for country spreadsheet if not provided
     if rename_with_pid and country_mapping is None:
@@ -654,15 +659,38 @@ def convert_folder_to_pdf(rename_with_pid=True, country_mapping=None, workers=No
                 print(f"Warning: Spreadsheet file not found: {spreadsheet_path}")
                 country_mapping = {}
     
-    # Prompt user for the output folder path
-    print("Please enter the path to the output folder for PDF files:")
-    output_dir = input().strip()
-    
-    # Strip quotes if the user included them
-    output_dir = output_dir.strip('"\'')
+    # Use provided output directory or prompt user
+    if output_directory is None:
+        # Prompt user for the output folder path
+        print("Please enter the path to the output folder for PDF files:")
+        output_dir = input().strip()
+        
+        # Strip quotes if the user included them
+        output_dir = output_dir.strip('"\'')
+    else:
+        output_dir = output_directory
     
     # Create output directory if it doesn't exist
     os.makedirs(output_dir, exist_ok=True)
+    
+    # If document type is provided via parameter, use it
+    if doc_type is not None:
+        document_type = doc_type
+    # Otherwise, prompt for document type if not already set via earlier main function call
+    elif 'document_type' not in globals() or globals()['document_type'] is None:
+        print("\n" + "-"*80)
+        print(" DOCUMENT TYPE ".center(80, "-"))
+        print("-"*80)
+        print("What type of documents are being processed?")
+        print("Examples: icrr, aidememoire, pad, esrs, etc.")
+        print("This will be added to the filenames for better tracking.")
+        document_type = input("Enter document type: ").strip().lower()
+        
+        # Validate input
+        if not document_type:
+            print("No document type entered. Proceeding without adding document type to filenames.")
+        else:
+            print(f"Using '{document_type}' as the document type identifier.")
     
     # Find all .docx and .doc files
     word_files = []
@@ -705,10 +733,7 @@ def convert_folder_to_pdf(rename_with_pid=True, country_mapping=None, workers=No
         # Even if no Word files are found, we'll still copy PDFs
     else:
         # Use provided worker count or determine optimal count
-        if workers is not None:
-            max_workers = workers
-        else:
-            max_workers = get_optimal_worker_count(len(word_files))
+        max_workers = get_optimal_worker_count(len(word_files))
         
         print(f"Found {len(word_files)} Word documents to convert")
         print(f"Using Microsoft Word for conversion with {max_workers} worker processes")
@@ -859,6 +884,18 @@ def convert_folder_to_pdf(rename_with_pid=True, country_mapping=None, workers=No
     print("  COUNTRY_COUNTRYNAME_LANGUAGE.pdf: Files with no project ID but detected country")
     print("  SCAN_OCR_DOCUMENT_##.pdf: Scanned documents with no extractable text")
     print("  UNKNOWN_LANGUAGE_##.pdf: Files with no identifiable project ID or country")
+    
+    # At the end, call reorganize_output with the document_type
+    try:
+        import reorganize_output
+        if output_dir and os.path.exists(output_dir):
+            print("\nStarting file reorganization...")
+            # Pass document_type to reorganize_output_folder
+            reorganize_output.reorganize_output_folder(output_dir, document_type)
+        else:
+            print("\nSkipping reorganization - output directory not available")
+    except Exception as e:
+        print(f"Error during reorganization: {str(e)}")
     
     return 0, output_dir  # Return tuple with exit code and output directory
 
@@ -1349,42 +1386,304 @@ def load_country_variants(variants_file):
         logging.error(f"Error loading country variants file: {str(e)}")
         return {}
 
+def process_multiple_folders():
+    """
+    Process multiple input folders sequentially, each with a different document type,
+    and merge all document types into the same country folders in the final output.
+    """
+    print("\n" + "="*80)
+    print(" MULTI-FOLDER DOCUMENT PROCESSING ".center(80, "="))
+    print("="*80 + "\n")
+    
+    # Prompt for number of input folders
+    while True:
+        try:
+            num_folders = int(input("How many input folders do you want to process? "))
+            if num_folders > 0:
+                break
+            else:
+                print("Please enter a positive number.")
+        except ValueError:
+            print("Please enter a valid number.")
+    
+    # Collect folder information
+    input_folders = []
+    for i in range(num_folders):
+        print(f"\n{'-'*80}")
+        print(f" FOLDER {i+1} DETAILS ".center(80, "-"))
+        print(f"{'-'*80}")
+        
+        print(f"\nPlease enter the path to input folder #{i+1}:")
+        folder_path = input().strip().strip('"\'')
+        
+        if not os.path.isdir(folder_path):
+            print(f"Error: '{folder_path}' is not a valid directory. Please try again.")
+            i -= 1  # Retry this folder
+            continue
+            
+        print(f"What document type is in folder '{os.path.basename(folder_path)}'?")
+        print("Examples: icrr, aidememoire, pad, esrs, etc.")
+        doc_type = input("Enter document type: ").strip().lower()
+        
+        if not doc_type:
+            print("Warning: No document type entered. Will use folder name as document type.")
+            doc_type = os.path.basename(folder_path).lower()
+        
+        input_folders.append((folder_path, doc_type))
+    
+    # Prompt for output directory
+    print("\nPlease enter the path to the main output folder for all document types:")
+    main_output_dir = input().strip().strip('"\'')
+    os.makedirs(main_output_dir, exist_ok=True)
+    
+    # Optional: Ask for country mapping file (use for all folders)
+    country_mapping = None
+    print("\nDo you want to use a spreadsheet to map project IDs to countries for all folders? (y/n):")
+    if input().strip().lower() == 'y':
+        print("Please enter the path to the spreadsheet file (Excel or CSV):")
+        spreadsheet_path = input().strip().strip('"\'')
+        
+        if os.path.exists(spreadsheet_path):
+            country_mapping = load_project_country_mapping(spreadsheet_path)
+            if not country_mapping:
+                print("Warning: No valid project ID to country mappings found in the spreadsheet.")
+        else:
+            print(f"Warning: Spreadsheet file not found: {spreadsheet_path}")
+    
+    # Process each folder sequentially
+    all_temp_outputs = []
+    for i, (folder_path, doc_type) in enumerate(input_folders):
+        print(f"\n{'-'*80}")
+        print(f" PROCESSING FOLDER {i+1}/{len(input_folders)}: {os.path.basename(folder_path)} ".center(80, "-"))
+        print(f"{'-'*80}")
+        
+        # Create a temporary output folder for this document type
+        temp_output_dir = os.path.join(main_output_dir, f"temp_{doc_type}_{i}")
+        os.makedirs(temp_output_dir, exist_ok=True)
+        
+        # Process this folder using the existing function
+        print(f"\nProcessing '{doc_type}' documents from {folder_path}")
+        print(f"Temporary output directory: {temp_output_dir}")
+        
+        # Call the existing conversion function
+        try:
+            # Store original sys.argv and replace with our parameters for this run
+            original_argv = sys.argv.copy()
+            sys.argv = [sys.argv[0]]  # Keep just the script name
+            
+            # Set up global variables for this run
+            document_type = doc_type
+            
+            # Run the conversion process with our parameters
+            exit_code, output_dir = convert_folder_to_pdf(
+                rename_with_pid=True, 
+                country_mapping=country_mapping,
+                input_directory=folder_path,
+                output_directory=temp_output_dir,
+                doc_type=doc_type
+            )
+            
+            # Restore original sys.argv
+            sys.argv = original_argv
+            
+            if exit_code == 0 and output_dir:
+                all_temp_outputs.append((output_dir, doc_type))
+                print(f"\nSuccessfully processed '{doc_type}' documents from {folder_path}")
+            else:
+                print(f"\nError processing '{doc_type}' documents from {folder_path}")
+        
+        except Exception as e:
+            print(f"Error processing folder {folder_path}: {str(e)}")
+    
+    # Merge all processed outputs
+    if all_temp_outputs:
+        print(f"\n{'-'*80}")
+        print(" MERGING ALL DOCUMENT TYPES ".center(80, "-"))
+        print(f"{'-'*80}")
+        
+        merge_all_country_folders(all_temp_outputs, main_output_dir)
+        
+        print("\nAll document types have been processed and merged.")
+        print(f"Final output directory: {main_output_dir}")
+    else:
+        print("\nNo folders were successfully processed. No merging necessary.")
+    
+    return 0
+
+def merge_all_country_folders(processed_outputs, main_output_dir):
+    """
+    Merge all processed country folders into a single organized structure.
+    
+    Args:
+        processed_outputs: List of tuples (output_dir, doc_type) of processed folders
+        main_output_dir: Main output directory where the final merged structure will be created
+    """
+    # Create the three main category folders in the final output
+    final_country_folder = os.path.join(main_output_dir, "Country Associated Documents")
+    final_unknown_folder = os.path.join(main_output_dir, "Unknown Countries")
+    final_failed_folder = os.path.join(main_output_dir, "Failed Conversions and Renaming")
+    
+    os.makedirs(final_country_folder, exist_ok=True)
+    os.makedirs(final_unknown_folder, exist_ok=True)
+    os.makedirs(final_failed_folder, exist_ok=True)
+    
+    # Keep track of statistics
+    stats = {
+        "countries": set(),
+        "country_files": 0,
+        "unknown_files": 0,
+        "failed_files": 0,
+    }
+    
+    # Process each output directory
+    for output_dir, doc_type in processed_outputs:
+        # Check for the three category folders
+        country_src = os.path.join(output_dir, "Country Associated Documents")
+        unknown_src = os.path.join(output_dir, "Unknown Countries")
+        failed_src = os.path.join(output_dir, "Failed Conversions and Renaming")
+        
+        # 1. Process Country Associated Documents
+        if os.path.exists(country_src):
+            # Look for country subfolders
+            for country_folder in os.listdir(country_src):
+                country_path = os.path.join(country_src, country_folder)
+                if os.path.isdir(country_path):
+                    # This is a country folder - copy to final structure
+                    final_country_path = os.path.join(final_country_folder, country_folder)
+                    os.makedirs(final_country_path, exist_ok=True)
+                    stats["countries"].add(country_folder)
+                    
+                    # Copy all files from this country folder to the final country folder
+                    for file in os.listdir(country_path):
+                        if os.path.isfile(os.path.join(country_path, file)):
+                            src_file = os.path.join(country_path, file)
+                            dest_file = os.path.join(final_country_path, file)
+                            
+                            # Handle file conflicts by adding a suffix if needed
+                            if os.path.exists(dest_file):
+                                base, ext = os.path.splitext(file)
+                                counter = 1
+                                while True:
+                                    new_filename = f"{base}_{counter:02d}{ext}"
+                                    dest_file = os.path.join(final_country_path, new_filename)
+                                    if not os.path.exists(dest_file):
+                                        break
+                                    counter += 1
+                            
+                            # Copy the file
+                            shutil.copy2(src_file, dest_file)
+                            stats["country_files"] += 1
+                elif os.path.isfile(country_path):
+                    # This is a file at the root of the country folder (shouldn't happen normally)
+                    # Copy it to the final country folder for handling
+                    dest_file = os.path.join(final_country_folder, country_folder)
+                    shutil.copy2(country_path, dest_file)
+                    stats["country_files"] += 1
+        
+        # 2. Process Unknown Countries folder
+        if os.path.exists(unknown_src):
+            for file in os.listdir(unknown_src):
+                file_path = os.path.join(unknown_src, file)
+                if os.path.isfile(file_path):
+                    dest_file = os.path.join(final_unknown_folder, file)
+                    
+                    # Handle file conflicts
+                    if os.path.exists(dest_file):
+                        base, ext = os.path.splitext(file)
+                        counter = 1
+                        while True:
+                            new_filename = f"{base}_{counter:02d}{ext}"
+                            dest_file = os.path.join(final_unknown_folder, new_filename)
+                            if not os.path.exists(dest_file):
+                                break
+                            counter += 1
+                    
+                    shutil.copy2(file_path, dest_file)
+                    stats["unknown_files"] += 1
+        
+        # 3. Process Failed Conversions folder
+        if os.path.exists(failed_src):
+            for file in os.listdir(failed_src):
+                file_path = os.path.join(failed_src, file)
+                if os.path.isfile(file_path):
+                    dest_file = os.path.join(final_failed_folder, file)
+                    
+                    # Handle file conflicts
+                    if os.path.exists(dest_file):
+                        base, ext = os.path.splitext(file)
+                        counter = 1
+                        while True:
+                            new_filename = f"{base}_{counter:02d}{ext}"
+                            dest_file = os.path.join(final_failed_folder, new_filename)
+                            if not os.path.exists(dest_file):
+                                break
+                            counter += 1
+                    
+                    shutil.copy2(file_path, dest_file)
+                    stats["failed_files"] += 1
+    
+    # Print statistics
+    print("\nMerging complete. Final statistics:")
+    print(f"Total countries: {len(stats['countries'])}")
+    print(f"Total country-associated files: {stats['country_files']}")
+    print(f"Total unknown files: {stats['unknown_files']}")
+    print(f"Total failed files: {stats['failed_files']}")
+    
+    # Optionally, remove temp folders after successful merge
+    for output_dir, _ in processed_outputs:
+        if output_dir.startswith(main_output_dir) and "temp_" in output_dir:
+            try:
+                # Just print intention - uncomment to actually remove
+                print(f"Keeping temporary directory for reference: {output_dir}")
+                # shutil.rmtree(output_dir)
+            except Exception as e:
+                print(f"Error removing temp directory {output_dir}: {str(e)}")
+
 if __name__ == "__main__":
     args = parse_args()
     exit_code = 0
     output_dir = None  # Initialize output_dir variable
     
-    # Prompt for document type at the beginning
-    print("\n" + "-"*80)
-    print(" DOCUMENT TYPE ".center(80, "-"))
-    print("-"*80)
-    print("What type of documents are being processed?")
-    print("Examples: icrr, aidememoire, pad, esrs, etc.")
-    print("This will be added to the filenames for better tracking.")
-    document_type = input("Enter document type: ").strip().lower()
+    # Check if we should use multi-folder mode
+    print("\nDo you want to process multiple folders with different document types? (y/n):")
+    use_multi_mode = input().strip().lower() == 'y'
     
-    # Validate input
-    if not document_type:
-        print("No document type entered. Proceeding without adding document type to filenames.")
+    if use_multi_mode:
+        # Use the new multi-folder processing function
+        exit_code = process_multiple_folders()
     else:
-        print(f"Using '{document_type}' as the document type identifier.")
-    
-    if args.input and args.output:
-        # TODO: Add command-line mode implementation
-        output_dir = args.output  # Use output directory from command line arguments
-    else:
-        # Modify convert_folder_to_pdf to return both exit_code and output_dir
-        exit_code, output_dir = convert_folder_to_pdf(rename_with_pid=True, workers=args.workers)
-    
-    try:
-        import reorganize_output
-        if output_dir and os.path.exists(output_dir):
-            print("\nStarting file reorganization...")
-            # Pass document_type to reorganize_output_folder
-            reorganize_output.reorganize_output_folder(output_dir, document_type)
+        # Continue with the original single-folder flow
+        # Prompt for document type at the beginning
+        print("\n" + "-"*80)
+        print(" DOCUMENT TYPE ".center(80, "-"))
+        print("-"*80)
+        print("What type of documents are being processed?")
+        print("Examples: icrr, aidememoire, pad, esrs, etc.")
+        print("This will be added to the filenames for better tracking.")
+        document_type = input("Enter document type: ").strip().lower()
+        
+        # Validate input
+        if not document_type:
+            print("No document type entered. Proceeding without adding document type to filenames.")
         else:
-            print("\nSkipping reorganization - output directory not available")
-    except Exception as e:
-        print(f"Error during reorganization: {str(e)}")
+            print(f"Using '{document_type}' as the document type identifier.")
+        
+        if args.input and args.output:
+            # TODO: Add command-line mode implementation
+            output_dir = args.output  # Use output directory from command line arguments
+        else:
+            # Modify convert_folder_to_pdf to return both exit_code and output_dir
+            exit_code, output_dir = convert_folder_to_pdf(rename_with_pid=True, workers=args.workers)
+        
+        try:
+            import reorganize_output
+            if output_dir and os.path.exists(output_dir):
+                print("\nStarting file reorganization...")
+                # Pass document_type to reorganize_output_folder
+                reorganize_output.reorganize_output_folder(output_dir, document_type)
+            else:
+                print("\nSkipping reorganization - output directory not available")
+        except Exception as e:
+            print(f"Error during reorganization: {str(e)}")
     
     sys.exit(exit_code) 
