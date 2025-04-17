@@ -23621,3 +23621,2166 @@
 2025-04-14 10:37:02,731 - INFO - Added document type to filename: P507190_Barbados_EN_escp_01.pdf
 2025-04-14 10:37:02,738 - INFO - Added document type to filename: P507190_Barbados_EN_escp_02.pdf
 2025-04-14 10:37:02,744 - INFO - Added document type to filename: P507316_St._Vincent_and_the_Grenadines_EN_escp.pdf
+2025-04-14 11:38:52,469 - INFO - Found project ID: P170688, corrected to: P170688
+2025-04-14 11:38:54,304 - INFO - Found country 'Bangladesh' for project ID: P170688
+2025-04-14 11:38:54,323 - INFO - Renamed to: P170688_Bangladesh_EN.pdf
+2025-04-14 11:39:01,544 - INFO - Found project ID: P118023, corrected to: P118023
+2025-04-14 11:39:01,979 - INFO - Renamed to: P118023_EN.pdf
+2025-04-14 11:39:02,256 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_aidememoire_0\090224b08842808f.pdf
+2025-04-14 11:39:02,506 - INFO - Found country: Afghanistan (standard: Afghanistan) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_aidememoire_0\090224b08842808f.pdf
+2025-04-14 11:39:02,512 - INFO - Copied with country match: COUNTRY_Afghanistan_EN.pdf
+2025-04-14 11:39:06,624 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_aidememoire_0\090224b08872d317.pdf
+2025-04-14 11:39:07,640 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_aidememoire_0\090224b087f5af73.pdf
+2025-04-14 11:39:08,423 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_aidememoire_0\090224b088490aa2.pdf
+2025-04-14 11:39:08,731 - INFO - Found country: Albania (standard: Albania) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_aidememoire_0\090224b087f5af73.pdf
+2025-04-14 11:39:08,745 - INFO - Copied with country match: COUNTRY_Albania_EN.pdf
+2025-04-14 11:39:09,057 - INFO - Found country: us (standard: United States) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_aidememoire_0\090224b08872d317.pdf
+2025-04-14 11:39:09,250 - INFO - Copied with country match: COUNTRY_United States_NON.pdf
+2025-04-14 11:39:09,445 - INFO - Found country: Afghanistan (standard: Afghanistan) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_aidememoire_0\090224b088490aa2.pdf
+2025-04-14 11:39:09,451 - INFO - Copied with country match: COUNTRY_Afghanistan_EN_01.pdf
+2025-04-14 11:39:11,918 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_aidememoire_0\090224b088114729.pdf
+2025-04-14 11:39:12,253 - INFO - Found country: Argentina (standard: Argentina) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_aidememoire_0\090224b088114729.pdf
+2025-04-14 11:39:12,259 - INFO - Copied with country match: COUNTRY_Argentina_NON.pdf
+2025-04-14 11:39:14,054 - INFO - Found project ID: P171250, corrected to: P171250
+2025-04-14 11:39:14,122 - INFO - Found project ID: P172109, corrected to: P172109
+2025-04-14 11:39:14,323 - INFO - Found country 'Azerbaijan' for project ID: P171250
+2025-04-14 11:39:14,333 - INFO - Renamed to: P171250_Azerbaijan_EN.pdf
+2025-04-14 11:39:14,412 - INFO - Found country 'Afghanistan' for project ID: P172109
+2025-04-14 11:39:14,416 - INFO - Renamed to: P172109_Afghanistan_EN.pdf
+2025-04-14 11:39:20,157 - INFO - Found project ID: P149913, corrected to: P149913
+2025-04-14 11:39:20,295 - INFO - Renamed to: P149913_EN.pdf
+2025-04-14 11:39:39,351 - INFO - Found project ID: P163310, corrected to: P163310
+2025-04-14 11:39:39,540 - INFO - Renamed to: P163310_NON.pdf
+2025-04-14 11:39:40,129 - INFO - Found project ID: P154577, corrected to: P154577
+2025-04-14 11:39:40,280 - INFO - Renamed to: P154577_EN.pdf
+2025-04-14 11:39:43,682 - INFO - Found project ID: P169140, corrected to: P169140
+2025-04-14 11:39:43,834 - INFO - Found country 'Brazil' for project ID: P169140
+2025-04-14 11:39:43,838 - INFO - Renamed to: P169140_Brazil_NON.pdf
+2025-04-14 11:39:46,421 - INFO - Found project ID: P169134, corrected to: P169134
+2025-04-14 11:39:46,515 - INFO - Found country 'Brazil' for project ID: P169134
+2025-04-14 11:39:46,519 - INFO - Renamed to: P169134_Brazil_NON.pdf
+2025-04-14 11:39:53,825 - INFO - Found country 'Bangladesh' for project ID: P169342
+2025-04-14 11:39:53,829 - INFO - Renamed to: P169342_Bangladesh_EN.pdf
+2025-04-14 11:39:54,608 - INFO - Found project ID: P163310, corrected to: P163310
+2025-04-14 11:39:54,934 - INFO - Renamed to: P163310_NON_01.pdf
+2025-04-14 11:39:54,999 - INFO - Found project ID: P169140, corrected to: P169140
+2025-04-14 11:39:55,154 - INFO - Found country 'Brazil' for project ID: P169140
+2025-04-14 11:39:55,161 - INFO - Renamed to: P169140_Brazil_NON_01.pdf
+2025-04-14 11:39:57,301 - INFO - Found project ID: P163310, corrected to: P163310
+2025-04-14 11:39:57,479 - INFO - Renamed to: P163310_NON_02.pdf
+2025-04-14 11:40:03,827 - INFO - Found project ID: P169779, corrected to: P169779
+2025-04-14 11:40:03,971 - INFO - Found country 'Angola' for project ID: P169779
+2025-04-14 11:40:03,975 - INFO - Renamed to: P169779_Angola_NON.pdf
+2025-04-14 11:40:04,712 - INFO - Found project ID: P169880, corrected to: P169880
+2025-04-14 11:40:04,861 - INFO - Found country 'Bangladesh' for project ID: P169880
+2025-04-14 11:40:04,865 - INFO - Renamed to: P169880_Bangladesh_EN.pdf
+2025-04-14 11:40:24,806 - INFO - Found country 'Bangladesh' for project ID: P169880
+2025-04-14 11:40:24,810 - INFO - Renamed to: P169880_Bangladesh_EN_01.pdf
+2025-04-14 11:40:25,784 - INFO - Found project ID: P170688, corrected to: P170688
+2025-04-14 11:40:26,013 - INFO - Found country 'Bangladesh' for project ID: P170688
+2025-04-14 11:40:26,028 - INFO - Found project ID: P170688, corrected to: P170688
+2025-04-14 11:40:26,035 - INFO - Renamed to: P170688_Bangladesh_EN_01.pdf
+2025-04-14 11:40:26,333 - INFO - Found country 'Bangladesh' for project ID: P170688
+2025-04-14 11:40:26,338 - INFO - Renamed to: P170688_Bangladesh_EN_02.pdf
+2025-04-14 11:40:34,452 - INFO - Found project ID: P169880, corrected to: P169880
+2025-04-14 11:40:34,601 - INFO - Found country 'Bangladesh' for project ID: P169880
+2025-04-14 11:40:34,606 - INFO - Renamed to: P169880_Bangladesh_EN_02.pdf
+2025-04-14 11:40:35,085 - INFO - Found project ID: P170688, corrected to: P170688
+2025-04-14 11:40:35,363 - INFO - Found country 'Bangladesh' for project ID: P170688
+2025-04-14 11:40:35,370 - INFO - Renamed to: P170688_Bangladesh_EN_03.pdf
+2025-04-14 11:40:36,208 - INFO - Found project ID: P169880, corrected to: P169880
+2025-04-14 11:40:36,328 - INFO - Found country 'Bangladesh' for project ID: P169880
+2025-04-14 11:40:36,332 - INFO - Renamed to: P169880_Bangladesh_EN_03.pdf
+2025-04-14 11:40:40,515 - INFO - Found project ID: P170850, corrected to: P170850
+2025-04-14 11:40:40,768 - INFO - Found country 'Brazil' for project ID: P170850
+2025-04-14 11:40:40,773 - INFO - Renamed to: P170850_Brazil_NON.pdf
+2025-04-14 11:40:43,307 - INFO - Found country 'Albania' for project ID: P171066
+2025-04-14 11:40:43,310 - INFO - Renamed to: P171066_Albania_EN.pdf
+2025-04-14 11:40:50,099 - INFO - Found country 'Bosnia_and_Herzegovina' for project ID: P171150
+2025-04-14 11:40:50,119 - INFO - Renamed to: P171150_Bosnia_and_Herzegovina_EN.pdf
+2025-04-14 11:40:50,297 - INFO - Found country 'Bosnia_and_Herzegovina' for project ID: P171150
+2025-04-14 11:40:50,301 - INFO - Renamed to: P171150_Bosnia_and_Herzegovina_EN_01.pdf
+2025-04-14 11:41:06,794 - INFO - Found country 'Bosnia_and_Herzegovina' for project ID: P171266
+2025-04-14 11:41:06,798 - INFO - Renamed to: P171266_Bosnia_and_Herzegovina_EN.pdf
+2025-04-14 11:41:10,324 - INFO - Found country 'Bosnia_and_Herzegovina' for project ID: P171150
+2025-04-14 11:41:10,328 - INFO - Renamed to: P171150_Bosnia_and_Herzegovina_EN_02.pdf
+2025-04-14 11:41:11,995 - INFO - Found project ID: P173019, corrected to: P173019
+2025-04-14 11:41:12,112 - INFO - Found country 'Bangladesh' for project ID: P173019
+2025-04-14 11:41:12,116 - INFO - Renamed to: P173019_Bangladesh_EN.pdf
+2025-04-14 11:41:13,820 - INFO - Found project ID: P171250, corrected to: P171250
+2025-04-14 11:41:13,919 - INFO - Found country 'Azerbaijan' for project ID: P171250
+2025-04-14 11:41:13,925 - INFO - Renamed to: P171250_Azerbaijan_EN_01.pdf
+2025-04-14 11:41:16,508 - INFO - Found project ID: P172817, corrected to: P172817
+2025-04-14 11:41:16,630 - INFO - Found country 'Bangladesh' for project ID: P172817
+2025-04-14 11:41:16,634 - INFO - Renamed to: P172817_Bangladesh_EN.pdf
+2025-04-14 11:41:21,423 - INFO - Found project ID: P172817, corrected to: P172817
+2025-04-14 11:41:21,556 - INFO - Found country 'Bangladesh' for project ID: P172817
+2025-04-14 11:41:21,560 - INFO - Renamed to: P172817_Bangladesh_EN_01.pdf
+2025-04-14 11:41:23,107 - INFO - Found project ID: P173839, corrected to: P173839
+2025-04-14 11:41:23,186 - INFO - Found country 'Benin' for project ID: P173839
+2025-04-14 11:41:23,190 - INFO - Renamed to: P173839_Benin_EN.pdf
+2025-04-14 11:41:30,835 - INFO - Found country 'Bangladesh' for project ID: P174085
+2025-04-14 11:41:30,854 - INFO - Renamed to: P174085_Bangladesh_EN.pdf
+2025-04-14 11:41:30,860 - INFO - Found country 'Bosnia_and_Herzegovina' for project ID: P173809
+2025-04-14 11:41:30,864 - INFO - Renamed to: P173809_Bosnia_and_Herzegovina_EN.pdf
+2025-04-14 11:41:35,389 - INFO - Found country 'Albania' for project ID: P174101
+2025-04-14 11:41:35,392 - INFO - Renamed to: P174101_Albania_EN.pdf
+2025-04-14 11:41:50,932 - INFO - Found country 'Benin' for project ID: P174186
+2025-04-14 11:41:50,936 - INFO - Renamed to: P174186_Benin_NON.pdf
+2025-04-14 11:41:53,380 - INFO - Found project ID: P174379, corrected to: P174379
+2025-04-14 11:41:53,505 - INFO - Found country 'Azerbaijan' for project ID: P174379
+2025-04-14 11:41:53,510 - INFO - Renamed to: P174379_Azerbaijan_EN.pdf
+2025-04-14 11:41:58,578 - INFO - Found project ID: P174379, corrected to: P174379
+2025-04-14 11:41:58,666 - INFO - Found country 'Azerbaijan' for project ID: P174379
+2025-04-14 11:41:58,669 - INFO - Renamed to: P174379_Azerbaijan_EN_01.pdf
+2025-04-14 11:41:59,784 - INFO - Found project ID: P174379, corrected to: P174379
+2025-04-14 11:42:00,008 - INFO - Found country 'Azerbaijan' for project ID: P174379
+2025-04-14 11:42:00,019 - INFO - Renamed to: P174379_Azerbaijan_EN_02.pdf
+2025-04-14 11:42:00,140 - INFO - Found project ID: P175081, corrected to: P175081
+2025-04-14 11:42:00,294 - INFO - Found country 'Bhutan' for project ID: P175081
+2025-04-14 11:42:00,298 - INFO - Renamed to: P175081_Bhutan_EN.pdf
+2025-04-14 11:42:09,295 - INFO - Found country 'Bosnia_and_Herzegovina' for project ID: P174604
+2025-04-14 11:42:09,305 - INFO - Renamed to: P174604_Bosnia_and_Herzegovina_EN.pdf
+2025-04-14 11:42:15,612 - INFO - Found project ID: P175143, corrected to: P175143
+2025-04-14 11:42:15,774 - INFO - Found country 'Argentina' for project ID: P175143
+2025-04-14 11:42:15,777 - INFO - Renamed to: P175143_Argentina_NON.pdf
+2025-04-14 11:42:16,931 - INFO - Found country 'Bosnia_and_Herzegovina' for project ID: P174604
+2025-04-14 11:42:16,935 - INFO - Renamed to: P174604_Bosnia_and_Herzegovina_EN_01.pdf
+2025-04-14 11:42:17,151 - INFO - Found project ID: P176040, corrected to: P176040
+2025-04-14 11:42:17,510 - INFO - Found project ID: P154477, corrected to: P154477
+2025-04-14 11:42:17,613 - INFO - Found country 'Bosnia_and_Herzegovina' for project ID: P176040
+2025-04-14 11:42:17,618 - INFO - Renamed to: P176040_Bosnia_and_Herzegovina_EN.pdf
+2025-04-14 11:42:17,737 - INFO - Renamed to: P154477_EN.pdf
+2025-04-14 11:42:33,257 - INFO - Found project ID: P176084, corrected to: P176084
+2025-04-14 11:42:33,349 - INFO - Found country 'Albania' for project ID: P176084
+2025-04-14 11:42:33,352 - INFO - Renamed to: P176084_Albania_EN.pdf
+2025-04-14 11:42:36,999 - INFO - Found country 'Argentina' for project ID: P176781
+2025-04-14 11:42:37,002 - INFO - Renamed to: P176781_Argentina_NON.pdf
+2025-04-14 11:42:37,839 - INFO - Found project ID: P176084, corrected to: P176084
+2025-04-14 11:42:37,930 - INFO - Found country 'Albania' for project ID: P176084
+2025-04-14 11:42:37,933 - INFO - Renamed to: P176084_Albania_EN_01.pdf
+2025-04-14 11:42:40,394 - INFO - Found project ID: P160948, corrected to: P160948
+2025-04-14 11:42:40,678 - INFO - Renamed to: P160948_NON.pdf
+2025-04-14 11:42:44,432 - INFO - Found project ID: P176084, corrected to: P176084
+2025-04-14 11:42:44,525 - INFO - Found country 'Albania' for project ID: P176084
+2025-04-14 11:42:44,529 - INFO - Renamed to: P176084_Albania_EN_02.pdf
+2025-04-14 11:42:50,808 - INFO - Found country 'Argentina' for project ID: P176781
+2025-04-14 11:42:50,812 - INFO - Renamed to: P176781_Argentina_NON_01.pdf
+2025-04-14 11:42:53,367 - INFO - Found country 'Bosnia_and_Herzegovina' for project ID: P176895
+2025-04-14 11:42:53,372 - INFO - Renamed to: P176895_Bosnia_and_Herzegovina_EN.pdf
+2025-04-14 11:42:55,272 - INFO - Found country 'Bosnia_and_Herzegovina' for project ID: P176895
+2025-04-14 11:42:55,276 - INFO - Renamed to: P176895_Bosnia_and_Herzegovina_EN_01.pdf
+2025-04-14 11:42:57,780 - INFO - Found project ID: P176803, corrected to: P176803
+2025-04-14 11:42:57,995 - INFO - Found country 'Armenia' for project ID: P176803
+2025-04-14 11:42:57,998 - INFO - Renamed to: P176803_Armenia_EN.pdf
+2025-04-14 11:43:02,660 - INFO - Found project ID: P177004, corrected to: P177004
+2025-04-14 11:43:02,777 - INFO - Found country 'Angola' for project ID: P177004
+2025-04-14 11:43:02,780 - INFO - Renamed to: P177004_Angola_NON.pdf
+2025-04-14 11:43:21,489 - INFO - Found project ID: P177004, corrected to: P177004
+2025-04-14 11:43:21,718 - INFO - Found country 'Angola' for project ID: P177004
+2025-04-14 11:43:21,721 - INFO - Renamed to: P177004_Angola_NON_01.pdf
+2025-04-14 11:43:24,168 - INFO - Found country 'Angola' for project ID: P177305
+2025-04-14 11:43:24,186 - INFO - Renamed to: P177305_Angola_NON.pdf
+2025-04-14 11:43:27,972 - INFO - Found project ID: P177004, corrected to: P177004
+2025-04-14 11:43:28,118 - INFO - Found country 'Angola' for project ID: P177004
+2025-04-14 11:43:28,135 - INFO - Renamed to: P177004_Angola_NON_02.pdf
+2025-04-14 11:43:32,112 - INFO - Found project ID: P177004, corrected to: P177004
+2025-04-14 11:43:32,259 - INFO - Found country 'Azerbaijan' for project ID: P178125
+2025-04-14 11:43:32,269 - INFO - Renamed to: P178125_Azerbaijan_EN.pdf
+2025-04-14 11:43:32,361 - INFO - Found country 'Angola' for project ID: P177004
+2025-04-14 11:43:32,365 - INFO - Renamed to: P177004_Angola_NON_03.pdf
+2025-04-14 11:43:34,511 - INFO - Found project ID: P177987, corrected to: P177987
+2025-04-14 11:43:34,618 - INFO - Found country 'Belize' for project ID: P177987
+2025-04-14 11:43:34,621 - INFO - Renamed to: P177987_Belize_EN.pdf
+2025-04-14 11:43:39,537 - INFO - Found country 'Bangladesh' for project ID: P178133
+2025-04-14 11:43:39,541 - INFO - Renamed to: P178133_Bangladesh_EN.pdf
+2025-04-14 11:43:45,914 - INFO - Found project ID: P178124, corrected to: P178124
+2025-04-14 11:43:46,027 - INFO - Found project ID: P178280, corrected to: P178280
+2025-04-14 11:43:46,246 - INFO - Renamed to: P178124_EN.pdf
+2025-04-14 11:43:46,339 - INFO - Found country 'Afghanistan' for project ID: P178280
+2025-04-14 11:43:46,342 - INFO - Renamed to: P178280_Afghanistan_EN.pdf
+2025-04-14 11:43:50,732 - INFO - Found country 'Bosnia_and_Herzegovina' for project ID: P178455
+2025-04-14 11:43:50,736 - INFO - Renamed to: P178455_Bosnia_and_Herzegovina_EN.pdf
+2025-04-14 11:44:08,553 - INFO - Found project ID: P178715, corrected to: P178715
+2025-04-14 11:44:08,746 - INFO - Found country 'Argentina' for project ID: P178553
+2025-04-14 11:44:08,766 - INFO - Renamed to: P178553_Argentina_NON.pdf
+2025-04-14 11:44:08,796 - INFO - Found country 'Albania' for project ID: P178715
+2025-04-14 11:44:08,804 - INFO - Renamed to: P178715_Albania_EN.pdf
+2025-04-14 11:44:11,669 - INFO - Found project ID: P178760, corrected to: P178760
+2025-04-14 11:44:11,812 - INFO - Found country 'Afghanistan' for project ID: P178760
+2025-04-14 11:44:11,816 - INFO - Renamed to: P178760_Afghanistan_EN.pdf
+2025-04-14 11:44:17,001 - INFO - Found country 'Bolivia' for project ID: P178861
+2025-04-14 11:44:17,005 - INFO - Renamed to: P178861_Bolivia_NON.pdf
+2025-04-14 11:44:18,082 - INFO - Found project ID: P178715, corrected to: P178715
+2025-04-14 11:44:18,250 - INFO - Found country 'Albania' for project ID: P178715
+2025-04-14 11:44:18,259 - INFO - Renamed to: P178715_Albania_EN_01.pdf
+2025-04-14 11:44:23,103 - INFO - Found country 'Argentina' for project ID: P178609
+2025-04-14 11:44:23,106 - INFO - Renamed to: P178609_Argentina_NON.pdf
+2025-04-14 11:44:23,404 - INFO - Found project ID: P178758, corrected to: P178758
+2025-04-14 11:44:23,616 - INFO - Found country 'Afghanistan' for project ID: P178758
+2025-04-14 11:44:23,621 - INFO - Renamed to: P178758_Afghanistan_EN.pdf
+2025-04-14 11:44:29,690 - INFO - Found project ID: P178715, corrected to: P178715
+2025-04-14 11:44:29,799 - INFO - Found country 'Albania' for project ID: P178715
+2025-04-14 11:44:29,803 - INFO - Renamed to: P178715_Albania_EN_02.pdf
+2025-04-14 11:44:31,330 - INFO - Found country 'Afghanistan' for project ID: P178933
+2025-04-14 11:44:31,334 - INFO - Renamed to: P178933_Afghanistan_EN.pdf
+2025-04-14 11:44:33,499 - INFO - Found project ID: P179311, corrected to: P179311
+2025-04-14 11:44:33,693 - INFO - Found country 'Afghanistan' for project ID: P179311
+2025-04-14 11:44:33,697 - INFO - Renamed to: P179311_Afghanistan_EN.pdf
+2025-04-14 11:44:51,928 - INFO - Found project ID: P179311, corrected to: P179311
+2025-04-14 11:44:52,033 - INFO - Found country 'Afghanistan' for project ID: P179311
+2025-04-14 11:44:52,036 - INFO - Renamed to: P179311_Afghanistan_EN_01.pdf
+2025-04-14 11:44:53,461 - INFO - Found project ID: P180027, corrected to: P180027
+2025-04-14 11:44:53,591 - INFO - Found country 'Bolivia' for project ID: P180027
+2025-04-14 11:44:53,594 - INFO - Renamed to: P180027_Bolivia_NON.pdf
+2025-04-14 11:44:54,133 - INFO - Found project ID: P159929, corrected to: P159929
+2025-04-14 11:44:54,288 - INFO - Renamed to: P159929_NON.pdf
+2025-04-14 11:44:55,807 - INFO - Found project ID: P105101, corrected to: P105101
+2025-04-14 11:44:56,040 - INFO - Copied with project ID: P105101_NON.pdf
+2025-04-14 11:44:56,178 - INFO - Found project ID: P169779, corrected to: P169779
+2025-04-14 11:44:56,311 - INFO - Copied with project ID: P169779_Angola_NON_01.pdf
+2025-04-14 11:44:56,341 - INFO - Document appears to be scanned or image-based: C:\Users\wb613298\OneDrive - WBG\Desktop\aidememoire_pt\090224b0880ca58f.pdf
+2025-04-14 11:44:56,348 - INFO - Copied as OCR document: SCAN_OCR_DOCUMENT.pdf
+2025-04-14 11:44:57,693 - INFO - Found country: Bangladesh (standard: Bangladesh) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\aidememoire_pt\090224b08823e663.pdf
+2025-04-14 11:44:57,911 - INFO - Copied with country match: COUNTRY_Bangladesh_EN.pdf
+2025-04-14 11:44:58,017 - INFO - Found project ID: P169134, corrected to: P169134
+2025-04-14 11:44:58,123 - INFO - Copied with project ID: P169134_Brazil_NON_01.pdf
+2025-04-14 11:44:58,221 - INFO - Found project ID: P152347, corrected to: P152347
+2025-04-14 11:44:58,311 - INFO - Copied with project ID: P152347_EN.pdf
+2025-04-14 11:44:58,463 - INFO - Found project ID: P169140, corrected to: P169140
+2025-04-14 11:44:58,526 - INFO - Copied with project ID: P169140_Brazil_NON_02.pdf
+2025-04-14 11:44:58,814 - INFO - Found country: Bolivia (standard: Bolivia) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\aidememoire_pt\090224b088508c57.pdf
+2025-04-14 11:44:58,872 - INFO - Copied with country match: COUNTRY_Bolivia_NON.pdf
+2025-04-14 11:44:59,247 - INFO - Found project ID: P169272, corrected to: P169272
+2025-04-14 11:44:59,536 - INFO - Copied with project ID: P169272_Brazil_NON.pdf
+2025-04-14 11:44:59,877 - INFO - Found project ID: P170682, corrected to: P170682
+2025-04-14 11:45:00,211 - INFO - Copied with project ID: P170682_Brazil_NON.pdf
+2025-04-14 11:45:05,886 - INFO - Copied as unknown document: UNKNOWN_NON.pdf
+2025-04-14 11:45:05,969 - INFO - Found project ID: P170425, corrected to: P170425
+2025-04-14 11:45:06,048 - INFO - Copied with project ID: P170425_Benin_NON.pdf
+2025-04-14 11:45:06,450 - INFO - Found country: Bosnia and Herzegovina (standard: Bosnia and Herzegovina) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\aidememoire_pt\090224b0889c0ca7.pdf
+2025-04-14 11:45:06,537 - INFO - Copied with country match: COUNTRY_Bosnia and Herzegovina_EN.pdf
+2025-04-14 11:45:06,664 - INFO - Document appears to be scanned or image-based: C:\Users\wb613298\OneDrive - WBG\Desktop\aidememoire_pt\090224b088a31198.pdf
+2025-04-14 11:45:06,673 - INFO - Copied as OCR document: SCAN_OCR_DOCUMENT_01.pdf
+2025-04-14 11:45:06,986 - INFO - Found project ID: P169134, corrected to: P169134
+2025-04-14 11:45:07,301 - INFO - Copied with project ID: P169134_Brazil_NON_02.pdf
+2025-04-14 11:45:08,133 - INFO - Found country: Bangladesh (standard: Bangladesh) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\aidememoire_pt\090224b088a4d434.pdf
+2025-04-14 11:45:08,331 - INFO - Copied with country match: COUNTRY_Bangladesh_EN_01.pdf
+2025-04-14 11:45:09,634 - INFO - Found country: Ghana (standard: Ghana) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\aidememoire_pt\090224b088a58168.pdf
+2025-04-14 11:45:09,751 - INFO - Copied with country match: COUNTRY_Ghana_NON.pdf
+2025-04-14 11:45:09,890 - INFO - Found project ID: P105101, corrected to: P105101
+2025-04-14 11:45:10,109 - INFO - Copied with project ID: P105101_NON_01.pdf
+2025-04-14 11:45:10,242 - INFO - Found project ID: P178985, corrected to: P178985
+2025-04-14 11:45:10,373 - INFO - Copied with project ID: P178985_Bangladesh_EN.pdf
+2025-04-14 11:45:10,739 - INFO - Found project ID: P159929, corrected to: P159929
+2025-04-14 11:45:11,189 - INFO - Copied with project ID: P159929_NON_01.pdf
+2025-04-14 11:45:11,324 - INFO - Found project ID: P160948, corrected to: P160948
+2025-04-14 11:45:11,458 - INFO - Copied with project ID: P160948_NON_01.pdf
+2025-04-14 11:45:11,602 - INFO - Found project ID: P160948, corrected to: P160948
+2025-04-14 11:45:11,842 - INFO - Copied with project ID: P160948_NON_02.pdf
+2025-04-14 11:45:11,981 - INFO - Found project ID: P160948, corrected to: P160948
+2025-04-14 11:45:12,117 - INFO - Copied with project ID: P160948_NON_03.pdf
+2025-04-14 11:45:12,303 - INFO - Found project ID: P163310, corrected to: P163310
+2025-04-14 11:45:12,552 - INFO - Copied with project ID: P163310_NON_03.pdf
+2025-04-14 11:45:12,648 - INFO - Found project ID: P166805, corrected to: P166805
+2025-04-14 11:45:12,741 - INFO - Copied with project ID: P166805_Angola_NON.pdf
+2025-04-14 11:45:12,846 - INFO - Found project ID: P166805, corrected to: P166805
+2025-04-14 11:45:12,957 - INFO - Copied with project ID: P166805_Angola_NON_01.pdf
+2025-04-14 11:45:13,072 - INFO - Found project ID: P166805, corrected to: P166805
+2025-04-14 11:45:13,188 - INFO - Copied with project ID: P166805_Angola_EN.pdf
+2025-04-14 11:45:13,449 - INFO - Found project ID: P167506, corrected to: P167506
+2025-04-14 11:45:13,618 - INFO - Copied with project ID: P167506_Bangladesh_EN.pdf
+2025-04-14 11:45:13,776 - INFO - Found project ID: P167506, corrected to: P167506
+2025-04-14 11:45:14,015 - INFO - Copied with project ID: P167506_Bangladesh_EN_01.pdf
+2025-04-14 11:45:14,998 - INFO - Copied with project ID: P168132_Benin_NON.pdf
+2025-04-14 11:45:15,999 - INFO - Copied with project ID: P168132_Benin_NON_01.pdf
+2025-04-14 11:45:16,027 - INFO - Document appears to be scanned or image-based: C:\Users\wb613298\OneDrive - WBG\Desktop\aidememoire_pt\P168699-0dd562d4-26ab-4462-9573-e0d116425254.pdf
+2025-04-14 11:45:16,032 - INFO - Copied with project ID: P168699_Angola_OCR.pdf
+2025-04-14 11:45:16,198 - INFO - Found project ID: P168699, corrected to: P168699
+2025-04-14 11:45:16,363 - INFO - Copied with project ID: P168699_Angola_NON.pdf
+2025-04-14 11:45:16,555 - INFO - Found project ID: P168699, corrected to: P168699
+2025-04-14 11:45:16,653 - INFO - Copied with project ID: P168699_Angola_NON_01.pdf
+2025-04-14 11:45:17,560 - INFO - Copied with project ID: P168943_Bosnia_and_Herzegovina_EN.pdf
+2025-04-14 11:45:18,458 - INFO - Copied with project ID: P168943_Bosnia_and_Herzegovina_EN_01.pdf
+2025-04-14 11:45:18,574 - INFO - Found project ID: P168961, corrected to: P168961
+2025-04-14 11:45:18,782 - INFO - Copied with project ID: P168961_Bangladesh_EN.pdf
+2025-04-14 11:45:18,872 - INFO - Found project ID: P169134, corrected to: P169134
+2025-04-14 11:45:18,943 - INFO - Copied with project ID: P169134_Brazil_NON_03.pdf
+2025-04-14 11:45:19,266 - INFO - Found project ID: P169134, corrected to: P169134
+2025-04-14 11:45:19,583 - INFO - Copied with project ID: P169134_Brazil_NON_04.pdf
+2025-04-14 11:45:19,889 - INFO - Found project ID: P169134, corrected to: P169134
+2025-04-14 11:45:20,187 - INFO - Copied with project ID: P169134_Brazil_NON_05.pdf
+2025-04-14 11:45:20,548 - INFO - Found project ID: P169134, corrected to: P169134
+2025-04-14 11:45:21,011 - INFO - Copied with project ID: P169134_Brazil_NON_06.pdf
+2025-04-14 11:45:23,202 - INFO - Copied with project ID: P169140_Brazil_NON_03.pdf
+2025-04-14 11:45:23,288 - INFO - Found project ID: P169140, corrected to: P169140
+2025-04-14 11:45:23,371 - INFO - Copied with project ID: P169140_Brazil_NON_04.pdf
+2025-04-14 11:45:24,175 - INFO - Copied with project ID: P169342_Bangladesh_EN_01.pdf
+2025-04-14 11:45:24,816 - INFO - Copied with project ID: P169342_Bangladesh_EN_02.pdf
+2025-04-14 11:45:25,341 - INFO - Copied with project ID: P169342_Bangladesh_EN_03.pdf
+2025-04-14 11:45:25,473 - INFO - Found project ID: P181495, corrected to: P181495
+2025-04-14 11:45:25,605 - INFO - Copied with project ID: P181495_Angola_NON.pdf
+2025-04-14 11:45:26,050 - INFO - Found project ID: P170329, corrected to: P170329
+2025-04-14 11:45:26,419 - INFO - Copied with project ID: P170329_Argentina_NON.pdf
+2025-04-14 11:45:28,382 - INFO - Copied with project ID: P170329_Argentina_NON_01.pdf
+2025-04-14 11:45:28,471 - INFO - Found project ID: P170425, corrected to: P170425
+2025-04-14 11:45:28,644 - INFO - Copied with project ID: P170425_Benin_NON_01.pdf
+2025-04-14 11:45:28,738 - INFO - Found project ID: P170425, corrected to: P170425
+2025-04-14 11:45:28,829 - INFO - Copied with project ID: P170425_Benin_NON_02.pdf
+2025-04-14 11:45:28,925 - INFO - Found project ID: P170425, corrected to: P170425
+2025-04-14 11:45:29,018 - INFO - Copied with project ID: P170425_Benin_NON_03.pdf
+2025-04-14 11:45:29,142 - INFO - Found project ID: P170425, corrected to: P170425
+2025-04-14 11:45:29,266 - INFO - Copied with project ID: P170425_Benin_NON_04.pdf
+2025-04-14 11:45:29,382 - INFO - Found project ID: P170682, corrected to: P170682
+2025-04-14 11:45:29,586 - INFO - Copied with project ID: P170682_Brazil_NON_01.pdf
+2025-04-14 11:45:29,690 - INFO - Found project ID: P170682, corrected to: P170682
+2025-04-14 11:45:29,796 - INFO - Copied with project ID: P170682_Brazil_NON_02.pdf
+2025-04-14 11:45:29,922 - INFO - Found project ID: P170688, corrected to: P170688
+2025-04-14 11:45:30,047 - INFO - Copied with project ID: P170688_Bangladesh_EN_04.pdf
+2025-04-14 11:45:31,311 - INFO - Copied with project ID: P171266_Bosnia_and_Herzegovina_EN_01.pdf
+2025-04-14 11:45:31,417 - INFO - Found project ID: P171266, corrected to: P171266
+2025-04-14 11:45:31,522 - INFO - Copied with project ID: P171266_Bosnia_and_Herzegovina_EN_02.pdf
+2025-04-14 11:45:32,081 - INFO - Copied with project ID: P171433_Bosnia_and_Herzegovina_EN.pdf
+2025-04-14 11:45:32,179 - INFO - Found project ID: P171433, corrected to: P171433
+2025-04-14 11:45:32,276 - INFO - Copied with project ID: P171433_Bosnia_and_Herzegovina_EN_01.pdf
+2025-04-14 11:45:32,358 - INFO - Found project ID: P171433, corrected to: P171433
+2025-04-14 11:45:32,437 - INFO - Copied with project ID: P171433_Bosnia_and_Herzegovina_EN_02.pdf
+2025-04-14 11:45:32,751 - INFO - Found project ID: P171433, corrected to: P171433
+2025-04-14 11:45:32,865 - INFO - Copied with project ID: P171433_Bosnia_and_Herzegovina_EN_03.pdf
+2025-04-14 11:45:33,929 - INFO - Copied with project ID: P171648_Bangladesh_EN.pdf
+2025-04-14 11:45:34,015 - INFO - Found project ID: P172247, corrected to: P172247
+2025-04-14 11:45:34,186 - INFO - Copied with project ID: P172247_Benin_NON.pdf
+2025-04-14 11:45:34,258 - INFO - Found project ID: P172247, corrected to: P172247
+2025-04-14 11:45:34,329 - INFO - Copied with project ID: P172247_Benin_NON_01.pdf
+2025-04-14 11:45:34,425 - INFO - Found project ID: P172592, corrected to: P172592
+2025-04-14 11:45:34,521 - INFO - Copied with project ID: P172592_Belize_EN.pdf
+2025-04-14 11:45:34,617 - INFO - Found project ID: P172592, corrected to: P172592
+2025-04-14 11:45:34,711 - INFO - Copied with project ID: P172592_Belize_EN_01.pdf
+2025-04-14 11:45:34,831 - INFO - Found project ID: P172592, corrected to: P172592
+2025-04-14 11:45:34,955 - INFO - Copied with project ID: P172592_Belize_EN_02.pdf
+2025-04-14 11:45:35,167 - INFO - Found project ID: P172817, corrected to: P172817
+2025-04-14 11:45:35,294 - INFO - Copied with project ID: P172817_Bangladesh_EN_02.pdf
+2025-04-14 11:45:35,420 - INFO - Found project ID: P173019, corrected to: P173019
+2025-04-14 11:45:35,543 - INFO - Copied with project ID: P173019_Bangladesh_EN_01.pdf
+2025-04-14 11:45:35,701 - INFO - Found project ID: P173312, corrected to: P173312
+2025-04-14 11:45:35,946 - INFO - Copied with project ID: P173312_Bangladesh_EN.pdf
+2025-04-14 11:45:36,099 - INFO - Found project ID: P173312, corrected to: P173312
+2025-04-14 11:45:36,249 - INFO - Copied with project ID: P173312_Bangladesh_EN_01.pdf
+2025-04-14 11:45:36,404 - INFO - Found project ID: P173312, corrected to: P173312
+2025-04-14 11:45:36,638 - INFO - Copied with project ID: P173312_Bangladesh_EN_02.pdf
+2025-04-14 11:45:36,794 - INFO - Found project ID: P173312, corrected to: P173312
+2025-04-14 11:45:36,953 - INFO - Copied with project ID: P173312_Bangladesh_EN_03.pdf
+2025-04-14 11:45:37,043 - INFO - Found project ID: P173749, corrected to: P173749
+2025-04-14 11:45:37,133 - INFO - Copied with project ID: P173749_Benin_NON.pdf
+2025-04-14 11:45:37,510 - INFO - Copied with project ID: P173757_Bangladesh_EN.pdf
+2025-04-14 11:45:38,130 - INFO - Copied with project ID: P173757_Bangladesh_EN_01.pdf
+2025-04-14 11:45:41,319 - INFO - Copied with project ID: P173767_Argentina_NON.pdf
+2025-04-14 11:45:44,419 - INFO - Copied with project ID: P173767_Argentina_NON_01.pdf
+2025-04-14 11:45:44,627 - INFO - Found project ID: P173787, corrected to: P173787
+2025-04-14 11:45:44,752 - INFO - Copied with project ID: P173787_Bhutan_EN.pdf
+2025-04-14 11:45:45,719 - INFO - Copied with project ID: P173787_Bhutan_EN_01.pdf
+2025-04-14 11:45:46,668 - INFO - Copied with project ID: P173839_Benin_NON.pdf
+2025-04-14 11:45:47,103 - INFO - Copied with project ID: P174085_Bangladesh_EN_01.pdf
+2025-04-14 11:45:47,480 - INFO - Copied with project ID: P174085_Bangladesh_EN_02.pdf
+2025-04-14 11:45:48,117 - INFO - Copied with project ID: P174186_Benin_NON_01.pdf
+2025-04-14 11:45:48,845 - INFO - Copied with project ID: P174186_Benin_NON_02.pdf
+2025-04-14 11:45:49,784 - INFO - Copied with project ID: P174268_Bangladesh_EN.pdf
+2025-04-14 11:45:49,909 - INFO - Found project ID: P174327, corrected to: P174327
+2025-04-14 11:45:50,107 - INFO - Copied with project ID: P174327_Bhutan_EN.pdf
+2025-04-14 11:45:50,209 - INFO - Found project ID: P174595, corrected to: P174595
+2025-04-14 11:45:50,300 - INFO - Copied with project ID: P174595_Albania_EN.pdf
+2025-04-14 11:45:50,915 - INFO - Copied with project ID: P174595_Albania_EN_01.pdf
+2025-04-14 11:45:51,016 - INFO - Found project ID: P174595, corrected to: P174595
+2025-04-14 11:45:51,106 - INFO - Copied with project ID: P174595_Albania_EN_02.pdf
+2025-04-14 11:45:51,214 - INFO - Found project ID: P174604, corrected to: P174604
+2025-04-14 11:45:51,319 - INFO - Copied with project ID: P174604_Bosnia_and_Herzegovina_EN_02.pdf
+2025-04-14 11:45:51,515 - INFO - Found project ID: P174604, corrected to: P174604
+2025-04-14 11:45:51,623 - INFO - Copied with project ID: P174604_Bosnia_and_Herzegovina_EN_03.pdf
+2025-04-14 11:45:51,745 - INFO - Found project ID: P174604, corrected to: P174604
+2025-04-14 11:45:51,854 - INFO - Copied with project ID: P174604_Bosnia_and_Herzegovina_EN_04.pdf
+2025-04-14 11:45:52,848 - INFO - Copied with project ID: P174937_Bangladesh_EN.pdf
+2025-04-14 11:45:54,249 - INFO - Copied with project ID: P174937_Bangladesh_EN_01.pdf
+2025-04-14 11:45:57,244 - INFO - Copied with project ID: P174946_Argentina_NON.pdf
+2025-04-14 11:45:59,728 - INFO - Copied with project ID: P174946_Argentina_NON_01.pdf
+2025-04-14 11:46:01,111 - INFO - Copied with project ID: P174946_Argentina_NON_02.pdf
+2025-04-14 11:46:04,286 - INFO - Copied with project ID: P174946_Argentina_NON_03.pdf
+2025-04-14 11:46:07,199 - INFO - Copied with project ID: P174946_Argentina_NON_04.pdf
+2025-04-14 11:46:07,347 - INFO - Found project ID: P175081, corrected to: P175081
+2025-04-14 11:46:07,581 - INFO - Copied with project ID: P175081_Bhutan_EN_01.pdf
+2025-04-14 11:46:08,978 - INFO - Found project ID: P175138, corrected to: P175138
+2025-04-14 11:46:09,296 - INFO - Copied with project ID: P175138_Argentina_NON.pdf
+2025-04-14 11:46:11,854 - INFO - Copied with project ID: P175138_Argentina_NON_01.pdf
+2025-04-14 11:46:12,595 - INFO - Copied with project ID: P175138_Argentina_NON_02.pdf
+2025-04-14 11:46:15,431 - INFO - Copied with project ID: P175138_Argentina_NON_03.pdf
+2025-04-14 11:46:15,528 - INFO - Found project ID: P175143, corrected to: P175143
+2025-04-14 11:46:15,621 - INFO - Copied with project ID: P175143_Argentina_EN.pdf
+2025-04-14 11:46:15,913 - INFO - Found project ID: P175143, corrected to: P175143
+2025-04-14 11:46:16,200 - INFO - Copied with project ID: P175143_Argentina_NON_01.pdf
+2025-04-14 11:46:16,496 - INFO - Found project ID: P175143, corrected to: P175143
+2025-04-14 11:46:16,792 - INFO - Copied with project ID: P175143_Argentina_NON_02.pdf
+2025-04-14 11:46:17,185 - INFO - Found project ID: P175669, corrected to: P175669
+2025-04-14 11:46:17,484 - INFO - Copied with project ID: P175669_Argentina_NON.pdf
+2025-04-14 11:46:17,797 - INFO - Found project ID: P175669, corrected to: P175669
+2025-04-14 11:46:18,106 - INFO - Copied with project ID: P175669_Argentina_NON_01.pdf
+2025-04-14 11:46:18,443 - INFO - Found project ID: P175669, corrected to: P175669
+2025-04-14 11:46:18,781 - INFO - Copied with project ID: P175669_Argentina_NON_02.pdf
+2025-04-14 11:46:19,098 - INFO - Found project ID: P175669, corrected to: P175669
+2025-04-14 11:46:19,516 - INFO - Copied with project ID: P175669_Argentina_NON_03.pdf
+2025-04-14 11:46:20,071 - INFO - Copied with project ID: P175768_Benin_NON.pdf
+2025-04-14 11:46:20,183 - INFO - Found project ID: P175768, corrected to: P175768
+2025-04-14 11:46:20,376 - INFO - Copied with project ID: P175768_Benin_NON_01.pdf
+2025-04-14 11:46:20,478 - INFO - Found project ID: P175768, corrected to: P175768
+2025-04-14 11:46:20,571 - INFO - Copied with project ID: P175768_Benin_NON_02.pdf
+2025-04-14 11:46:20,686 - INFO - Found project ID: P176084, corrected to: P176084
+2025-04-14 11:46:20,801 - INFO - Copied with project ID: P176084_Albania_EN_03.pdf
+2025-04-14 11:46:21,306 - INFO - Copied with project ID: P176454_Armenia_EN.pdf
+2025-04-14 11:46:21,737 - INFO - Copied with project ID: P176454_Armenia_EN_01.pdf
+2025-04-14 11:46:21,937 - INFO - Found project ID: P176549, corrected to: P176549
+2025-04-14 11:46:22,050 - INFO - Copied with project ID: P176549_Bangladesh_EN.pdf
+2025-04-14 11:46:22,182 - INFO - Found project ID: P176549, corrected to: P176549
+2025-04-14 11:46:22,315 - INFO - Copied with project ID: P176549_Bangladesh_EN_01.pdf
+2025-04-14 11:46:22,440 - INFO - Found project ID: P176549, corrected to: P176549
+2025-04-14 11:46:22,650 - INFO - Copied with project ID: P176549_Bangladesh_EN_02.pdf
+2025-04-14 11:46:22,773 - INFO - Found project ID: P176549, corrected to: P176549
+2025-04-14 11:46:22,892 - INFO - Copied with project ID: P176549_Bangladesh_EN_03.pdf
+2025-04-14 11:46:23,034 - INFO - Found project ID: P160948, corrected to: P160948
+2025-04-14 11:46:23,267 - INFO - Copied with project ID: P160948_NON_04.pdf
+2025-04-14 11:46:23,397 - INFO - Found project ID: P160948, corrected to: P160948
+2025-04-14 11:46:23,526 - INFO - Copied with project ID: P160948_NON_05.pdf
+2025-04-14 11:46:27,012 - INFO - Copied with project ID: P176781_Argentina_NON_02.pdf
+2025-04-14 11:46:27,147 - INFO - Found project ID: P149913, corrected to: P149913
+2025-04-14 11:46:27,280 - INFO - Copied with project ID: P149913_EN_01.pdf
+2025-04-14 11:46:27,426 - INFO - Found project ID: P176803, corrected to: P176803
+2025-04-14 11:46:27,671 - INFO - Copied with project ID: P176803_Armenia_EN_01.pdf
+2025-04-14 11:46:27,773 - INFO - Found project ID: P181067, corrected to: P181067
+2025-04-14 11:46:27,871 - INFO - Copied with project ID: P181067_EN.pdf
+2025-04-14 11:46:28,230 - INFO - Found project ID: P176905, corrected to: P176905
+2025-04-14 11:46:28,590 - INFO - Copied with project ID: P176905_Argentina_NON.pdf
+2025-04-14 11:46:28,919 - INFO - Found project ID: P176905, corrected to: P176905
+2025-04-14 11:46:29,325 - INFO - Copied with project ID: P176905_Argentina_NON_01.pdf
+2025-04-14 11:46:29,429 - INFO - Found project ID: P177987, corrected to: P177987
+2025-04-14 11:46:29,529 - INFO - Copied with project ID: P177987_Belize_EN_01.pdf
+2025-04-14 11:46:30,433 - INFO - Copied with project ID: P178035_Angola_NON.pdf
+2025-04-14 11:46:30,614 - INFO - Found project ID: P178040, corrected to: P178040
+2025-04-14 11:46:30,710 - INFO - Copied with project ID: P178040_Angola_NON.pdf
+2025-04-14 11:46:30,803 - INFO - Found project ID: P178040, corrected to: P178040
+2025-04-14 11:46:30,898 - INFO - Copied with project ID: P178040_Angola_NON_01.pdf
+2025-04-14 11:46:31,013 - INFO - Found project ID: P178040, corrected to: P178040
+2025-04-14 11:46:31,128 - INFO - Copied with project ID: P178040_Angola_NON_02.pdf
+2025-04-14 11:46:31,344 - INFO - Found project ID: P178043, corrected to: P178043
+2025-04-14 11:46:31,463 - INFO - Copied with project ID: P178043_Angola_NON.pdf
+2025-04-14 11:46:31,582 - INFO - Found project ID: P178043, corrected to: P178043
+2025-04-14 11:46:31,699 - INFO - Copied with project ID: P178043_Angola_NON_01.pdf
+2025-04-14 11:46:31,853 - INFO - Found project ID: P178043, corrected to: P178043
+2025-04-14 11:46:32,083 - INFO - Copied with project ID: P178043_Angola_NON_02.pdf
+2025-04-14 11:46:34,348 - INFO - Copied with project ID: P178067_Argentina_NON.pdf
+2025-04-14 11:46:35,158 - INFO - Copied with project ID: P178077_Bangladesh_EN.pdf
+2025-04-14 11:46:35,870 - INFO - Copied with project ID: P178133_Bangladesh_EN_01.pdf
+2025-04-14 11:46:36,460 - INFO - Found project ID: P178280, corrected to: P178280
+2025-04-14 11:46:36,767 - INFO - Copied with project ID: P178280_Afghanistan_EN_01.pdf
+2025-04-14 11:46:40,397 - INFO - Copied with project ID: P178609_Argentina_NON_01.pdf
+2025-04-14 11:46:42,989 - INFO - Copied with project ID: P178609_Argentina_NON_02.pdf
+2025-04-14 11:46:43,576 - INFO - Found project ID: P178760, corrected to: P178760
+2025-04-14 11:46:43,875 - INFO - Copied with project ID: P178760_Afghanistan_EN_01.pdf
+2025-04-14 11:46:44,738 - INFO - Copied with project ID: P178760_Afghanistan_EN_02.pdf
+2025-04-14 11:46:44,860 - INFO - Found project ID: P178760, corrected to: P178760
+2025-04-14 11:46:44,983 - INFO - Copied with project ID: P178760_Afghanistan_EN_03.pdf
+2025-04-14 11:46:45,176 - INFO - Found project ID: P181221, corrected to: P181221
+2025-04-14 11:46:45,288 - INFO - Copied with project ID: P181221_Botswana_EN.pdf
+2025-04-14 11:46:45,387 - INFO - Found project ID: P181221, corrected to: P181221
+2025-04-14 11:46:45,486 - INFO - Copied with project ID: P181221_Botswana_EN_01.pdf
+2025-04-14 11:46:46,553 - INFO - Copied with project ID: P178933_Afghanistan_EN_01.pdf
+2025-04-14 11:46:46,904 - INFO - Copied with project ID: P178996_Bangladesh_EN.pdf
+2025-04-14 11:46:47,023 - INFO - Found project ID: P179154, corrected to: P179154
+2025-04-14 11:46:47,222 - INFO - Copied with project ID: P179154_Angola_NON.pdf
+2025-04-14 11:46:47,586 - INFO - Found project ID: P159929, corrected to: P159929
+2025-04-14 11:46:47,951 - INFO - Copied with project ID: P159929_NON_02.pdf
+2025-04-14 11:46:48,254 - INFO - Found project ID: P180092, corrected to: P180092
+2025-04-14 11:46:48,560 - INFO - Copied with project ID: P180092_Argentina_NON.pdf
+2025-04-14 11:46:48,737 - INFO - Found project ID: P180456, corrected to: P180456
+2025-04-14 11:46:48,829 - INFO - Copied with project ID: P180456_Argentina_NON.pdf
+2025-04-14 11:46:48,955 - INFO - Found project ID: P160948, corrected to: P160948
+2025-04-14 11:46:49,066 - INFO - Copied with project ID: P160948_NON_06.pdf
+2025-04-14 11:46:49,182 - INFO - Found project ID: P181221, corrected to: P181221
+2025-04-14 11:46:49,291 - INFO - Copied with project ID: P181221_Botswana_EN_02.pdf
+2025-04-14 11:46:49,510 - INFO - Found project ID: P181495, corrected to: P181495
+2025-04-14 11:46:49,630 - INFO - Copied with project ID: P181495_Angola_NON_01.pdf
+2025-04-14 11:46:49,684 - INFO - Added document type to filename: 090224b087f5af73_aidememoire.pdf
+2025-04-14 11:46:49,693 - INFO - Added document type to filename: 090224b088114729_aidememoire.pdf
+2025-04-14 11:46:49,700 - INFO - Added document type to filename: 090224b08842808f_aidememoire.pdf
+2025-04-14 11:46:49,708 - INFO - Added document type to filename: 090224b088490aa2_aidememoire.pdf
+2025-04-14 11:46:49,715 - INFO - Added document type to filename: 090224b08872d317_aidememoire.pdf
+2025-04-14 11:46:49,819 - INFO - Added document type to filename: COUNTRY_Afghanistan_EN_aidememoire.pdf
+2025-04-14 11:46:49,827 - INFO - Added document type to filename: COUNTRY_Afghanistan_EN_aidememoire_01.pdf
+2025-04-14 11:46:49,835 - INFO - Added document type to filename: COUNTRY_Albania_EN_aidememoire.pdf
+2025-04-14 11:46:49,842 - INFO - Added document type to filename: COUNTRY_Argentina_NON_aidememoire.pdf
+2025-04-14 11:46:49,849 - INFO - Added document type to filename: COUNTRY_Bangladesh_EN_aidememoire.pdf
+2025-04-14 11:46:49,856 - INFO - Added document type to filename: COUNTRY_Bangladesh_EN_aidememoire_01.pdf
+2025-04-14 11:46:49,863 - INFO - Added document type to filename: COUNTRY_Bolivia_NON_aidememoire.pdf
+2025-04-14 11:46:49,869 - INFO - Added document type to filename: COUNTRY_Bosnia and Herzegovina_EN_aidememoire.pdf
+2025-04-14 11:46:49,875 - INFO - Added document type to filename: COUNTRY_Ghana_NON_aidememoire.pdf
+2025-04-14 11:46:49,881 - INFO - Added document type to filename: COUNTRY_United States_NON_aidememoire.pdf
+2025-04-14 11:46:49,888 - INFO - Added document type to filename: P105101_NON_aidememoire.pdf
+2025-04-14 11:46:49,894 - INFO - Added document type to filename: P105101_NON_aidememoire_01.pdf
+2025-04-14 11:46:49,900 - INFO - Added document type to filename: P118023_EN_aidememoire.pdf
+2025-04-14 11:46:49,907 - INFO - Added document type to filename: P149913_EN_aidememoire.pdf
+2025-04-14 11:46:49,914 - INFO - Added document type to filename: P149913_EN_aidememoire_01.pdf
+2025-04-14 11:46:49,921 - INFO - Added document type to filename: P152347_EN_aidememoire.pdf
+2025-04-14 11:46:49,929 - INFO - Added document type to filename: P154477_EN_aidememoire.pdf
+2025-04-14 11:46:49,936 - INFO - Added document type to filename: P154577_EN_aidememoire.pdf
+2025-04-14 11:46:49,942 - INFO - Added document type to filename: P159929_NON_aidememoire.pdf
+2025-04-14 11:46:49,949 - INFO - Added document type to filename: P159929_NON_aidememoire_01.pdf
+2025-04-14 11:46:49,956 - INFO - Added document type to filename: P159929_NON_aidememoire_02.pdf
+2025-04-14 11:46:49,962 - INFO - Added document type to filename: P160948_NON_aidememoire.pdf
+2025-04-14 11:46:49,968 - INFO - Added document type to filename: P160948_NON_aidememoire_01.pdf
+2025-04-14 11:46:49,974 - INFO - Added document type to filename: P160948_NON_aidememoire_02.pdf
+2025-04-14 11:46:49,982 - INFO - Added document type to filename: P160948_NON_aidememoire_03.pdf
+2025-04-14 11:46:49,988 - INFO - Added document type to filename: P160948_NON_aidememoire_04.pdf
+2025-04-14 11:46:49,995 - INFO - Added document type to filename: P160948_NON_aidememoire_05.pdf
+2025-04-14 11:46:50,000 - INFO - Added document type to filename: P160948_NON_aidememoire_06.pdf
+2025-04-14 11:46:50,006 - INFO - Added document type to filename: P163310_NON_aidememoire.pdf
+2025-04-14 11:46:50,012 - INFO - Added document type to filename: P163310_NON_aidememoire_01.pdf
+2025-04-14 11:46:50,019 - INFO - Added document type to filename: P163310_NON_aidememoire_02.pdf
+2025-04-14 11:46:50,025 - INFO - Added document type to filename: P163310_NON_aidememoire_03.pdf
+2025-04-14 11:46:50,032 - INFO - Added document type to filename: P166805_Angola_EN_aidememoire.pdf
+2025-04-14 11:46:50,038 - INFO - Added document type to filename: P166805_Angola_NON_aidememoire.pdf
+2025-04-14 11:46:50,045 - INFO - Added document type to filename: P166805_Angola_NON_aidememoire_01.pdf
+2025-04-14 11:46:50,051 - INFO - Added document type to filename: P167506_Bangladesh_EN_aidememoire.pdf
+2025-04-14 11:46:50,057 - INFO - Added document type to filename: P167506_Bangladesh_EN_aidememoire_01.pdf
+2025-04-14 11:46:50,064 - INFO - Added document type to filename: P168132_Benin_NON_aidememoire.pdf
+2025-04-14 11:46:50,070 - INFO - Added document type to filename: P168132_Benin_NON_aidememoire_01.pdf
+2025-04-14 11:46:50,076 - INFO - Added document type to filename: P168699_Angola_NON_aidememoire.pdf
+2025-04-14 11:46:50,083 - INFO - Added document type to filename: P168699_Angola_NON_aidememoire_01.pdf
+2025-04-14 11:46:50,090 - INFO - Added document type to filename: P168699_Angola_OCR_aidememoire.pdf
+2025-04-14 11:46:50,097 - INFO - Added document type to filename: P168943_Bosnia_and_Herzegovina_EN_aidememoire.pdf
+2025-04-14 11:46:50,103 - INFO - Added document type to filename: P168943_Bosnia_and_Herzegovina_EN_aidememoire_01.pdf
+2025-04-14 11:46:50,111 - INFO - Added document type to filename: P168961_Bangladesh_EN_aidememoire.pdf
+2025-04-14 11:46:50,118 - INFO - Added document type to filename: P169134_Brazil_NON_aidememoire.pdf
+2025-04-14 11:46:50,124 - INFO - Added document type to filename: P169134_Brazil_NON_aidememoire_01.pdf
+2025-04-14 11:46:50,132 - INFO - Added document type to filename: P169134_Brazil_NON_aidememoire_02.pdf
+2025-04-14 11:46:50,139 - INFO - Added document type to filename: P169134_Brazil_NON_aidememoire_03.pdf
+2025-04-14 11:46:50,147 - INFO - Added document type to filename: P169134_Brazil_NON_aidememoire_04.pdf
+2025-04-14 11:46:50,154 - INFO - Added document type to filename: P169134_Brazil_NON_aidememoire_05.pdf
+2025-04-14 11:46:50,162 - INFO - Added document type to filename: P169134_Brazil_NON_aidememoire_06.pdf
+2025-04-14 11:46:50,170 - INFO - Added document type to filename: P169140_Brazil_NON_aidememoire.pdf
+2025-04-14 11:46:50,177 - INFO - Added document type to filename: P169140_Brazil_NON_aidememoire_01.pdf
+2025-04-14 11:46:50,183 - INFO - Added document type to filename: P169140_Brazil_NON_aidememoire_02.pdf
+2025-04-14 11:46:50,191 - INFO - Added document type to filename: P169140_Brazil_NON_aidememoire_03.pdf
+2025-04-14 11:46:50,198 - INFO - Added document type to filename: P169140_Brazil_NON_aidememoire_04.pdf
+2025-04-14 11:46:50,205 - INFO - Added document type to filename: P169272_Brazil_NON_aidememoire.pdf
+2025-04-14 11:46:50,212 - INFO - Added document type to filename: P169342_Bangladesh_EN_aidememoire.pdf
+2025-04-14 11:46:50,219 - INFO - Added document type to filename: P169342_Bangladesh_EN_aidememoire_01.pdf
+2025-04-14 11:46:50,226 - INFO - Added document type to filename: P169342_Bangladesh_EN_aidememoire_02.pdf
+2025-04-14 11:46:50,233 - INFO - Added document type to filename: P169342_Bangladesh_EN_aidememoire_03.pdf
+2025-04-14 11:46:50,238 - INFO - Added document type to filename: P169779_Angola_NON_aidememoire.pdf
+2025-04-14 11:46:50,245 - INFO - Added document type to filename: P169779_Angola_NON_aidememoire_01.pdf
+2025-04-14 11:46:50,251 - INFO - Added document type to filename: P169880_Bangladesh_EN_aidememoire.pdf
+2025-04-14 11:46:50,259 - INFO - Added document type to filename: P169880_Bangladesh_EN_aidememoire_01.pdf
+2025-04-14 11:46:50,265 - INFO - Added document type to filename: P169880_Bangladesh_EN_aidememoire_02.pdf
+2025-04-14 11:46:50,271 - INFO - Added document type to filename: P169880_Bangladesh_EN_aidememoire_03.pdf
+2025-04-14 11:46:50,277 - INFO - Added document type to filename: P170329_Argentina_NON_aidememoire.pdf
+2025-04-14 11:46:50,284 - INFO - Added document type to filename: P170329_Argentina_NON_aidememoire_01.pdf
+2025-04-14 11:46:50,291 - INFO - Added document type to filename: P170425_Benin_NON_aidememoire.pdf
+2025-04-14 11:46:50,297 - INFO - Added document type to filename: P170425_Benin_NON_aidememoire_01.pdf
+2025-04-14 11:46:50,304 - INFO - Added document type to filename: P170425_Benin_NON_aidememoire_02.pdf
+2025-04-14 11:46:50,310 - INFO - Added document type to filename: P170425_Benin_NON_aidememoire_03.pdf
+2025-04-14 11:46:50,316 - INFO - Added document type to filename: P170425_Benin_NON_aidememoire_04.pdf
+2025-04-14 11:46:50,323 - INFO - Added document type to filename: P170682_Brazil_NON_aidememoire.pdf
+2025-04-14 11:46:50,330 - INFO - Added document type to filename: P170682_Brazil_NON_aidememoire_01.pdf
+2025-04-14 11:46:50,336 - INFO - Added document type to filename: P170682_Brazil_NON_aidememoire_02.pdf
+2025-04-14 11:46:50,343 - INFO - Added document type to filename: P170688_Bangladesh_EN_aidememoire.pdf
+2025-04-14 11:46:50,350 - INFO - Added document type to filename: P170688_Bangladesh_EN_aidememoire_01.pdf
+2025-04-14 11:46:50,358 - INFO - Added document type to filename: P170688_Bangladesh_EN_aidememoire_02.pdf
+2025-04-14 11:46:50,365 - INFO - Added document type to filename: P170688_Bangladesh_EN_aidememoire_03.pdf
+2025-04-14 11:46:50,371 - INFO - Added document type to filename: P170688_Bangladesh_EN_aidememoire_04.pdf
+2025-04-14 11:46:50,378 - INFO - Added document type to filename: P170850_Brazil_NON_aidememoire.pdf
+2025-04-14 11:46:50,385 - INFO - Added document type to filename: P171066_Albania_EN_aidememoire.pdf
+2025-04-14 11:46:50,393 - INFO - Added document type to filename: P171150_Bosnia_and_Herzegovina_EN_aidememoire.pdf
+2025-04-14 11:46:50,399 - INFO - Added document type to filename: P171150_Bosnia_and_Herzegovina_EN_aidememoire_01.pdf
+2025-04-14 11:46:50,405 - INFO - Added document type to filename: P171150_Bosnia_and_Herzegovina_EN_aidememoire_02.pdf
+2025-04-14 11:46:50,413 - INFO - Added document type to filename: P171250_Azerbaijan_EN_aidememoire.pdf
+2025-04-14 11:46:50,419 - INFO - Added document type to filename: P171250_Azerbaijan_EN_aidememoire_01.pdf
+2025-04-14 11:46:50,425 - INFO - Added document type to filename: P171266_Bosnia_and_Herzegovina_EN_aidememoire.pdf
+2025-04-14 11:46:50,432 - INFO - Added document type to filename: P171266_Bosnia_and_Herzegovina_EN_aidememoire_01.pdf
+2025-04-14 11:46:50,439 - INFO - Added document type to filename: P171266_Bosnia_and_Herzegovina_EN_aidememoire_02.pdf
+2025-04-14 11:46:50,445 - INFO - Added document type to filename: P171433_Bosnia_and_Herzegovina_EN_aidememoire.pdf
+2025-04-14 11:46:50,452 - INFO - Added document type to filename: P171433_Bosnia_and_Herzegovina_EN_aidememoire_01.pdf
+2025-04-14 11:46:50,459 - INFO - Added document type to filename: P171433_Bosnia_and_Herzegovina_EN_aidememoire_02.pdf
+2025-04-14 11:46:50,465 - INFO - Added document type to filename: P171433_Bosnia_and_Herzegovina_EN_aidememoire_03.pdf
+2025-04-14 11:46:50,472 - INFO - Added document type to filename: P171648_Bangladesh_EN_aidememoire.pdf
+2025-04-14 11:46:50,479 - INFO - Added document type to filename: P172109_Afghanistan_EN_aidememoire.pdf
+2025-04-14 11:46:50,486 - INFO - Added document type to filename: P172247_Benin_NON_aidememoire.pdf
+2025-04-14 11:46:50,492 - INFO - Added document type to filename: P172247_Benin_NON_aidememoire_01.pdf
+2025-04-14 11:46:50,499 - INFO - Added document type to filename: P172592_Belize_EN_aidememoire.pdf
+2025-04-14 11:46:50,506 - INFO - Added document type to filename: P172592_Belize_EN_aidememoire_01.pdf
+2025-04-14 11:46:50,514 - INFO - Added document type to filename: P172592_Belize_EN_aidememoire_02.pdf
+2025-04-14 11:46:50,522 - INFO - Added document type to filename: P172817_Bangladesh_EN_aidememoire.pdf
+2025-04-14 11:46:50,529 - INFO - Added document type to filename: P172817_Bangladesh_EN_aidememoire_01.pdf
+2025-04-14 11:46:50,536 - INFO - Added document type to filename: P172817_Bangladesh_EN_aidememoire_02.pdf
+2025-04-14 11:46:50,543 - INFO - Added document type to filename: P173019_Bangladesh_EN_aidememoire.pdf
+2025-04-14 11:46:50,549 - INFO - Added document type to filename: P173019_Bangladesh_EN_aidememoire_01.pdf
+2025-04-14 11:46:50,555 - INFO - Added document type to filename: P173312_Bangladesh_EN_aidememoire.pdf
+2025-04-14 11:46:50,561 - INFO - Added document type to filename: P173312_Bangladesh_EN_aidememoire_01.pdf
+2025-04-14 11:46:50,568 - INFO - Added document type to filename: P173312_Bangladesh_EN_aidememoire_02.pdf
+2025-04-14 11:46:50,576 - INFO - Added document type to filename: P173312_Bangladesh_EN_aidememoire_03.pdf
+2025-04-14 11:46:50,582 - INFO - Added document type to filename: P173749_Benin_NON_aidememoire.pdf
+2025-04-14 11:46:50,588 - INFO - Added document type to filename: P173757_Bangladesh_EN_aidememoire.pdf
+2025-04-14 11:46:50,595 - INFO - Added document type to filename: P173757_Bangladesh_EN_aidememoire_01.pdf
+2025-04-14 11:46:50,601 - INFO - Added document type to filename: P173767_Argentina_NON_aidememoire.pdf
+2025-04-14 11:46:50,608 - INFO - Added document type to filename: P173767_Argentina_NON_aidememoire_01.pdf
+2025-04-14 11:46:50,614 - INFO - Added document type to filename: P173787_Bhutan_EN_aidememoire.pdf
+2025-04-14 11:46:50,619 - INFO - Added document type to filename: P173787_Bhutan_EN_aidememoire_01.pdf
+2025-04-14 11:46:50,626 - INFO - Added document type to filename: P173809_Bosnia_and_Herzegovina_EN_aidememoire.pdf
+2025-04-14 11:46:50,633 - INFO - Added document type to filename: P173839_Benin_EN_aidememoire.pdf
+2025-04-14 11:46:50,639 - INFO - Added document type to filename: P173839_Benin_NON_aidememoire.pdf
+2025-04-14 11:46:50,646 - INFO - Added document type to filename: P174085_Bangladesh_EN_aidememoire.pdf
+2025-04-14 11:46:50,653 - INFO - Added document type to filename: P174085_Bangladesh_EN_aidememoire_01.pdf
+2025-04-14 11:46:50,660 - INFO - Added document type to filename: P174085_Bangladesh_EN_aidememoire_02.pdf
+2025-04-14 11:46:50,667 - INFO - Added document type to filename: P174101_Albania_EN_aidememoire.pdf
+2025-04-14 11:46:50,673 - INFO - Added document type to filename: P174186_Benin_NON_aidememoire.pdf
+2025-04-14 11:46:50,680 - INFO - Added document type to filename: P174186_Benin_NON_aidememoire_01.pdf
+2025-04-14 11:46:50,688 - INFO - Added document type to filename: P174186_Benin_NON_aidememoire_02.pdf
+2025-04-14 11:46:50,694 - INFO - Added document type to filename: P174268_Bangladesh_EN_aidememoire.pdf
+2025-04-14 11:46:50,700 - INFO - Added document type to filename: P174327_Bhutan_EN_aidememoire.pdf
+2025-04-14 11:46:50,707 - INFO - Added document type to filename: P174379_Azerbaijan_EN_aidememoire.pdf
+2025-04-14 11:46:50,714 - INFO - Added document type to filename: P174379_Azerbaijan_EN_aidememoire_01.pdf
+2025-04-14 11:46:50,720 - INFO - Added document type to filename: P174379_Azerbaijan_EN_aidememoire_02.pdf
+2025-04-14 11:46:50,727 - INFO - Added document type to filename: P174595_Albania_EN_aidememoire.pdf
+2025-04-14 11:46:50,733 - INFO - Added document type to filename: P174595_Albania_EN_aidememoire_01.pdf
+2025-04-14 11:46:50,740 - INFO - Added document type to filename: P174595_Albania_EN_aidememoire_02.pdf
+2025-04-14 11:46:50,747 - INFO - Added document type to filename: P174604_Bosnia_and_Herzegovina_EN_aidememoire.pdf
+2025-04-14 11:46:50,753 - INFO - Added document type to filename: P174604_Bosnia_and_Herzegovina_EN_aidememoire_01.pdf
+2025-04-14 11:46:50,761 - INFO - Added document type to filename: P174604_Bosnia_and_Herzegovina_EN_aidememoire_02.pdf
+2025-04-14 11:46:50,768 - INFO - Added document type to filename: P174604_Bosnia_and_Herzegovina_EN_aidememoire_03.pdf
+2025-04-14 11:46:50,774 - INFO - Added document type to filename: P174604_Bosnia_and_Herzegovina_EN_aidememoire_04.pdf
+2025-04-14 11:46:50,780 - INFO - Added document type to filename: P174937_Bangladesh_EN_aidememoire.pdf
+2025-04-14 11:46:50,786 - INFO - Added document type to filename: P174937_Bangladesh_EN_aidememoire_01.pdf
+2025-04-14 11:46:50,794 - INFO - Added document type to filename: P174946_Argentina_NON_aidememoire.pdf
+2025-04-14 11:46:50,800 - INFO - Added document type to filename: P174946_Argentina_NON_aidememoire_01.pdf
+2025-04-14 11:46:50,806 - INFO - Added document type to filename: P174946_Argentina_NON_aidememoire_02.pdf
+2025-04-14 11:46:50,814 - INFO - Added document type to filename: P174946_Argentina_NON_aidememoire_03.pdf
+2025-04-14 11:46:50,820 - INFO - Added document type to filename: P174946_Argentina_NON_aidememoire_04.pdf
+2025-04-14 11:46:50,826 - INFO - Added document type to filename: P175081_Bhutan_EN_aidememoire.pdf
+2025-04-14 11:46:50,832 - INFO - Added document type to filename: P175081_Bhutan_EN_aidememoire_01.pdf
+2025-04-14 11:46:50,839 - INFO - Added document type to filename: P175138_Argentina_NON_aidememoire.pdf
+2025-04-14 11:46:50,847 - INFO - Added document type to filename: P175138_Argentina_NON_aidememoire_01.pdf
+2025-04-14 11:46:50,855 - INFO - Added document type to filename: P175138_Argentina_NON_aidememoire_02.pdf
+2025-04-14 11:46:50,862 - INFO - Added document type to filename: P175138_Argentina_NON_aidememoire_03.pdf
+2025-04-14 11:46:50,869 - INFO - Added document type to filename: P175143_Argentina_EN_aidememoire.pdf
+2025-04-14 11:46:50,876 - INFO - Added document type to filename: P175143_Argentina_NON_aidememoire.pdf
+2025-04-14 11:46:50,883 - INFO - Added document type to filename: P175143_Argentina_NON_aidememoire_01.pdf
+2025-04-14 11:46:50,988 - INFO - Added document type to filename: P175143_Argentina_NON_aidememoire_02.pdf
+2025-04-14 11:46:50,996 - INFO - Added document type to filename: P175669_Argentina_NON_aidememoire.pdf
+2025-04-14 11:46:51,003 - INFO - Added document type to filename: P175669_Argentina_NON_aidememoire_01.pdf
+2025-04-14 11:46:51,010 - INFO - Added document type to filename: P175669_Argentina_NON_aidememoire_02.pdf
+2025-04-14 11:46:51,017 - INFO - Added document type to filename: P175669_Argentina_NON_aidememoire_03.pdf
+2025-04-14 11:46:51,024 - INFO - Added document type to filename: P175768_Benin_NON_aidememoire.pdf
+2025-04-14 11:46:51,032 - INFO - Added document type to filename: P175768_Benin_NON_aidememoire_01.pdf
+2025-04-14 11:46:51,039 - INFO - Added document type to filename: P175768_Benin_NON_aidememoire_02.pdf
+2025-04-14 11:46:51,046 - INFO - Added document type to filename: P176040_Bosnia_and_Herzegovina_EN_aidememoire.pdf
+2025-04-14 11:46:51,053 - INFO - Added document type to filename: P176084_Albania_EN_aidememoire.pdf
+2025-04-14 11:46:51,060 - INFO - Added document type to filename: P176084_Albania_EN_aidememoire_01.pdf
+2025-04-14 11:46:51,067 - INFO - Added document type to filename: P176084_Albania_EN_aidememoire_02.pdf
+2025-04-14 11:46:51,074 - INFO - Added document type to filename: P176084_Albania_EN_aidememoire_03.pdf
+2025-04-14 11:46:51,082 - INFO - Added document type to filename: P176454_Armenia_EN_aidememoire.pdf
+2025-04-14 11:46:51,089 - INFO - Added document type to filename: P176454_Armenia_EN_aidememoire_01.pdf
+2025-04-14 11:46:51,096 - INFO - Added document type to filename: P176549_Bangladesh_EN_aidememoire.pdf
+2025-04-14 11:46:51,105 - INFO - Added document type to filename: P176549_Bangladesh_EN_aidememoire_01.pdf
+2025-04-14 11:46:51,112 - INFO - Added document type to filename: P176549_Bangladesh_EN_aidememoire_02.pdf
+2025-04-14 11:46:51,119 - INFO - Added document type to filename: P176549_Bangladesh_EN_aidememoire_03.pdf
+2025-04-14 11:46:51,126 - INFO - Added document type to filename: P176781_Argentina_NON_aidememoire.pdf
+2025-04-14 11:46:51,132 - INFO - Added document type to filename: P176781_Argentina_NON_aidememoire_01.pdf
+2025-04-14 11:46:51,139 - INFO - Added document type to filename: P176781_Argentina_NON_aidememoire_02.pdf
+2025-04-14 11:46:51,146 - INFO - Added document type to filename: P176803_Armenia_EN_aidememoire.pdf
+2025-04-14 11:46:51,154 - INFO - Added document type to filename: P176803_Armenia_EN_aidememoire_01.pdf
+2025-04-14 11:46:51,164 - INFO - Added document type to filename: P176895_Bosnia_and_Herzegovina_EN_aidememoire.pdf
+2025-04-14 11:46:51,171 - INFO - Added document type to filename: P176895_Bosnia_and_Herzegovina_EN_aidememoire_01.pdf
+2025-04-14 11:46:51,179 - INFO - Added document type to filename: P176905_Argentina_NON_aidememoire.pdf
+2025-04-14 11:46:51,186 - INFO - Added document type to filename: P176905_Argentina_NON_aidememoire_01.pdf
+2025-04-14 11:46:51,197 - INFO - Added document type to filename: P177004_Angola_NON_aidememoire.pdf
+2025-04-14 11:46:51,205 - INFO - Added document type to filename: P177004_Angola_NON_aidememoire_01.pdf
+2025-04-14 11:46:51,212 - INFO - Added document type to filename: P177004_Angola_NON_aidememoire_02.pdf
+2025-04-14 11:46:51,227 - INFO - Added document type to filename: P177004_Angola_NON_aidememoire_03.pdf
+2025-04-14 11:46:51,249 - INFO - Added document type to filename: P177305_Angola_NON_aidememoire.pdf
+2025-04-14 11:46:51,261 - INFO - Added document type to filename: P177987_Belize_EN_aidememoire.pdf
+2025-04-14 11:46:51,273 - INFO - Added document type to filename: P177987_Belize_EN_aidememoire_01.pdf
+2025-04-14 11:46:51,281 - INFO - Added document type to filename: P178035_Angola_NON_aidememoire.pdf
+2025-04-14 11:46:51,289 - INFO - Added document type to filename: P178040_Angola_NON_aidememoire.pdf
+2025-04-14 11:46:51,299 - INFO - Added document type to filename: P178040_Angola_NON_aidememoire_01.pdf
+2025-04-14 11:46:51,309 - INFO - Added document type to filename: P178040_Angola_NON_aidememoire_02.pdf
+2025-04-14 11:46:51,316 - INFO - Added document type to filename: P178043_Angola_NON_aidememoire.pdf
+2025-04-14 11:46:51,331 - INFO - Added document type to filename: P178043_Angola_NON_aidememoire_01.pdf
+2025-04-14 11:46:51,342 - INFO - Added document type to filename: P178043_Angola_NON_aidememoire_02.pdf
+2025-04-14 11:46:51,350 - INFO - Added document type to filename: P178067_Argentina_NON_aidememoire.pdf
+2025-04-14 11:46:51,360 - INFO - Added document type to filename: P178077_Bangladesh_EN_aidememoire.pdf
+2025-04-14 11:46:51,371 - INFO - Added document type to filename: P178124_EN_aidememoire.pdf
+2025-04-14 11:46:51,378 - INFO - Added document type to filename: P178125_Azerbaijan_EN_aidememoire.pdf
+2025-04-14 11:46:51,386 - INFO - Added document type to filename: P178133_Bangladesh_EN_aidememoire.pdf
+2025-04-14 11:46:51,392 - INFO - Added document type to filename: P178133_Bangladesh_EN_aidememoire_01.pdf
+2025-04-14 11:46:51,399 - INFO - Added document type to filename: P178280_Afghanistan_EN_aidememoire.pdf
+2025-04-14 11:46:51,406 - INFO - Added document type to filename: P178280_Afghanistan_EN_aidememoire_01.pdf
+2025-04-14 11:46:51,412 - INFO - Added document type to filename: P178455_Bosnia_and_Herzegovina_EN_aidememoire.pdf
+2025-04-14 11:46:51,418 - INFO - Added document type to filename: P178553_Argentina_NON_aidememoire.pdf
+2025-04-14 11:46:51,425 - INFO - Added document type to filename: P178609_Argentina_NON_aidememoire.pdf
+2025-04-14 11:46:51,431 - INFO - Added document type to filename: P178609_Argentina_NON_aidememoire_01.pdf
+2025-04-14 11:46:51,437 - INFO - Added document type to filename: P178609_Argentina_NON_aidememoire_02.pdf
+2025-04-14 11:46:51,443 - INFO - Added document type to filename: P178715_Albania_EN_aidememoire.pdf
+2025-04-14 11:46:51,450 - INFO - Added document type to filename: P178715_Albania_EN_aidememoire_01.pdf
+2025-04-14 11:46:51,457 - INFO - Added document type to filename: P178715_Albania_EN_aidememoire_02.pdf
+2025-04-14 11:46:51,464 - INFO - Added document type to filename: P178758_Afghanistan_EN_aidememoire.pdf
+2025-04-14 11:46:51,471 - INFO - Added document type to filename: P178760_Afghanistan_EN_aidememoire.pdf
+2025-04-14 11:46:51,477 - INFO - Added document type to filename: P178760_Afghanistan_EN_aidememoire_01.pdf
+2025-04-14 11:46:51,483 - INFO - Added document type to filename: P178760_Afghanistan_EN_aidememoire_02.pdf
+2025-04-14 11:46:51,490 - INFO - Added document type to filename: P178760_Afghanistan_EN_aidememoire_03.pdf
+2025-04-14 11:46:51,497 - INFO - Added document type to filename: P178861_Bolivia_NON_aidememoire.pdf
+2025-04-14 11:46:51,503 - INFO - Added document type to filename: P178933_Afghanistan_EN_aidememoire.pdf
+2025-04-14 11:46:51,509 - INFO - Added document type to filename: P178933_Afghanistan_EN_aidememoire_01.pdf
+2025-04-14 11:46:51,516 - INFO - Added document type to filename: P178985_Bangladesh_EN_aidememoire.pdf
+2025-04-14 11:46:51,522 - INFO - Added document type to filename: P178996_Bangladesh_EN_aidememoire.pdf
+2025-04-14 11:46:51,528 - INFO - Added document type to filename: P179154_Angola_NON_aidememoire.pdf
+2025-04-14 11:46:51,535 - INFO - Added document type to filename: P179311_Afghanistan_EN_aidememoire.pdf
+2025-04-14 11:46:51,543 - INFO - Added document type to filename: P179311_Afghanistan_EN_aidememoire_01.pdf
+2025-04-14 11:46:51,552 - INFO - Added document type to filename: P180027_Bolivia_NON_aidememoire.pdf
+2025-04-14 11:46:51,559 - INFO - Added document type to filename: P180092_Argentina_NON_aidememoire.pdf
+2025-04-14 11:46:51,564 - INFO - Added document type to filename: P180456_Argentina_NON_aidememoire.pdf
+2025-04-14 11:46:51,572 - INFO - Added document type to filename: P181067_EN_aidememoire.pdf
+2025-04-14 11:46:51,581 - INFO - Added document type to filename: P181221_Botswana_EN_aidememoire.pdf
+2025-04-14 11:46:51,593 - INFO - Added document type to filename: P181221_Botswana_EN_aidememoire_01.pdf
+2025-04-14 11:46:51,601 - INFO - Added document type to filename: P181221_Botswana_EN_aidememoire_02.pdf
+2025-04-14 11:46:51,608 - INFO - Added document type to filename: P181495_Angola_NON_aidememoire.pdf
+2025-04-14 11:46:51,616 - INFO - Added document type to filename: P181495_Angola_NON_aidememoire_01.pdf
+2025-04-14 11:46:51,622 - INFO - Added document type to filename: SCAN_OCR_DOCUMENT_aidememoire.pdf
+2025-04-14 11:46:51,635 - INFO - Added document type to filename: SCAN_OCR_DOCUMENT_aidememoire_01.pdf
+2025-04-14 11:46:51,645 - INFO - Added document type to filename: UNKNOWN_NON_aidememoire.pdf
+2025-04-14 11:47:08,915 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b086da6b0b.pdf
+2025-04-14 11:47:09,786 - INFO - Renamed as unknown document: UNKNOWN_NON.pdf
+2025-04-14 11:47:13,755 - INFO - Found project ID: P169779, corrected to: P169779
+2025-04-14 11:47:14,431 - INFO - Found country 'Angola' for project ID: P169779
+2025-04-14 11:47:14,436 - INFO - Renamed to: P169779_Angola_EN.pdf
+2025-04-14 11:47:14,915 - INFO - Found project ID: P171066, corrected to: P171066
+2025-04-14 11:47:15,618 - INFO - Found country 'Albania' for project ID: P171066
+2025-04-14 11:47:15,621 - INFO - Renamed to: P171066_Albania_EN.pdf
+2025-04-14 11:47:19,344 - INFO - Found project ID: P169779, corrected to: P169779
+2025-04-14 11:47:20,098 - INFO - Found country 'Angola' for project ID: P169779
+2025-04-14 11:47:20,124 - INFO - Renamed to: P169779_Angola_EN_01.pdf
+2025-04-14 11:47:20,318 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b086ddaab6.pdf
+2025-04-14 11:47:21,135 - INFO - Renamed as unknown document: UNKNOWN_NON_01.pdf
+2025-04-14 11:47:24,143 - INFO - Found project ID: P169779, corrected to: P169779
+2025-04-14 11:47:24,721 - INFO - Found country 'Angola' for project ID: P169779
+2025-04-14 11:47:24,725 - INFO - Renamed to: P169779_Angola_EN_02.pdf
+2025-04-14 11:47:26,775 - INFO - Found project ID: P169779, corrected to: P169779
+2025-04-14 11:47:27,372 - INFO - Found country 'Angola' for project ID: P169779
+2025-04-14 11:47:27,375 - INFO - Renamed to: P169779_Angola_EN_03.pdf
+2025-04-14 11:47:34,216 - INFO - Found project ID: P169779, corrected to: P169779
+2025-04-14 11:47:34,814 - INFO - Found country 'Angola' for project ID: P169779
+2025-04-14 11:47:34,820 - INFO - Renamed to: P169779_Angola_EN_04.pdf
+2025-04-14 11:47:36,671 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b0873d5c36.pdf
+2025-04-14 11:47:37,998 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b08716aa7e.pdf
+2025-04-14 11:47:38,016 - INFO - Found country: Bangladesh (standard: Bangladesh) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b0873d5c36.pdf
+2025-04-14 11:47:38,025 - INFO - Copied with country match: COUNTRY_Bangladesh_EN.pdf
+2025-04-14 11:47:38,951 - INFO - Found country: Afghanistan (standard: Afghanistan) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b08716aa7e.pdf
+2025-04-14 11:47:38,957 - INFO - Copied with country match: COUNTRY_Afghanistan_EN.pdf
+2025-04-14 11:47:55,252 - INFO - Found project ID: P170688, corrected to: P170688
+2025-04-14 11:47:55,353 - INFO - Found country 'Bangladesh' for project ID: P170688
+2025-04-14 11:47:55,356 - INFO - Renamed to: P170688_Bangladesh_EN.pdf
+2025-04-14 11:47:58,674 - INFO - Found project ID: P171250, corrected to: P171250
+2025-04-14 11:47:59,230 - INFO - Found country 'Azerbaijan' for project ID: P171250
+2025-04-14 11:47:59,235 - INFO - Renamed to: P171250_Azerbaijan_EN.pdf
+2025-04-14 11:47:59,632 - INFO - Found project ID: P170850, corrected to: P170850
+2025-04-14 11:47:59,760 - INFO - Found country 'Brazil' for project ID: P170850
+2025-04-14 11:47:59,765 - INFO - Renamed to: P170850_Brazil_EN.pdf
+2025-04-14 11:48:02,982 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b087670713.pdf
+2025-04-14 11:48:03,235 - INFO - Found country: Afghanistan (standard: Afghanistan) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b087670713.pdf
+2025-04-14 11:48:03,246 - INFO - Copied with country match: COUNTRY_Afghanistan_EN_01.pdf
+2025-04-14 11:48:06,819 - INFO - Found project ID: P170850, corrected to: P170850
+2025-04-14 11:48:06,981 - INFO - Found country 'Brazil' for project ID: P170850
+2025-04-14 11:48:06,989 - INFO - Renamed to: P170850_Brazil_EN_01.pdf
+2025-04-14 11:48:10,040 - INFO - Found project ID: P173775, corrected to: P173775
+2025-04-14 11:48:10,639 - INFO - Found country 'Afghanistan' for project ID: P173775
+2025-04-14 11:48:10,642 - INFO - Renamed to: P173775_Afghanistan_EN.pdf
+2025-04-14 11:48:18,420 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b0876f3d55.pdf
+2025-04-14 11:48:18,472 - INFO - Found project ID: P170688, corrected to: P170688
+2025-04-14 11:48:18,641 - INFO - Found country: Bangladesh (standard: Bangladesh) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b0876f3d55.pdf
+2025-04-14 11:48:18,738 - INFO - Copied with country match: COUNTRY_Bangladesh_EN_01.pdf
+2025-04-14 11:48:18,818 - INFO - Found country 'Bangladesh' for project ID: P170688
+2025-04-14 11:48:18,822 - INFO - Renamed to: P170688_Bangladesh_EN_01.pdf
+2025-04-14 11:48:20,265 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b08772b10f.pdf
+2025-04-14 11:48:21,198 - INFO - Found country: argentine republic (standard: Argentina) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b08772b10f.pdf
+2025-04-14 11:48:21,205 - INFO - Copied with country match: COUNTRY_Argentina_EN.pdf
+2025-04-14 11:48:23,880 - INFO - Found project ID: P173757, corrected to: P173757
+2025-04-14 11:48:24,427 - INFO - Found country 'Bangladesh' for project ID: P173757
+2025-04-14 11:48:24,431 - INFO - Renamed to: P173757_Bangladesh_EN.pdf
+2025-04-14 11:48:39,340 - INFO - Found project ID: P173757, corrected to: P173757
+2025-04-14 11:48:40,687 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b08780ae4b.pdf
+2025-04-14 11:48:40,916 - INFO - Found country 'Bangladesh' for project ID: P173757
+2025-04-14 11:48:40,919 - INFO - Renamed to: P173757_Bangladesh_EN_01.pdf
+2025-04-14 11:48:41,854 - INFO - Found country: Bosnia and Herzegovina (standard: Bosnia and Herzegovina) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b08780ae4b.pdf
+2025-04-14 11:48:41,860 - INFO - Copied with country match: COUNTRY_Bosnia and Herzegovina_EN.pdf
+2025-04-14 11:48:48,023 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b0877d3a60.pdf
+2025-04-14 11:48:48,975 - INFO - Found country: Bosnia and Herzegovina (standard: Bosnia and Herzegovina) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b0877d3a60.pdf
+2025-04-14 11:48:48,981 - INFO - Copied with country match: COUNTRY_Bosnia and Herzegovina_EN_01.pdf
+2025-04-14 11:48:50,886 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b087787346.pdf
+2025-04-14 11:48:51,889 - INFO - Found country: argentine republic (standard: Argentina) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b087787346.pdf
+2025-04-14 11:48:51,895 - INFO - Copied with country match: COUNTRY_Argentina_EN_01.pdf
+2025-04-14 11:48:53,069 - INFO - Found project ID: P173775, corrected to: P173775
+2025-04-14 11:48:53,855 - INFO - Found country 'Afghanistan' for project ID: P173775
+2025-04-14 11:48:53,860 - INFO - Renamed to: P173775_Afghanistan_EN_01.pdf
+2025-04-14 11:48:57,359 - INFO - Found project ID: P173828, corrected to: P173828
+2025-04-14 11:48:58,004 - INFO - Found country 'Belarus' for project ID: P173828
+2025-04-14 11:48:58,009 - INFO - Renamed to: P173828_Belarus_EN.pdf
+2025-04-14 11:49:00,948 - INFO - Found project ID: P161163, corrected to: P161163
+2025-04-14 11:49:01,518 - INFO - Renamed to: P161163_EN.pdf
+2025-04-14 11:49:06,934 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b0878475d2.pdf
+2025-04-14 11:49:08,557 - INFO - Found country: Bangladesh (standard: Bangladesh) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b0878475d2.pdf
+2025-04-14 11:49:08,793 - INFO - Copied with country match: COUNTRY_Bangladesh_EN_02.pdf
+2025-04-14 11:49:11,730 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b0878a1beb.pdf
+2025-04-14 11:49:12,303 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b087847927.pdf
+2025-04-14 11:49:13,588 - INFO - Found country: Bolivia (standard: Bolivia) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b0878a1beb.pdf
+2025-04-14 11:49:13,718 - INFO - Copied with country match: COUNTRY_Bolivia_EN.pdf
+2025-04-14 11:49:14,139 - INFO - Found country: Bangladesh (standard: Bangladesh) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b087847927.pdf
+2025-04-14 11:49:14,145 - INFO - Copied with country match: COUNTRY_Bangladesh_EN_03.pdf
+2025-04-14 11:49:32,909 - INFO - Found project ID: P174119, corrected to: P174119
+2025-04-14 11:49:33,015 - INFO - Found country 'Afghanistan' for project ID: P174119
+2025-04-14 11:49:33,019 - INFO - Renamed to: P174119_Afghanistan_EN.pdf
+2025-04-14 11:49:37,297 - INFO - Found project ID: P171433, corrected to: P171433
+2025-04-14 11:49:39,108 - INFO - Found country 'Bosnia_and_Herzegovina' for project ID: P171433
+2025-04-14 11:49:39,132 - INFO - Renamed to: P171433_Bosnia_and_Herzegovina_EN.pdf
+2025-04-14 11:49:39,414 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b0879343af.pdf
+2025-04-14 11:49:40,484 - INFO - Found project ID: P169342, corrected to: P169342
+2025-04-14 11:49:40,884 - INFO - Found country: Bangladesh (standard: Bangladesh) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b0879343af.pdf
+2025-04-14 11:49:41,027 - INFO - Copied with country match: COUNTRY_Bangladesh_EN_04.pdf
+2025-04-14 11:49:41,386 - INFO - Found country 'Bangladesh' for project ID: P169342
+2025-04-14 11:49:41,398 - INFO - Renamed to: P169342_Bangladesh_EN.pdf
+2025-04-14 11:49:42,342 - INFO - Found project ID: P167506, corrected to: P167506
+2025-04-14 11:49:43,168 - INFO - Found country 'Bangladesh' for project ID: P167506
+2025-04-14 11:49:43,172 - INFO - Renamed to: P167506_Bangladesh_EN.pdf
+2025-04-14 11:49:46,147 - INFO - Found project ID: P173686, corrected to: P173686
+2025-04-14 11:49:46,772 - INFO - Found country 'Armenia' for project ID: P173686
+2025-04-14 11:49:46,779 - INFO - Renamed to: P173686_Armenia_EN.pdf
+2025-04-14 11:49:48,211 - INFO - Found project ID: P168132, corrected to: P168132
+2025-04-14 11:49:49,116 - INFO - Found country 'Benin' for project ID: P168132
+2025-04-14 11:49:49,120 - INFO - Renamed to: P168132_Benin_EN.pdf
+2025-04-14 11:49:50,029 - INFO - Found project ID: P173787, corrected to: P173787
+2025-04-14 11:49:50,563 - INFO - Found country 'Bhutan' for project ID: P173787
+2025-04-14 11:49:50,566 - INFO - Renamed to: P173787_Bhutan_EN.pdf
+2025-04-14 11:49:55,428 - INFO - Found project ID: P174348, corrected to: P174348
+2025-04-14 11:49:55,981 - INFO - Found country 'Afghanistan' for project ID: P174348
+2025-04-14 11:49:55,985 - INFO - Renamed to: P174348_Afghanistan_EN.pdf
+2025-04-14 11:49:57,635 - INFO - Found project ID: P174186, corrected to: P174186
+2025-04-14 11:49:58,294 - INFO - Found country 'Benin' for project ID: P174186
+2025-04-14 11:49:58,298 - INFO - Renamed to: P174186_Benin_EN.pdf
+2025-04-14 11:50:16,955 - INFO - Found project ID: P174085, corrected to: P174085
+2025-04-14 11:50:17,699 - INFO - Found country 'Bangladesh' for project ID: P174085
+2025-04-14 11:50:17,706 - INFO - Renamed to: P174085_Bangladesh_EN.pdf
+2025-04-14 11:50:17,930 - INFO - Found project ID: P171886, corrected to: P171886
+2025-04-14 11:50:18,561 - INFO - Found country 'Afghanistan' for project ID: P171886
+2025-04-14 11:50:18,564 - INFO - Renamed to: P171886_Afghanistan_EN.pdf
+2025-04-14 11:50:23,858 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b087c90a2f.pdf
+2025-04-14 11:50:25,292 - INFO - Found project ID: P174604, corrected to: P174604
+2025-04-14 11:50:26,336 - INFO - Found country: Bangladesh (standard: Bangladesh) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b087c90a2f.pdf
+2025-04-14 11:50:26,483 - INFO - Copied with country match: COUNTRY_Bangladesh_EN_05.pdf
+2025-04-14 11:50:26,596 - INFO - Found country 'Bosnia_and_Herzegovina' for project ID: P174604
+2025-04-14 11:50:26,611 - INFO - Renamed to: P174604_Bosnia_and_Herzegovina_EN.pdf
+2025-04-14 11:50:28,888 - INFO - Found project ID: P173387, corrected to: P173387
+2025-04-14 11:50:29,559 - INFO - Found country 'Afghanistan' for project ID: P173387
+2025-04-14 11:50:29,563 - INFO - Renamed to: P173387_Afghanistan_EN.pdf
+2025-04-14 11:50:31,238 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b087ecfa57.pdf
+2025-04-14 11:50:31,425 - INFO - Found country: Afghanistan (standard: Afghanistan) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b087ecfa57.pdf
+2025-04-14 11:50:31,432 - INFO - Copied with country match: COUNTRY_Afghanistan_EN_02.pdf
+2025-04-14 11:50:34,344 - INFO - Found project ID: P170329, corrected to: P170329
+2025-04-14 11:50:34,748 - INFO - Found country 'Argentina' for project ID: P170329
+2025-04-14 11:50:34,752 - INFO - Renamed to: P170329_Argentina_EN.pdf
+2025-04-14 11:50:38,885 - INFO - Found project ID: P170425, corrected to: P170425
+2025-04-14 11:50:39,540 - INFO - Found country 'Benin' for project ID: P170425
+2025-04-14 11:50:39,544 - INFO - Renamed to: P170425_Benin_NON.pdf
+2025-04-14 11:50:40,115 - INFO - Found project ID: P167506, corrected to: P167506
+2025-04-14 11:50:40,725 - INFO - Found country 'Bangladesh' for project ID: P167506
+2025-04-14 11:50:40,728 - INFO - Renamed to: P167506_Bangladesh_EN_01.pdf
+2025-04-14 11:50:44,461 - INFO - Found project ID: P166805, corrected to: P166805
+2025-04-14 11:50:45,126 - INFO - Found country 'Angola' for project ID: P166805
+2025-04-14 11:50:45,130 - INFO - Renamed to: P166805_Angola_EN.pdf
+2025-04-14 11:50:59,098 - INFO - Found project ID: P168961, corrected to: P168961
+2025-04-14 11:50:59,219 - INFO - Found country 'Bangladesh' for project ID: P168961
+2025-04-14 11:50:59,221 - INFO - Renamed to: P168961_Bangladesh_EN.pdf
+2025-04-14 11:51:03,659 - INFO - Found project ID: P176012, corrected to: P176012
+2025-04-14 11:51:04,310 - INFO - Found country 'Afghanistan' for project ID: P176012
+2025-04-14 11:51:04,314 - INFO - Renamed to: P176012_Afghanistan_EN.pdf
+2025-04-14 11:51:06,581 - INFO - Found project ID: P173387, corrected to: P173387
+2025-04-14 11:51:07,128 - INFO - Found country 'Afghanistan' for project ID: P173387
+2025-04-14 11:51:07,132 - INFO - Renamed to: P173387_Afghanistan_EN_01.pdf
+2025-04-14 11:51:11,657 - INFO - Found project ID: P161163, corrected to: P161163
+2025-04-14 11:51:12,253 - INFO - Renamed to: P161163_EN_01.pdf
+2025-04-14 11:51:17,262 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b08824f913.pdf
+2025-04-14 11:51:17,582 - INFO - Found project ID: P171150, corrected to: P171150
+2025-04-14 11:51:19,147 - INFO - Found country 'Bosnia_and_Herzegovina' for project ID: P171150
+2025-04-14 11:51:19,178 - INFO - Renamed to: P171150_Bosnia_and_Herzegovina_EN.pdf
+2025-04-14 11:51:19,566 - INFO - Found country: Bangladesh (standard: Bangladesh) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b08824f913.pdf
+2025-04-14 11:51:19,574 - INFO - Copied with country match: COUNTRY_Bangladesh_EN_06.pdf
+2025-04-14 11:51:21,094 - INFO - Found project ID: P168699, corrected to: P168699
+2025-04-14 11:51:21,686 - INFO - Found country 'Angola' for project ID: P168699
+2025-04-14 11:51:21,689 - INFO - Renamed to: P168699_Angola_EN.pdf
+2025-04-14 11:51:24,880 - INFO - Found project ID: P174379, corrected to: P174379
+2025-04-14 11:51:24,951 - INFO - Found country 'Azerbaijan' for project ID: P174379
+2025-04-14 11:51:24,954 - INFO - Renamed to: P174379_Azerbaijan_EN.pdf
+2025-04-14 11:51:26,943 - INFO - Found project ID: P176012, corrected to: P176012
+2025-04-14 11:51:27,486 - INFO - Found country 'Afghanistan' for project ID: P176012
+2025-04-14 11:51:27,490 - INFO - Renamed to: P176012_Afghanistan_EN_01.pdf
+2025-04-14 11:51:31,244 - INFO - Found project ID: P168699, corrected to: P168699
+2025-04-14 11:51:31,805 - INFO - Found country 'Angola' for project ID: P168699
+2025-04-14 11:51:31,809 - INFO - Renamed to: P168699_Angola_EN_01.pdf
+2025-04-14 11:51:45,347 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b088319a6a.pdf
+2025-04-14 11:51:46,362 - INFO - Found country: Bangladesh (standard: Bangladesh) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b088319a6a.pdf
+2025-04-14 11:51:46,371 - INFO - Copied with country match: COUNTRY_Bangladesh_EN_07.pdf
+2025-04-14 11:51:50,992 - INFO - Found project ID: P175138, corrected to: P175138
+2025-04-14 11:51:51,601 - INFO - Found country 'Argentina' for project ID: P175138
+2025-04-14 11:51:51,609 - INFO - Renamed to: P175138_Argentina_EN.pdf
+2025-04-14 11:51:54,465 - INFO - Found project ID: P173749, corrected to: P173749
+2025-04-14 11:51:54,735 - INFO - Found country 'Benin' for project ID: P173749
+2025-04-14 11:51:54,739 - INFO - Renamed to: P173749_Benin_NON.pdf
+2025-04-14 11:51:57,409 - INFO - Found project ID: P175138, corrected to: P175138
+2025-04-14 11:51:58,293 - INFO - Found country 'Argentina' for project ID: P175138
+2025-04-14 11:51:58,297 - INFO - Renamed to: P175138_Argentina_EN_01.pdf
+2025-04-14 11:52:02,836 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b08849b666.pdf
+2025-04-14 11:52:06,406 - INFO - Renamed as unknown document: UNKNOWN_EN.pdf
+2025-04-14 11:52:07,251 - INFO - Found project ID: P168699, corrected to: P168699
+2025-04-14 11:52:09,251 - INFO - Found country 'Angola' for project ID: P168699
+2025-04-14 11:52:09,387 - INFO - Renamed to: P168699_Angola_EN_02.pdf
+2025-04-14 11:52:10,225 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b08835709c.pdf
+2025-04-14 11:52:11,490 - INFO - Found country: Bangladesh (standard: Bangladesh) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b08835709c.pdf
+2025-04-14 11:52:11,497 - INFO - Copied with country match: COUNTRY_Bangladesh_EN_08.pdf
+2025-04-14 11:52:11,611 - INFO - Found project ID: P173749, corrected to: P173749
+2025-04-14 11:52:11,783 - INFO - Found country 'Benin' for project ID: P173749
+2025-04-14 11:52:11,787 - INFO - Renamed to: P173749_Benin_NON_01.pdf
+2025-04-14 11:52:12,805 - INFO - Found project ID: P171657, corrected to: P171657
+2025-04-14 11:52:12,889 - INFO - Found country 'Afghanistan' for project ID: P171657
+2025-04-14 11:52:12,893 - INFO - Renamed to: P171657_Afghanistan_EN.pdf
+2025-04-14 11:52:17,669 - INFO - Found project ID: P176630, corrected to: P176630
+2025-04-14 11:52:18,316 - INFO - Found country 'Angola' for project ID: P176630
+2025-04-14 11:52:18,319 - INFO - Renamed to: P176630_Angola_EN.pdf
+2025-04-14 11:52:33,750 - INFO - Found project ID: P171266, corrected to: P171266
+2025-04-14 11:52:34,459 - INFO - Found country 'Bosnia_and_Herzegovina' for project ID: P171266
+2025-04-14 11:52:34,463 - INFO - Renamed to: P171266_Bosnia_and_Herzegovina_EN.pdf
+2025-04-14 11:52:39,093 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b08887d6c2.pdf
+2025-04-14 11:52:40,058 - INFO - Found country: Argentina (standard: Argentina) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b08887d6c2.pdf
+2025-04-14 11:52:40,066 - INFO - Copied with country match: COUNTRY_Argentina_EN_02.pdf
+2025-04-14 11:52:40,711 - INFO - Found project ID: P167506, corrected to: P167506
+2025-04-14 11:52:40,973 - INFO - Found country 'Bangladesh' for project ID: P167506
+2025-04-14 11:52:40,977 - INFO - Renamed to: P167506_Bangladesh_EN_02.pdf
+2025-04-14 11:52:45,203 - INFO - Found project ID: P172247, corrected to: P172247
+2025-04-14 11:52:45,368 - INFO - Found country 'Benin' for project ID: P172247
+2025-04-14 11:52:45,375 - INFO - Renamed to: P172247_Benin_EN.pdf
+2025-04-14 11:52:49,224 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b0888c9765.pdf
+2025-04-14 11:52:50,688 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b0888bbb84.pdf
+2025-04-14 11:52:51,038 - INFO - Found country: Argentina (standard: Argentina) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b0888c9765.pdf
+2025-04-14 11:52:51,125 - INFO - Copied with country match: COUNTRY_Argentina_EN_03.pdf
+2025-04-14 11:52:51,761 - INFO - Found country: Bangladesh (standard: Bangladesh) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b0888bbb84.pdf
+2025-04-14 11:52:51,769 - INFO - Copied with country match: COUNTRY_Bangladesh_EN_09.pdf
+2025-04-14 11:52:55,663 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b08893711f.pdf
+2025-04-14 11:52:56,643 - INFO - Found country: Argentina (standard: Argentina) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b08893711f.pdf
+2025-04-14 11:52:56,651 - INFO - Copied with country match: COUNTRY_Argentina_EN_04.pdf
+2025-04-14 11:52:57,187 - INFO - Found project ID: P175081, corrected to: P175081
+2025-04-14 11:52:57,744 - INFO - Found country 'Bhutan' for project ID: P175081
+2025-04-14 11:52:57,748 - INFO - Renamed to: P175081_Bhutan_EN.pdf
+2025-04-14 11:52:59,441 - INFO - Found project ID: P175768, corrected to: P175768
+2025-04-14 11:53:00,003 - INFO - Found country 'Benin' for project ID: P175768
+2025-04-14 11:53:00,007 - INFO - Renamed to: P175768_Benin_EN.pdf
+2025-04-14 11:53:05,391 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b088b22305.pdf
+2025-04-14 11:53:06,284 - INFO - Found country: Bhutan (standard: Bhutan) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b088b22305.pdf
+2025-04-14 11:53:06,291 - INFO - Copied with country match: COUNTRY_Bhutan_EN.pdf
+2025-04-14 11:53:24,730 - INFO - Found project ID: P176905, corrected to: P176905
+2025-04-14 11:53:25,280 - INFO - Found country 'Argentina' for project ID: P176905
+2025-04-14 11:53:25,299 - INFO - Renamed to: P176905_Argentina_EN.pdf
+2025-04-14 11:53:26,796 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b088b22389.pdf
+2025-04-14 11:53:27,777 - INFO - Found country: Bhutan (standard: Bhutan) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b088b22389.pdf
+2025-04-14 11:53:27,784 - INFO - Copied with country match: COUNTRY_Bhutan_EN_01.pdf
+2025-04-14 11:53:27,922 - INFO - Found project ID: P176905, corrected to: P176905
+2025-04-14 11:53:28,057 - INFO - Found country 'Argentina' for project ID: P176905
+2025-04-14 11:53:28,061 - INFO - Renamed to: P176905_Argentina_EN_01.pdf
+2025-04-14 11:53:33,485 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b088b5a0b3.pdf
+2025-04-14 11:53:34,568 - INFO - Found country: Bosnia and Herzegovina (standard: Bosnia and Herzegovina) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b088b5a0b3.pdf
+2025-04-14 11:53:34,576 - INFO - Copied with country match: COUNTRY_Bosnia and Herzegovina_EN_02.pdf
+2025-04-14 11:53:38,283 - INFO - Found project ID: P174937, corrected to: P174937
+2025-04-14 11:53:38,398 - INFO - Found country 'Bangladesh' for project ID: P174937
+2025-04-14 11:53:38,402 - INFO - Renamed to: P174937_Bangladesh_EN.pdf
+2025-04-14 11:53:41,924 - INFO - Found project ID: P168132, corrected to: P168132
+2025-04-14 11:53:42,488 - INFO - Found country 'Benin' for project ID: P168132
+2025-04-14 11:53:42,491 - INFO - Renamed to: P168132_Benin_EN_01.pdf
+2025-04-14 11:53:43,284 - INFO - Found project ID: P180505, corrected to: P180505
+2025-04-14 11:53:43,958 - INFO - Found country 'Benin' for project ID: P180505
+2025-04-14 11:53:43,963 - INFO - Renamed to: P180505_Benin_EN.pdf
+2025-04-14 11:53:47,488 - WARNING - No project ID found in PDF or filename: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b088b687b9.pdf
+2025-04-14 11:53:48,743 - INFO - Found country: Benin (standard: Benin) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\pt_total\temp_escp_1\090224b088b687b9.pdf
+2025-04-14 11:53:48,746 - INFO - Found project ID: P180505, corrected to: P180505
+2025-04-14 11:53:48,757 - INFO - Copied with country match: COUNTRY_Benin_EN.pdf
+2025-04-14 11:53:49,323 - INFO - Found country 'Benin' for project ID: P180505
+2025-04-14 11:53:49,327 - INFO - Renamed to: P180505_Benin_EN_01.pdf
+2025-04-14 11:53:49,346 - INFO - Found project ID: P170329, corrected to: P170329
+2025-04-14 11:53:49,432 - INFO - Found country 'Argentina' for project ID: P170329
+2025-04-14 11:53:49,436 - INFO - Renamed to: P170329_Argentina_EN_01.pdf
+2025-04-14 11:54:04,702 - INFO - Found project ID: P170329, corrected to: P170329
+2025-04-14 11:54:04,812 - INFO - Found country 'Argentina' for project ID: P170329
+2025-04-14 11:54:04,817 - INFO - Renamed to: P170329_Argentina_EN_02.pdf
+2025-04-14 11:54:10,448 - INFO - Found country 'Bangladesh' for project ID: P171144
+2025-04-14 11:54:10,453 - INFO - Renamed to: P171144_Bangladesh_EN.pdf
+2025-04-14 11:54:13,993 - INFO - Found project ID: P171150, corrected to: P171150
+2025-04-14 11:54:14,649 - INFO - Found country 'Bosnia_and_Herzegovina' for project ID: P171150
+2025-04-14 11:54:14,653 - INFO - Renamed to: P171150_Bosnia_and_Herzegovina_EN_01.pdf
+2025-04-14 11:54:18,602 - INFO - Found country 'Bosnia_and_Herzegovina' for project ID: P171266
+2025-04-14 11:54:18,607 - INFO - Renamed to: P171266_Bosnia_and_Herzegovina_EN_01.pdf
+2025-04-14 11:54:18,623 - INFO - Found project ID: P172817, corrected to: P172817
+2025-04-14 11:54:18,748 - INFO - Found country 'Bangladesh' for project ID: P172817
+2025-04-14 11:54:18,751 - INFO - Renamed to: P172817_Bangladesh_EN.pdf
+2025-04-14 11:54:21,477 - INFO - Found project ID: P172499, corrected to: P172499
+2025-04-14 11:54:22,052 - INFO - Found country 'Bangladesh' for project ID: P172499
+2025-04-14 11:54:22,056 - INFO - Renamed to: P172499_Bangladesh_EN.pdf
+2025-04-14 11:54:27,913 - INFO - Found project ID: P173019, corrected to: P173019
+2025-04-14 11:54:29,080 - INFO - Found country 'Bangladesh' for project ID: P173019
+2025-04-14 11:54:29,084 - INFO - Renamed to: P173019_Bangladesh_EN.pdf
+2025-04-14 11:54:29,682 - INFO - Found country 'Bosnia_and_Herzegovina' for project ID: P171266
+2025-04-14 11:54:29,686 - INFO - Renamed to: P171266_Bosnia_and_Herzegovina_EN_02.pdf
+2025-04-14 11:54:30,209 - INFO - Found project ID: P173019, corrected to: P173019
+2025-04-14 11:54:30,594 - INFO - Found country 'Bangladesh' for project ID: P173019
+2025-04-14 11:54:30,599 - INFO - Renamed to: P173019_Bangladesh_EN_01.pdf
+2025-04-14 11:54:34,809 - INFO - Found country 'Bangladesh' for project ID: P173312
+2025-04-14 11:54:34,813 - INFO - Renamed to: P173312_Bangladesh_EN.pdf
+2025-04-14 11:54:49,897 - INFO - Found project ID: P173749, corrected to: P173749
+2025-04-14 11:54:50,040 - INFO - Found country 'Benin' for project ID: P173749
+2025-04-14 11:54:50,045 - INFO - Renamed to: P173749_Benin_EN.pdf
+2025-04-14 11:54:56,071 - INFO - Found country 'Bhutan' for project ID: P174327
+2025-04-14 11:54:56,078 - INFO - Renamed to: P174327_Bhutan_EN.pdf
+2025-04-14 11:54:57,185 - INFO - Found project ID: P174595, corrected to: P174595
+2025-04-14 11:54:57,391 - INFO - Found country 'Albania' for project ID: P174595
+2025-04-14 11:54:57,395 - INFO - Renamed to: P174595_Albania_EN.pdf
+2025-04-14 11:54:57,901 - INFO - Found project ID: P178245, corrected to: P178245
+2025-04-14 11:54:58,502 - INFO - Found country 'Benin' for project ID: P178245
+2025-04-14 11:54:58,506 - INFO - Renamed to: P178245_Benin_EN.pdf
+2025-04-14 11:55:04,559 - INFO - Found project ID: P174327, corrected to: P174327
+2025-04-14 11:55:05,237 - INFO - Found country 'Bhutan' for project ID: P174327
+2025-04-14 11:55:05,242 - INFO - Renamed to: P174327_Bhutan_EN_01.pdf
+2025-04-14 11:55:05,619 - INFO - Found project ID: P174595, corrected to: P174595
+2025-04-14 11:55:05,755 - INFO - Found country 'Albania' for project ID: P174595
+2025-04-14 11:55:05,759 - INFO - Renamed to: P174595_Albania_EN_01.pdf
+2025-04-14 11:55:09,340 - INFO - Found project ID: P174937, corrected to: P174937
+2025-04-14 11:55:09,465 - INFO - Found country 'Bangladesh' for project ID: P174937
+2025-04-14 11:55:09,469 - INFO - Renamed to: P174937_Bangladesh_EN_01.pdf
+2025-04-14 11:55:12,686 - INFO - Found project ID: P174937, corrected to: P174937
+2025-04-14 11:55:12,811 - INFO - Found country 'Bangladesh' for project ID: P174937
+2025-04-14 11:55:12,815 - INFO - Renamed to: P174937_Bangladesh_EN_02.pdf
+2025-04-14 11:55:17,835 - INFO - Found project ID: P175081, corrected to: P175081
+2025-04-14 11:55:18,412 - INFO - Found country 'Bhutan' for project ID: P175081
+2025-04-14 11:55:18,416 - INFO - Renamed to: P175081_Bhutan_EN_01.pdf
+2025-04-14 11:55:18,820 - INFO - Found project ID: P175143, corrected to: P175143
+2025-04-14 11:55:19,368 - INFO - Found country 'Argentina' for project ID: P175143
+2025-04-14 11:55:19,372 - INFO - Renamed to: P175143_Argentina_EN.pdf
+2025-04-14 11:55:35,411 - INFO - Found project ID: P176163, corrected to: P176163
+2025-04-14 11:55:36,080 - INFO - Found country 'Albania' for project ID: P176163
+2025-04-14 11:55:36,083 - INFO - Renamed to: P176163_Albania_EN.pdf
+2025-04-14 11:55:37,738 - INFO - Found project ID: P175669, corrected to: P175669
+2025-04-14 11:55:37,833 - INFO - Found country 'Argentina' for project ID: P175669
+2025-04-14 11:55:37,837 - INFO - Renamed to: P175669_Argentina_EN.pdf
+2025-04-14 11:55:42,615 - INFO - Found project ID: P176163, corrected to: P176163
+2025-04-14 11:55:43,294 - INFO - Found country 'Albania' for project ID: P176163
+2025-04-14 11:55:43,303 - INFO - Renamed to: P176163_Albania_EN_01.pdf
+2025-04-14 11:55:49,347 - INFO - Found project ID: P176429, corrected to: P176429
+2025-04-14 11:55:49,439 - INFO - Found country 'Bangladesh' for project ID: P176429
+2025-04-14 11:55:49,442 - INFO - Renamed to: P176429_Bangladesh_EN.pdf
+2025-04-14 11:55:50,534 - INFO - Found project ID: P175669, corrected to: P175669
+2025-04-14 11:55:50,653 - INFO - Found country 'Argentina' for project ID: P175669
+2025-04-14 11:55:50,659 - INFO - Renamed to: P175669_Argentina_EN_01.pdf
+2025-04-14 11:55:54,256 - INFO - Found country 'Bangladesh' for project ID: P176549
+2025-04-14 11:55:54,270 - INFO - Renamed to: P176549_Bangladesh_EN.pdf
+2025-04-14 11:55:57,317 - INFO - Found project ID: P176549, corrected to: P176549
+2025-04-14 11:55:57,624 - INFO - Found country 'Bangladesh' for project ID: P176549
+2025-04-14 11:55:57,628 - INFO - Renamed to: P176549_Bangladesh_EN_01.pdf
+2025-04-14 11:55:57,945 - INFO - Found project ID: P175143, corrected to: P175143
+2025-04-14 11:55:58,501 - INFO - Found country 'Argentina' for project ID: P175143
+2025-04-14 11:55:58,504 - INFO - Renamed to: P175143_Argentina_EN_01.pdf
+2025-04-14 11:56:03,454 - INFO - Found project ID: P176781, corrected to: P176781
+2025-04-14 11:56:04,639 - INFO - Found country 'Argentina' for project ID: P176781
+2025-04-14 11:56:04,643 - INFO - Renamed to: P176781_Argentina_EN.pdf
+2025-04-14 11:56:04,984 - INFO - Found country 'Bangladesh' for project ID: P176549
+2025-04-14 11:56:04,988 - INFO - Renamed to: P176549_Bangladesh_EN_02.pdf
+2025-04-14 11:56:20,563 - INFO - Found project ID: P176781, corrected to: P176781
+2025-04-14 11:56:21,251 - INFO - Found country 'Argentina' for project ID: P176781
+2025-04-14 11:56:21,254 - INFO - Renamed to: P176781_Argentina_EN_01.pdf
+2025-04-14 11:56:21,389 - INFO - Found project ID: P176803, corrected to: P176803
+2025-04-14 11:56:21,461 - INFO - Found country 'Armenia' for project ID: P176803
+2025-04-14 11:56:21,465 - INFO - Renamed to: P176803_Armenia_EN.pdf
+2025-04-14 11:56:26,425 - INFO - Found project ID: P176905, corrected to: P176905
+2025-04-14 11:56:26,542 - INFO - Found country 'Argentina' for project ID: P176905
+2025-04-14 11:56:26,547 - INFO - Renamed to: P176905_Argentina_EN_02.pdf
+2025-04-14 11:56:28,159 - INFO - Found project ID: P176803, corrected to: P176803
+2025-04-14 11:56:28,236 - INFO - Found country 'Armenia' for project ID: P176803
+2025-04-14 11:56:28,240 - INFO - Renamed to: P176803_Armenia_EN_01.pdf
+2025-04-14 11:56:36,380 - INFO - Found project ID: P177130, corrected to: P177130
+2025-04-14 11:56:37,008 - INFO - Found country 'Albania' for project ID: P177130
+2025-04-14 11:56:37,020 - INFO - Renamed to: P177130_Albania_EN.pdf
+2025-04-14 11:56:37,375 - INFO - Found project ID: P177004, corrected to: P177004
+2025-04-14 11:56:38,023 - INFO - Found country 'Angola' for project ID: P177004
+2025-04-14 11:56:38,027 - INFO - Renamed to: P177004_Angola_EN.pdf
+2025-04-14 11:56:39,817 - INFO - Found project ID: P176781, corrected to: P176781
+2025-04-14 11:56:40,444 - INFO - Found country 'Argentina' for project ID: P176781
+2025-04-14 11:56:40,448 - INFO - Renamed to: P176781_Argentina_NON.pdf
+2025-04-14 11:56:48,767 - INFO - Found project ID: P176895, corrected to: P176895
+2025-04-14 11:56:49,327 - INFO - Found country 'Bosnia_and_Herzegovina' for project ID: P176895
+2025-04-14 11:56:49,331 - INFO - Renamed to: P176895_Bosnia_and_Herzegovina_EN.pdf
+2025-04-14 11:56:49,717 - INFO - Found project ID: P177987, corrected to: P177987
+2025-04-14 11:56:50,283 - INFO - Found country 'Belize' for project ID: P177987
+2025-04-14 11:56:50,286 - INFO - Renamed to: P177987_Belize_EN.pdf
+2025-04-14 11:56:50,491 - INFO - Found project ID: P177305, corrected to: P177305
+2025-04-14 11:56:51,112 - INFO - Found country 'Angola' for project ID: P177305
+2025-04-14 11:56:51,116 - INFO - Renamed to: P177305_Angola_EN.pdf
+2025-04-14 11:57:09,686 - INFO - Found project ID: P178067, corrected to: P178067
+2025-04-14 11:57:10,261 - INFO - Found country 'Argentina' for project ID: P178067
+2025-04-14 11:57:10,265 - INFO - Renamed to: P178067_Argentina_NON.pdf
+2025-04-14 11:57:13,169 - INFO - Found project ID: P178040, corrected to: P178040
+2025-04-14 11:57:13,738 - INFO - Found country 'Angola' for project ID: P178040
+2025-04-14 11:57:13,741 - INFO - Renamed to: P178040_Angola_EN.pdf
+2025-04-14 11:57:14,089 - INFO - Found project ID: P178040, corrected to: P178040
+2025-04-14 11:57:14,636 - INFO - Found country 'Angola' for project ID: P178040
+2025-04-14 11:57:14,641 - INFO - Renamed to: P178040_Angola_EN_01.pdf
+2025-04-14 11:57:15,498 - INFO - Found project ID: P178040, corrected to: P178040
+2025-04-14 11:57:16,133 - INFO - Found country 'Angola' for project ID: P178040
+2025-04-14 11:57:16,139 - INFO - Renamed to: P178040_Angola_EN_02.pdf
+2025-04-14 11:57:19,939 - INFO - Found country 'Angola' for project ID: P178043
+2025-04-14 11:57:19,942 - INFO - Renamed to: P178043_Angola_EN.pdf
+2025-04-14 11:57:21,675 - INFO - Found project ID: P178067, corrected to: P178067
+2025-04-14 11:57:22,847 - INFO - Found country 'Argentina' for project ID: P178067
+2025-04-14 11:57:22,857 - INFO - Renamed to: P178067_Argentina_EN.pdf
+2025-04-14 11:57:23,035 - INFO - Found country 'Angola' for project ID: P178043
+2025-04-14 11:57:23,039 - INFO - Renamed to: P178043_Angola_EN_01.pdf
+2025-04-14 11:57:28,807 - INFO - Found project ID: P178067, corrected to: P178067
+2025-04-14 11:57:29,483 - INFO - Found country 'Argentina' for project ID: P178067
+2025-04-14 11:57:29,492 - INFO - Renamed to: P178067_Argentina_NON_01.pdf
+2025-04-14 11:57:32,879 - INFO - Found project ID: P178077, corrected to: P178077
+2025-04-14 11:57:33,147 - INFO - Found country 'Bangladesh' for project ID: P178077
+2025-04-14 11:57:33,150 - INFO - Renamed to: P178077_Bangladesh_EN.pdf
+2025-04-14 11:57:35,583 - INFO - Found project ID: P178077, corrected to: P178077
+2025-04-14 11:57:35,935 - INFO - Found country 'Bangladesh' for project ID: P178077
+2025-04-14 11:57:35,939 - INFO - Renamed to: P178077_Bangladesh_EN_01.pdf
+2025-04-14 11:57:51,731 - INFO - Found project ID: P178245, corrected to: P178245
+2025-04-14 11:57:52,311 - INFO - Found country 'Benin' for project ID: P178245
+2025-04-14 11:57:52,314 - INFO - Renamed to: P178245_Benin_EN_01.pdf
+2025-04-14 11:57:53,673 - INFO - Found project ID: P178280, corrected to: P178280
+2025-04-14 11:57:53,785 - INFO - Found country 'Afghanistan' for project ID: P178280
+2025-04-14 11:57:53,788 - INFO - Renamed to: P178280_Afghanistan_EN.pdf
+2025-04-14 11:57:58,398 - INFO - Found project ID: P178280, corrected to: P178280
+2025-04-14 11:57:58,941 - INFO - Found country 'Afghanistan' for project ID: P178280
+2025-04-14 11:57:58,945 - INFO - Renamed to: P178280_Afghanistan_EN_01.pdf
+2025-04-14 11:58:05,063 - INFO - Found project ID: P178534, corrected to: P178534
+2025-04-14 11:58:05,699 - INFO - Found country 'Argentina' for project ID: P178534
+2025-04-14 11:58:05,702 - INFO - Renamed to: P178534_Argentina_EN.pdf
+2025-04-14 11:58:07,572 - INFO - Found project ID: P178077, corrected to: P178077
+2025-04-14 11:58:07,933 - INFO - Found country 'Bangladesh' for project ID: P178077
+2025-04-14 11:58:07,938 - INFO - Renamed to: P178077_Bangladesh_EN_02.pdf
+2025-04-14 11:58:08,149 - INFO - Found project ID: P178125, corrected to: P178125
+2025-04-14 11:58:08,776 - INFO - Found country 'Azerbaijan' for project ID: P178125
+2025-04-14 11:58:08,779 - INFO - Renamed to: P178125_Azerbaijan_EN.pdf
+2025-04-14 11:58:09,126 - INFO - Found project ID: P178455, corrected to: P178455
+2025-04-14 11:58:09,725 - INFO - Found country 'Bosnia_and_Herzegovina' for project ID: P178455
+2025-04-14 11:58:09,730 - INFO - Renamed to: P178455_Bosnia_and_Herzegovina_EN.pdf
+2025-04-14 11:58:12,849 - INFO - Found project ID: P178534, corrected to: P178534
+2025-04-14 11:58:12,931 - INFO - Found country 'Argentina' for project ID: P178534
+2025-04-14 11:58:12,937 - INFO - Renamed to: P178534_Argentina_EN_01.pdf
+2025-04-14 11:58:19,104 - INFO - Found project ID: P178553, corrected to: P178553
+2025-04-14 11:58:19,656 - INFO - Found country 'Argentina' for project ID: P178553
+2025-04-14 11:58:19,660 - INFO - Renamed to: P178553_Argentina_EN.pdf
+2025-04-14 11:58:20,150 - INFO - Found project ID: P178553, corrected to: P178553
+2025-04-14 11:58:20,701 - INFO - Found country 'Argentina' for project ID: P178553
+2025-04-14 11:58:20,705 - INFO - Renamed to: P178553_Argentina_EN_01.pdf
+2025-04-14 11:58:37,278 - INFO - Found project ID: P178715, corrected to: P178715
+2025-04-14 11:58:37,859 - INFO - Found country 'Albania' for project ID: P178715
+2025-04-14 11:58:37,862 - INFO - Renamed to: P178715_Albania_EN.pdf
+2025-04-14 11:58:40,287 - INFO - Found project ID: P178609, corrected to: P178609
+2025-04-14 11:58:40,950 - INFO - Found country 'Argentina' for project ID: P178609
+2025-04-14 11:58:40,954 - INFO - Renamed to: P178609_Argentina_EN.pdf
+2025-04-14 11:58:41,019 - INFO - Found project ID: P178758, corrected to: P178758
+2025-04-14 11:58:41,102 - INFO - Found country 'Afghanistan' for project ID: P178758
+2025-04-14 11:58:41,105 - INFO - Renamed to: P178758_Afghanistan_EN.pdf
+2025-04-14 11:58:45,801 - INFO - Found project ID: P178715, corrected to: P178715
+2025-04-14 11:58:46,477 - INFO - Found country 'Albania' for project ID: P178715
+2025-04-14 11:58:46,481 - INFO - Renamed to: P178715_Albania_EN_01.pdf
+2025-04-14 11:58:48,605 - INFO - Found project ID: P178609, corrected to: P178609
+2025-04-14 11:58:49,176 - INFO - Found country 'Argentina' for project ID: P178609
+2025-04-14 11:58:49,180 - INFO - Renamed to: P178609_Argentina_EN_01.pdf
+2025-04-14 11:58:52,946 - INFO - Found project ID: P178758, corrected to: P178758
+2025-04-14 11:58:53,047 - INFO - Found country 'Afghanistan' for project ID: P178758
+2025-04-14 11:58:53,050 - INFO - Renamed to: P178758_Afghanistan_EN_01.pdf
+2025-04-14 11:59:02,880 - INFO - Found country 'Afghanistan' for project ID: P178758
+2025-04-14 11:59:02,889 - INFO - Renamed to: P178758_Afghanistan_EN_02.pdf
+2025-04-14 11:59:05,853 - INFO - Found project ID: P178775, corrected to: P178775
+2025-04-14 11:59:07,561 - INFO - Found country 'Afghanistan' for project ID: P178775
+2025-04-14 11:59:07,583 - INFO - Renamed to: P178775_Afghanistan_EN.pdf
+2025-04-14 11:59:08,564 - INFO - Found country 'Bhutan' for project ID: P178656
+2025-04-14 11:59:08,568 - INFO - Renamed to: P178656_Bhutan_EN.pdf
+2025-04-14 11:59:09,088 - INFO - Found country 'Afghanistan' for project ID: P178760
+2025-04-14 11:59:09,092 - INFO - Renamed to: P178760_Afghanistan_EN.pdf
+2025-04-14 11:59:24,509 - INFO - Found project ID: P178933, corrected to: P178933
+2025-04-14 11:59:25,200 - INFO - Found country 'Afghanistan' for project ID: P178933
+2025-04-14 11:59:25,211 - INFO - Renamed to: P178933_Afghanistan_EN.pdf
+2025-04-14 11:59:32,518 - INFO - Found project ID: P178775, corrected to: P178775
+2025-04-14 11:59:33,027 - INFO - Found country 'Afghanistan' for project ID: P178775
+2025-04-14 11:59:33,031 - INFO - Renamed to: P178775_Afghanistan_EN_01.pdf
+2025-04-14 11:59:33,752 - INFO - Found country 'Afghanistan' for project ID: P178775
+2025-04-14 11:59:33,756 - INFO - Renamed to: P178775_Afghanistan_EN_02.pdf
+2025-04-14 11:59:40,280 - INFO - Found country 'Afghanistan' for project ID: P178775
+2025-04-14 11:59:40,287 - INFO - Renamed to: P178775_Afghanistan_EN_03.pdf
+2025-04-14 11:59:41,370 - INFO - Found project ID: P178985, corrected to: P178985
+2025-04-14 11:59:41,921 - INFO - Found country 'Bangladesh' for project ID: P178985
+2025-04-14 11:59:41,925 - INFO - Renamed to: P178985_Bangladesh_EN.pdf
+2025-04-14 11:59:42,236 - INFO - Found project ID: P178985, corrected to: P178985
+2025-04-14 11:59:42,786 - INFO - Found country 'Bangladesh' for project ID: P178985
+2025-04-14 11:59:42,791 - INFO - Renamed to: P178985_Bangladesh_EN_01.pdf
+2025-04-14 11:59:43,619 - INFO - Found project ID: P178822, corrected to: P178822
+2025-04-14 11:59:44,320 - INFO - Found country 'Botswana' for project ID: P178822
+2025-04-14 11:59:44,324 - INFO - Renamed to: P178822_Botswana_EN.pdf
+2025-04-14 11:59:47,740 - INFO - Found project ID: P178996, corrected to: P178996
+2025-04-14 11:59:48,300 - INFO - Found country 'Bangladesh' for project ID: P178996
+2025-04-14 11:59:48,303 - INFO - Renamed to: P178996_Bangladesh_EN.pdf
+2025-04-14 11:59:49,805 - INFO - Found project ID: P179311, corrected to: P179311
+2025-04-14 11:59:50,374 - INFO - Found country 'Afghanistan' for project ID: P179311
+2025-04-14 11:59:50,382 - INFO - Renamed to: P179311_Afghanistan_EN.pdf
+2025-04-14 11:59:50,938 - INFO - Found country 'Bangladesh' for project ID: P179009
+2025-04-14 11:59:50,941 - INFO - Renamed to: P179009_Bangladesh_EN.pdf
+2025-04-14 12:00:09,100 - INFO - Found project ID: P179534, corrected to: P179534
+2025-04-14 12:00:09,282 - INFO - Found project ID: P179311, corrected to: P179311
+2025-04-14 12:00:09,854 - INFO - Found project ID: P179311, corrected to: P179311
+2025-04-14 12:00:10,539 - INFO - Found country 'Argentina' for project ID: P179534
+2025-04-14 12:00:10,574 - INFO - Renamed to: P179534_Argentina_EN.pdf
+2025-04-14 12:00:11,048 - INFO - Found country 'Afghanistan' for project ID: P179311
+2025-04-14 12:00:11,081 - INFO - Renamed to: P179311_Afghanistan_EN_01.pdf
+2025-04-14 12:00:11,402 - INFO - Found country 'Afghanistan' for project ID: P179311
+2025-04-14 12:00:11,412 - INFO - Renamed to: P179311_Afghanistan_EN_02.pdf
+2025-04-14 12:00:18,057 - INFO - Found project ID: P179636, corrected to: P179636
+2025-04-14 12:00:18,605 - INFO - Found country 'Argentina' for project ID: P179636
+2025-04-14 12:00:18,608 - INFO - Renamed to: P179636_Argentina_EN.pdf
+2025-04-14 12:00:20,886 - INFO - Found project ID: P179534, corrected to: P179534
+2025-04-14 12:00:21,437 - INFO - Found country 'Argentina' for project ID: P179534
+2025-04-14 12:00:21,441 - INFO - Renamed to: P179534_Argentina_EN_01.pdf
+2025-04-14 12:00:24,215 - INFO - Found project ID: P179636, corrected to: P179636
+2025-04-14 12:00:24,893 - INFO - Found country 'Argentina' for project ID: P179636
+2025-04-14 12:00:24,899 - INFO - Renamed to: P179636_Argentina_EN_01.pdf
+2025-04-14 12:00:25,226 - INFO - Found project ID: P180027, corrected to: P180027
+2025-04-14 12:00:25,952 - INFO - Found country 'Bolivia' for project ID: P180027
+2025-04-14 12:00:25,981 - INFO - Renamed to: P180027_Bolivia_NON.pdf
+2025-04-14 12:00:31,470 - INFO - Found project ID: P180092, corrected to: P180092
+2025-04-14 12:00:32,011 - INFO - Found country 'Argentina' for project ID: P180092
+2025-04-14 12:00:32,015 - INFO - Renamed to: P180092_Argentina_EN.pdf
+2025-04-14 12:00:33,043 - INFO - Found project ID: P180027, corrected to: P180027
+2025-04-14 12:00:33,619 - INFO - Found country 'Bolivia' for project ID: P180027
+2025-04-14 12:00:33,623 - INFO - Renamed to: P180027_Bolivia_NON_01.pdf
+2025-04-14 12:00:34,250 - INFO - Found project ID: P180027, corrected to: P180027
+2025-04-14 12:00:34,824 - INFO - Found country 'Bolivia' for project ID: P180027
+2025-04-14 12:00:34,827 - INFO - Renamed to: P180027_Bolivia_NON_02.pdf
+2025-04-14 12:00:47,412 - INFO - Found project ID: P180409, corrected to: P180409
+2025-04-14 12:00:47,959 - INFO - Found country 'Bosnia_and_Herzegovina' for project ID: P180409
+2025-04-14 12:00:47,963 - INFO - Renamed to: P180409_Bosnia_and_Herzegovina_EN.pdf
+2025-04-14 12:00:52,987 - INFO - Found project ID: P180409, corrected to: P180409
+2025-04-14 12:00:53,665 - INFO - Found country 'Bosnia_and_Herzegovina' for project ID: P180409
+2025-04-14 12:00:53,668 - INFO - Renamed to: P180409_Bosnia_and_Herzegovina_EN_01.pdf
+2025-04-14 12:00:56,674 - INFO - Found project ID: P180456, corrected to: P180456
+2025-04-14 12:00:57,223 - INFO - Found country 'Argentina' for project ID: P180456
+2025-04-14 12:00:57,227 - INFO - Renamed to: P180456_Argentina_EN.pdf
+2025-04-14 12:00:59,567 - INFO - Found project ID: P180092, corrected to: P180092
+2025-04-14 12:01:00,215 - INFO - Found country 'Argentina' for project ID: P180092
+2025-04-14 12:01:00,219 - INFO - Renamed to: P180092_Argentina_NON.pdf
+2025-04-14 12:01:02,735 - INFO - Found project ID: P180456, corrected to: P180456
+2025-04-14 12:01:03,378 - INFO - Found country 'Argentina' for project ID: P180456
+2025-04-14 12:01:03,381 - INFO - Renamed to: P180456_Argentina_EN_01.pdf
+2025-04-14 12:01:06,912 - INFO - Found project ID: P180505, corrected to: P180505
+2025-04-14 12:01:07,549 - INFO - Found country 'Benin' for project ID: P180505
+2025-04-14 12:01:07,553 - INFO - Renamed to: P180505_Benin_EN_02.pdf
+2025-04-14 12:01:10,601 - INFO - Found project ID: P180693, corrected to: P180693
+2025-04-14 12:01:11,265 - INFO - Found country 'Angola' for project ID: P180693
+2025-04-14 12:01:11,268 - INFO - Renamed to: P180693_Angola_EN.pdf
+2025-04-14 12:01:13,215 - INFO - Found project ID: P180693, corrected to: P180693
+2025-04-14 12:01:13,335 - INFO - Found country 'Angola' for project ID: P180693
+2025-04-14 12:01:13,339 - INFO - Renamed to: P180693_Angola_NON.pdf
+2025-04-14 12:01:13,704 - INFO - Found project ID: P180770, corrected to: P180770
+2025-04-14 12:01:14,253 - INFO - Found country 'Bolivia' for project ID: P180770
+2025-04-14 12:01:14,257 - INFO - Renamed to: P180770_Bolivia_EN.pdf
+2025-04-14 12:01:20,791 - INFO - Found project ID: P180770, corrected to: P180770
+2025-04-14 12:01:21,322 - INFO - Found country 'Bolivia' for project ID: P180770
+2025-04-14 12:01:21,326 - INFO - Renamed to: P180770_Bolivia_EN_01.pdf
+2025-04-14 12:01:40,589 - INFO - Found project ID: P180770, corrected to: P180770
+2025-04-14 12:01:41,200 - INFO - Found country 'Bolivia' for project ID: P180770
+2025-04-14 12:01:41,204 - INFO - Renamed to: P180770_Bolivia_NON.pdf
+2025-04-14 12:01:42,810 - INFO - Found project ID: P181384, corrected to: P181384
+2025-04-14 12:01:43,485 - INFO - Found country 'Bangladesh' for project ID: P181384
+2025-04-14 12:01:43,495 - INFO - Renamed to: P181384_Bangladesh_EN.pdf
+2025-04-14 12:01:43,794 - INFO - Found project ID: P181384, corrected to: P181384
+2025-04-14 12:01:44,359 - INFO - Found country 'Bangladesh' for project ID: P181384
+2025-04-14 12:01:44,362 - INFO - Renamed to: P181384_Bangladesh_EN_01.pdf
+2025-04-14 12:01:46,951 - INFO - Found project ID: P180904, corrected to: P180904
+2025-04-14 12:01:47,514 - INFO - Found country 'Bhutan' for project ID: P180904
+2025-04-14 12:01:47,518 - INFO - Renamed to: P180904_Bhutan_EN.pdf
+2025-04-14 12:01:52,686 - INFO - Found project ID: P181384, corrected to: P181384
+2025-04-14 12:01:53,331 - INFO - Found country 'Bangladesh' for project ID: P181384
+2025-04-14 12:01:53,335 - INFO - Renamed to: P181384_Bangladesh_EN_02.pdf
+2025-04-14 12:01:54,256 - INFO - Found country 'Afghanistan' for project ID: P181378
+2025-04-14 12:01:54,259 - INFO - Renamed to: P181378_Afghanistan_EN.pdf
+2025-04-14 12:01:54,986 - INFO - Found project ID: P181563, corrected to: P181563
+2025-04-14 12:01:55,358 - INFO - Found country 'Bangladesh' for project ID: P181563
+2025-04-14 12:01:55,362 - INFO - Renamed to: P181563_Bangladesh_EN.pdf
+2025-04-14 12:01:58,550 - INFO - Found project ID: P178280, corrected to: P178280
+2025-04-14 12:01:58,708 - INFO - Found country 'Afghanistan' for project ID: P178280
+2025-04-14 12:01:58,721 - INFO - Renamed to: P178280_Afghanistan_EN_02.pdf
+2025-04-14 12:02:02,116 - INFO - Found project ID: P181563, corrected to: P181563
+2025-04-14 12:02:02,391 - INFO - Found country 'Bangladesh' for project ID: P181563
+2025-04-14 12:02:02,395 - INFO - Renamed to: P181563_Bangladesh_EN_01.pdf
+2025-04-14 12:02:04,574 - INFO - Found project ID: P181563, corrected to: P181563
+2025-04-14 12:02:04,851 - INFO - Found country 'Bangladesh' for project ID: P181563
+2025-04-14 12:02:04,855 - INFO - Renamed to: P181563_Bangladesh_EN_02.pdf
+2025-04-14 12:02:19,932 - INFO - Found project ID: P501274, corrected to: P501274
+2025-04-14 12:02:20,534 - INFO - Found country 'Bangladesh' for project ID: P501274
+2025-04-14 12:02:20,537 - INFO - Renamed to: P501274_Bangladesh_EN.pdf
+2025-04-14 12:02:22,590 - INFO - Found project ID: P171250, corrected to: P171250
+2025-04-14 12:02:23,122 - INFO - Found country 'Azerbaijan' for project ID: P171250
+2025-04-14 12:02:23,126 - INFO - Renamed to: P171250_Azerbaijan_EN_01.pdf
+2025-04-14 12:02:26,096 - INFO - Found project ID: P504220, corrected to: P504220
+2025-04-14 12:02:26,668 - INFO - Found country 'Afghanistan' for project ID: P504220
+2025-04-14 12:02:26,675 - INFO - Renamed to: P504220_Afghanistan_EN.pdf
+2025-04-14 12:02:27,261 - INFO - Found project ID: P504220, corrected to: P504220
+2025-04-14 12:02:27,806 - INFO - Found country 'Afghanistan' for project ID: P504220
+2025-04-14 12:02:27,809 - INFO - Renamed to: P504220_Afghanistan_EN_01.pdf
+2025-04-14 12:02:33,431 - INFO - Found country 'Afghanistan' for project ID: P181622
+2025-04-14 12:02:33,437 - INFO - Renamed to: P181622_Afghanistan_EN.pdf
+2025-04-14 12:02:37,256 - INFO - Found country 'Afghanistan' for project ID: P181622
+2025-04-14 12:02:37,260 - INFO - Renamed to: P181622_Afghanistan_EN_01.pdf
+2025-04-14 12:02:40,825 - INFO - Found project ID: P506430, corrected to: P506430
+2025-04-14 12:02:40,918 - INFO - Found country 'Argentina' for project ID: P506430
+2025-04-14 12:02:40,926 - INFO - Renamed to: P506430_Argentina_EN.pdf
+2025-04-14 12:02:43,587 - INFO - Found project ID: P506846, corrected to: P506846
+2025-04-14 12:02:43,668 - INFO - Found country 'Argentina' for project ID: P506846
+2025-04-14 12:02:43,671 - INFO - Renamed to: P506846_Argentina_EN.pdf
+2025-04-14 12:02:44,493 - INFO - Found project ID: P506430, corrected to: P506430
+2025-04-14 12:02:44,571 - INFO - Found country 'Argentina' for project ID: P506430
+2025-04-14 12:02:44,574 - INFO - Renamed to: P506430_Argentina_EN_01.pdf
+2025-04-14 12:02:46,043 - INFO - Found project ID: P505675, corrected to: P505675
+2025-04-14 12:02:46,129 - INFO - Found country 'Argentina' for project ID: P505675
+2025-04-14 12:02:46,132 - INFO - Renamed to: P505675_Argentina_EN.pdf
+2025-04-14 12:03:02,099 - INFO - Found project ID: P507190, corrected to: P507190
+2025-04-14 12:03:02,196 - INFO - Found country 'Barbados' for project ID: P507190
+2025-04-14 12:03:02,200 - INFO - Renamed to: P507190_Barbados_EN.pdf
+2025-04-14 12:03:05,357 - INFO - Found project ID: P507190, corrected to: P507190
+2025-04-14 12:03:05,456 - INFO - Found country 'Barbados' for project ID: P507190
+2025-04-14 12:03:05,909 - INFO - Renamed to: P507190_Barbados_EN_01.pdf
+2025-04-14 12:03:06,500 - INFO - Found project ID: P507190, corrected to: P507190
+2025-04-14 12:03:06,590 - INFO - Found country 'Barbados' for project ID: P507190
+2025-04-14 12:03:06,593 - INFO - Renamed to: P507190_Barbados_EN_02.pdf
+2025-04-14 12:03:08,865 - INFO - Copied as unknown document: UNKNOWN_NON_02.pdf
+2025-04-14 12:03:09,892 - INFO - Copied as unknown document: UNKNOWN_NON_03.pdf
+2025-04-14 12:03:10,835 - INFO - Copied as unknown document: UNKNOWN_NON_04.pdf
+2025-04-14 12:03:11,866 - INFO - Copied as unknown document: UNKNOWN_NON_05.pdf
+2025-04-14 12:03:12,811 - INFO - Copied as unknown document: UNKNOWN_NON_06.pdf
+2025-04-14 12:03:13,762 - INFO - Copied as unknown document: UNKNOWN_NON_07.pdf
+2025-04-14 12:03:13,806 - INFO - Found project ID: P169140, corrected to: P169140
+2025-04-14 12:03:14,009 - INFO - Copied with project ID: P169140_Brazil_EN.pdf
+2025-04-14 12:03:14,047 - INFO - Found project ID: P169134, corrected to: P169134
+2025-04-14 12:03:14,181 - INFO - Copied with project ID: P169134_Brazil_EN.pdf
+2025-04-14 12:03:14,214 - INFO - Found project ID: P170682, corrected to: P170682
+2025-04-14 12:03:14,295 - INFO - Copied with project ID: P170682_Brazil_EN.pdf
+2025-04-14 12:03:14,325 - INFO - Found project ID: P170682, corrected to: P170682
+2025-04-14 12:03:14,404 - INFO - Copied with project ID: P170682_Brazil_EN_01.pdf
+2025-04-14 12:03:14,436 - INFO - Found project ID: P170682, corrected to: P170682
+2025-04-14 12:03:14,512 - INFO - Copied with project ID: P170682_Brazil_EN_02.pdf
+2025-04-14 12:03:14,539 - INFO - Document appears to be scanned or image-based: C:\Users\wb613298\OneDrive - WBG\Desktop\escp_pt\090224b0876a3fe5.pdf
+2025-04-14 12:03:14,545 - INFO - Copied as OCR document: SCAN_OCR_DOCUMENT.pdf
+2025-04-14 12:03:14,572 - INFO - Document appears to be scanned or image-based: C:\Users\wb613298\OneDrive - WBG\Desktop\escp_pt\090224b0876fde28.pdf
+2025-04-14 12:03:14,579 - INFO - Copied as OCR document: SCAN_OCR_DOCUMENT_01.pdf
+2025-04-14 12:03:14,618 - INFO - Found project ID: P169140, corrected to: P169140
+2025-04-14 12:03:14,722 - INFO - Copied with project ID: P169140_Brazil_EN_01.pdf
+2025-04-14 12:03:14,773 - INFO - Found project ID: P169342, corrected to: P169342
+2025-04-14 12:03:14,887 - INFO - Copied with project ID: P169342_Bangladesh_EN_01.pdf
+2025-04-14 12:03:15,719 - INFO - Copied as unknown document: UNKNOWN_NON_08.pdf
+2025-04-14 12:03:16,588 - INFO - Found country: Bosnia and Herzegovina (standard: Bosnia and Herzegovina) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\escp_pt\090224b088282910.pdf
+2025-04-14 12:03:16,719 - INFO - Copied with country match: COUNTRY_Bosnia and Herzegovina_EN_03.pdf
+2025-04-14 12:03:16,779 - INFO - Found project ID: P174946, corrected to: P174946
+2025-04-14 12:03:16,907 - INFO - Copied with project ID: P174946_Argentina_EN.pdf
+2025-04-14 12:03:16,952 - INFO - Found project ID: P174946, corrected to: P174946
+2025-04-14 12:03:17,058 - INFO - Copied with project ID: P174946_Argentina_EN_01.pdf
+2025-04-14 12:03:17,097 - INFO - Found project ID: P174379, corrected to: P174379
+2025-04-14 12:03:17,180 - INFO - Copied with project ID: P174379_Azerbaijan_EN_01.pdf
+2025-04-14 12:03:17,215 - INFO - Found project ID: P176454, corrected to: P176454
+2025-04-14 12:03:17,338 - INFO - Copied with project ID: P176454_Armenia_EN.pdf
+2025-04-14 12:03:17,378 - INFO - Found project ID: P174379, corrected to: P174379
+2025-04-14 12:03:17,545 - INFO - Copied with project ID: P174379_Azerbaijan_EN_02.pdf
+2025-04-14 12:03:17,594 - INFO - Found project ID: P170001, corrected to: P170001
+2025-04-14 12:03:17,707 - INFO - Copied with project ID: P170001_Armenia_EN.pdf
+2025-04-14 12:03:18,108 - INFO - Found country: Argentina (standard: Argentina) in document: C:\Users\wb613298\OneDrive - WBG\Desktop\escp_pt\090224b0887b912f.pdf
+2025-04-14 12:03:18,209 - INFO - Copied with country match: COUNTRY_Argentina_EN_05.pdf
+2025-04-14 12:03:18,244 - INFO - Found project ID: P176905, corrected to: P176905
+2025-04-14 12:03:18,434 - INFO - Copied with project ID: P176905_Argentina_EN_03.pdf
+2025-04-14 12:03:18,492 - INFO - Found project ID: P169134, corrected to: P169134
+2025-04-14 12:03:18,623 - INFO - Copied with project ID: P169134_Brazil_EN_01.pdf
+2025-04-14 12:03:18,668 - INFO - Found project ID: P169140, corrected to: P169140
+2025-04-14 12:03:18,760 - INFO - Copied with project ID: P169140_Brazil_EN_02.pdf
+2025-04-14 12:03:18,797 - INFO - Found project ID: P170329, corrected to: P170329
+2025-04-14 12:03:18,897 - INFO - Copied with project ID: P170329_Argentina_NON.pdf
+2025-04-14 12:03:18,934 - INFO - Found project ID: P170682, corrected to: P170682
+2025-04-14 12:03:19,008 - INFO - Copied with project ID: P170682_Brazil_EN_03.pdf
+2025-04-14 12:03:19,589 - INFO - Copied with project ID: P171144_Bangladesh_EN_01.pdf
+2025-04-14 12:03:19,637 - INFO - Found project ID: P171250, corrected to: P171250
+2025-04-14 12:03:19,738 - INFO - Copied with project ID: P171250_Azerbaijan_EN_02.pdf
+2025-04-14 12:03:19,789 - INFO - Found project ID: P171250, corrected to: P171250
+2025-04-14 12:03:19,920 - INFO - Copied with project ID: P171250_Azerbaijan_EN_03.pdf
+2025-04-14 12:03:20,077 - INFO - Found project ID: P172497, corrected to: P172497
+2025-04-14 12:03:20,241 - INFO - Copied with project ID: P172497_Brazil_EN.pdf
+2025-04-14 12:03:20,316 - INFO - Found project ID: P172497, corrected to: P172497
+2025-04-14 12:03:20,474 - INFO - Copied with project ID: P172497_Brazil_EN_01.pdf
+2025-04-14 12:03:20,526 - INFO - Found project ID: P172497, corrected to: P172497
+2025-04-14 12:03:20,641 - INFO - Copied with project ID: P172497_Brazil_EN_02.pdf
+2025-04-14 12:03:20,704 - INFO - Found project ID: P172499, corrected to: P172499
+2025-04-14 12:03:20,896 - INFO - Copied with project ID: P172499_Bangladesh_EN_01.pdf
+2025-04-14 12:03:20,951 - INFO - Found project ID: P172592, corrected to: P172592
+2025-04-14 12:03:21,051 - INFO - Copied with project ID: P172592_Belize_EN.pdf
+2025-04-14 12:03:21,092 - INFO - Found project ID: P172592, corrected to: P172592
+2025-04-14 12:03:21,191 - INFO - Copied with project ID: P172592_Belize_EN_01.pdf
+2025-04-14 12:03:21,233 - INFO - Found project ID: P172592, corrected to: P172592
+2025-04-14 12:03:21,334 - INFO - Copied with project ID: P172592_Belize_EN_02.pdf
+2025-04-14 12:03:21,376 - INFO - Found project ID: P172592, corrected to: P172592
+2025-04-14 12:03:21,456 - INFO - Copied with project ID: P172592_Belize_EN_03.pdf
+2025-04-14 12:03:21,498 - INFO - Found project ID: P172817, corrected to: P172817
+2025-04-14 12:03:21,716 - INFO - Copied with project ID: P172817_Bangladesh_EN_01.pdf
+2025-04-14 12:03:22,725 - INFO - Copied with project ID: P175672_Bolivia_NON.pdf
+2025-04-14 12:03:22,744 - WARNING - incorrect startxref pointer(1)
+2025-04-14 12:03:22,776 - INFO - Found project ID: P176781, corrected to: P176781
+2025-04-14 12:03:22,777 - WARNING - incorrect startxref pointer(1)
+2025-04-14 12:03:22,903 - INFO - Copied with project ID: P176781_Argentina_NON_01.pdf
+2025-04-14 12:03:22,941 - INFO - Found project ID: P176812, corrected to: P176812
+2025-04-14 12:03:23,105 - INFO - Copied with project ID: P176812_Bangladesh_EN.pdf
+2025-04-14 12:03:24,756 - INFO - Found project ID: P176812, corrected to: P176812
+2025-04-14 12:03:27,951 - INFO - Copied with project ID: P176812_Bangladesh_EN_01.pdf
+2025-04-14 12:03:28,015 - INFO - Found project ID: P177305, corrected to: P177305
+2025-04-14 12:03:28,125 - INFO - Copied with project ID: P177305_Angola_EN_01.pdf
+2025-04-14 12:03:28,176 - INFO - Found project ID: P177987, corrected to: P177987
+2025-04-14 12:03:28,286 - INFO - Copied with project ID: P177987_Belize_EN_01.pdf
+2025-04-14 12:03:28,335 - INFO - Found project ID: P177987, corrected to: P177987
+2025-04-14 12:03:28,442 - INFO - Copied with project ID: P177987_Belize_EN_02.pdf
+2025-04-14 12:03:28,495 - INFO - Found project ID: P178035, corrected to: P178035
+2025-04-14 12:03:28,697 - INFO - Copied with project ID: P178035_Angola_EN.pdf
+2025-04-14 12:03:28,753 - INFO - Found project ID: P178035, corrected to: P178035
+2025-04-14 12:03:28,862 - INFO - Copied with project ID: P178035_Angola_EN_01.pdf
+2025-04-14 12:03:28,917 - INFO - Found project ID: P178133, corrected to: P178133
+2025-04-14 12:03:29,028 - INFO - Copied with project ID: P178133_Bangladesh_EN.pdf
+2025-04-14 12:03:29,085 - INFO - Found project ID: P178133, corrected to: P178133
+2025-04-14 12:03:29,203 - INFO - Copied with project ID: P178133_Bangladesh_EN_01.pdf
+2025-04-14 12:03:29,269 - INFO - Found project ID: P178133, corrected to: P178133
+2025-04-14 12:03:29,474 - INFO - Copied with project ID: P178133_Bangladesh_EN_02.pdf
+2025-04-14 12:03:29,520 - INFO - Found project ID: P170329, corrected to: P170329
+2025-04-14 12:03:29,668 - INFO - Copied with project ID: P170329_Argentina_EN_03.pdf
+2025-04-14 12:03:29,727 - INFO - Found project ID: P178822, corrected to: P178822
+2025-04-14 12:03:29,843 - INFO - Copied with project ID: P178822_Botswana_EN_01.pdf
+2025-04-14 12:03:29,904 - INFO - Found project ID: P178861, corrected to: P178861
+2025-04-14 12:03:30,016 - INFO - Copied with project ID: P178861_Bolivia_EN.pdf
+2025-04-14 12:03:30,078 - INFO - Found project ID: P178861, corrected to: P178861
+2025-04-14 12:03:30,287 - INFO - Copied with project ID: P178861_Bolivia_NON.pdf
+2025-04-14 12:03:30,792 - INFO - Copied with project ID: P179009_Bangladesh_EN_01.pdf
+2025-04-14 12:03:30,991 - INFO - Found project ID: P179154, corrected to: P179154
+2025-04-14 12:03:31,101 - INFO - Copied with project ID: P179154_Angola_EN.pdf
+2025-04-14 12:03:31,135 - INFO - Found project ID: P179988, corrected to: P179988
+2025-04-14 12:03:31,242 - INFO - Copied with project ID: P179988_Armenia_EN.pdf
+2025-04-14 12:03:31,278 - INFO - Found project ID: P179988, corrected to: P179988
+2025-04-14 12:03:31,383 - INFO - Copied with project ID: P179988_Armenia_EN_01.pdf
+2025-04-14 12:03:31,460 - INFO - Found project ID: P180027, corrected to: P180027
+2025-04-14 12:03:31,594 - INFO - Copied with project ID: P180027_Bolivia_EN.pdf
+2025-04-14 12:03:31,646 - INFO - Found project ID: P168862, corrected to: P168862
+2025-04-14 12:03:31,876 - INFO - Copied with project ID: P168862_Western_Balkans_EN.pdf
+2025-04-14 12:03:31,927 - INFO - Found project ID: P180631, corrected to: P180631
+2025-04-14 12:03:32,023 - INFO - Copied with project ID: P180631_Angola_EN.pdf
+2025-04-14 12:03:32,073 - INFO - Found project ID: P180631, corrected to: P180631
+2025-04-14 12:03:32,170 - INFO - Copied with project ID: P180631_Angola_EN_01.pdf
+2025-04-14 12:03:32,220 - INFO - Found project ID: P180770, corrected to: P180770
+2025-04-14 12:03:32,316 - INFO - Copied with project ID: P180770_Bolivia_EN_02.pdf
+2025-04-14 12:03:32,364 - INFO - Found project ID: P181221, corrected to: P181221
+2025-04-14 12:03:32,475 - INFO - Copied with project ID: P181221_Botswana_EN.pdf
+2025-04-14 12:03:32,525 - INFO - Found project ID: P181495, corrected to: P181495
+2025-04-14 12:03:32,718 - INFO - Copied with project ID: P181495_Angola_EN.pdf
+2025-04-14 12:03:32,769 - INFO - Found project ID: P500727, corrected to: P500727
+2025-04-14 12:03:32,891 - INFO - Copied with project ID: P500727_Bangladesh_EN.pdf
+2025-04-14 12:03:32,924 - INFO - Found project ID: P504701, corrected to: P504701
+2025-04-14 12:03:32,989 - INFO - Copied with project ID: P504701_Armenia_EN.pdf
+2025-04-14 12:03:33,026 - INFO - Found project ID: P505675, corrected to: P505675
+2025-04-14 12:03:33,096 - INFO - Copied with project ID: P505675_Argentina_EN_01.pdf
+2025-04-14 12:03:33,119 - INFO - Added document type to filename: 090224b08716aa7e_escp.pdf
+2025-04-14 12:03:33,126 - INFO - Added document type to filename: 090224b0873d5c36_escp.pdf
+2025-04-14 12:03:33,133 - INFO - Added document type to filename: 090224b087670713_escp.pdf
+2025-04-14 12:03:33,141 - INFO - Added document type to filename: 090224b0876f3d55_escp.pdf
+2025-04-14 12:03:33,148 - INFO - Added document type to filename: 090224b08772b10f_escp.pdf
+2025-04-14 12:03:33,155 - INFO - Added document type to filename: 090224b087787346_escp.pdf
+2025-04-14 12:03:33,163 - INFO - Added document type to filename: 090224b0877d3a60_escp.pdf
+2025-04-14 12:03:33,170 - INFO - Added document type to filename: 090224b08780ae4b_escp.pdf
+2025-04-14 12:03:33,178 - INFO - Added document type to filename: 090224b0878475d2_escp.pdf
+2025-04-14 12:03:33,184 - INFO - Added document type to filename: 090224b087847927_escp.pdf
+2025-04-14 12:03:33,190 - INFO - Added document type to filename: 090224b0878a1beb_escp.pdf
+2025-04-14 12:03:33,196 - INFO - Added document type to filename: 090224b0879343af_escp.pdf
+2025-04-14 12:03:33,203 - INFO - Added document type to filename: 090224b087c90a2f_escp.pdf
+2025-04-14 12:03:33,210 - INFO - Added document type to filename: 090224b087ecfa57_escp.pdf
+2025-04-14 12:03:33,217 - INFO - Added document type to filename: 090224b08824f913_escp.pdf
+2025-04-14 12:03:33,224 - INFO - Added document type to filename: 090224b088319a6a_escp.pdf
+2025-04-14 12:03:33,230 - INFO - Added document type to filename: 090224b08835709c_escp.pdf
+2025-04-14 12:03:33,238 - INFO - Added document type to filename: 090224b08887d6c2_escp.pdf
+2025-04-14 12:03:33,246 - INFO - Added document type to filename: 090224b0888bbb84_escp.pdf
+2025-04-14 12:03:33,252 - INFO - Added document type to filename: 090224b0888c9765_escp.pdf
+2025-04-14 12:03:33,259 - INFO - Added document type to filename: 090224b08893711f_escp.pdf
+2025-04-14 12:03:33,265 - INFO - Added document type to filename: 090224b088b22305_escp.pdf
+2025-04-14 12:03:33,272 - INFO - Added document type to filename: 090224b088b22389_escp.pdf
+2025-04-14 12:03:33,378 - INFO - Added document type to filename: 090224b088b5a0b3_escp.pdf
+2025-04-14 12:03:33,385 - INFO - Added document type to filename: 090224b088b687b9_escp.pdf
+2025-04-14 12:03:33,392 - INFO - Added document type to filename: COUNTRY_Afghanistan_EN_escp.pdf
+2025-04-14 12:03:33,398 - INFO - Added document type to filename: COUNTRY_Afghanistan_EN_escp_01.pdf
+2025-04-14 12:03:33,404 - INFO - Added document type to filename: COUNTRY_Afghanistan_EN_escp_02.pdf
+2025-04-14 12:03:33,411 - INFO - Added document type to filename: COUNTRY_Argentina_EN_escp.pdf
+2025-04-14 12:03:33,417 - INFO - Added document type to filename: COUNTRY_Argentina_EN_escp_01.pdf
+2025-04-14 12:03:33,423 - INFO - Added document type to filename: COUNTRY_Argentina_EN_escp_02.pdf
+2025-04-14 12:03:33,430 - INFO - Added document type to filename: COUNTRY_Argentina_EN_escp_03.pdf
+2025-04-14 12:03:33,437 - INFO - Added document type to filename: COUNTRY_Argentina_EN_escp_04.pdf
+2025-04-14 12:03:33,443 - INFO - Added document type to filename: COUNTRY_Argentina_EN_escp_05.pdf
+2025-04-14 12:03:33,449 - INFO - Added document type to filename: COUNTRY_Bangladesh_EN_escp.pdf
+2025-04-14 12:03:33,455 - INFO - Added document type to filename: COUNTRY_Bangladesh_EN_escp_01.pdf
+2025-04-14 12:03:33,462 - INFO - Added document type to filename: COUNTRY_Bangladesh_EN_escp_02.pdf
+2025-04-14 12:03:33,468 - INFO - Added document type to filename: COUNTRY_Bangladesh_EN_escp_03.pdf
+2025-04-14 12:03:33,475 - INFO - Added document type to filename: COUNTRY_Bangladesh_EN_escp_04.pdf
+2025-04-14 12:03:33,481 - INFO - Added document type to filename: COUNTRY_Bangladesh_EN_escp_05.pdf
+2025-04-14 12:03:33,487 - INFO - Added document type to filename: COUNTRY_Bangladesh_EN_escp_06.pdf
+2025-04-14 12:03:33,494 - INFO - Added document type to filename: COUNTRY_Bangladesh_EN_escp_07.pdf
+2025-04-14 12:03:33,501 - INFO - Added document type to filename: COUNTRY_Bangladesh_EN_escp_08.pdf
+2025-04-14 12:03:33,507 - INFO - Added document type to filename: COUNTRY_Bangladesh_EN_escp_09.pdf
+2025-04-14 12:03:33,513 - INFO - Added document type to filename: COUNTRY_Benin_EN_escp.pdf
+2025-04-14 12:03:33,520 - INFO - Added document type to filename: COUNTRY_Bhutan_EN_escp.pdf
+2025-04-14 12:03:33,525 - INFO - Added document type to filename: COUNTRY_Bhutan_EN_escp_01.pdf
+2025-04-14 12:03:33,531 - INFO - Added document type to filename: COUNTRY_Bolivia_EN_escp.pdf
+2025-04-14 12:03:33,537 - INFO - Added document type to filename: COUNTRY_Bosnia and Herzegovina_EN_escp.pdf
+2025-04-14 12:03:33,545 - INFO - Added document type to filename: COUNTRY_Bosnia and Herzegovina_EN_escp_01.pdf
+2025-04-14 12:03:33,552 - INFO - Added document type to filename: COUNTRY_Bosnia and Herzegovina_EN_escp_02.pdf
+2025-04-14 12:03:33,557 - INFO - Added document type to filename: COUNTRY_Bosnia and Herzegovina_EN_escp_03.pdf
+2025-04-14 12:03:33,563 - INFO - Added document type to filename: P161163_EN_escp.pdf
+2025-04-14 12:03:33,570 - INFO - Added document type to filename: P161163_EN_escp_01.pdf
+2025-04-14 12:03:33,578 - INFO - Added document type to filename: P166805_Angola_EN_escp.pdf
+2025-04-14 12:03:33,585 - INFO - Added document type to filename: P167506_Bangladesh_EN_escp.pdf
+2025-04-14 12:03:33,592 - INFO - Added document type to filename: P167506_Bangladesh_EN_escp_01.pdf
+2025-04-14 12:03:33,599 - INFO - Added document type to filename: P167506_Bangladesh_EN_escp_02.pdf
+2025-04-14 12:03:33,606 - INFO - Added document type to filename: P168132_Benin_EN_escp.pdf
+2025-04-14 12:03:33,613 - INFO - Added document type to filename: P168132_Benin_EN_escp_01.pdf
+2025-04-14 12:03:33,619 - INFO - Added document type to filename: P168699_Angola_EN_escp.pdf
+2025-04-14 12:03:33,625 - INFO - Added document type to filename: P168699_Angola_EN_escp_01.pdf
+2025-04-14 12:03:33,633 - INFO - Added document type to filename: P168699_Angola_EN_escp_02.pdf
+2025-04-14 12:03:33,642 - INFO - Added document type to filename: P168862_Western_Balkans_EN_escp.pdf
+2025-04-14 12:03:33,648 - INFO - Added document type to filename: P168961_Bangladesh_EN_escp.pdf
+2025-04-14 12:03:33,653 - INFO - Added document type to filename: P169134_Brazil_EN_escp.pdf
+2025-04-14 12:03:33,658 - INFO - Added document type to filename: P169134_Brazil_EN_escp_01.pdf
+2025-04-14 12:03:33,663 - INFO - Added document type to filename: P169140_Brazil_EN_escp.pdf
+2025-04-14 12:03:33,668 - INFO - Added document type to filename: P169140_Brazil_EN_escp_01.pdf
+2025-04-14 12:03:33,674 - INFO - Added document type to filename: P169140_Brazil_EN_escp_02.pdf
+2025-04-14 12:03:33,680 - INFO - Added document type to filename: P169342_Bangladesh_EN_escp.pdf
+2025-04-14 12:03:33,686 - INFO - Added document type to filename: P169342_Bangladesh_EN_escp_01.pdf
+2025-04-14 12:03:33,691 - INFO - Added document type to filename: P169779_Angola_EN_escp.pdf
+2025-04-14 12:03:33,698 - INFO - Added document type to filename: P169779_Angola_EN_escp_01.pdf
+2025-04-14 12:03:33,705 - INFO - Added document type to filename: P169779_Angola_EN_escp_02.pdf
+2025-04-14 12:03:33,712 - INFO - Added document type to filename: P169779_Angola_EN_escp_03.pdf
+2025-04-14 12:03:33,718 - INFO - Added document type to filename: P169779_Angola_EN_escp_04.pdf
+2025-04-14 12:03:33,722 - INFO - Added document type to filename: P170001_Armenia_EN_escp.pdf
+2025-04-14 12:03:33,729 - INFO - Added document type to filename: P170329_Argentina_EN_escp.pdf
+2025-04-14 12:03:33,735 - INFO - Added document type to filename: P170329_Argentina_EN_escp_01.pdf
+2025-04-14 12:03:33,742 - INFO - Added document type to filename: P170329_Argentina_EN_escp_02.pdf
+2025-04-14 12:03:33,748 - INFO - Added document type to filename: P170329_Argentina_EN_escp_03.pdf
+2025-04-14 12:03:33,752 - INFO - Added document type to filename: P170329_Argentina_NON_escp.pdf
+2025-04-14 12:03:33,758 - INFO - Added document type to filename: P170425_Benin_NON_escp.pdf
+2025-04-14 12:03:33,763 - INFO - Added document type to filename: P170682_Brazil_EN_escp.pdf
+2025-04-14 12:03:33,768 - INFO - Added document type to filename: P170682_Brazil_EN_escp_01.pdf
+2025-04-14 12:03:33,774 - INFO - Added document type to filename: P170682_Brazil_EN_escp_02.pdf
+2025-04-14 12:03:33,780 - INFO - Added document type to filename: P170682_Brazil_EN_escp_03.pdf
+2025-04-14 12:03:33,785 - INFO - Added document type to filename: P170688_Bangladesh_EN_escp.pdf
+2025-04-14 12:03:33,791 - INFO - Added document type to filename: P170688_Bangladesh_EN_escp_01.pdf
+2025-04-14 12:03:33,897 - INFO - Added document type to filename: P170850_Brazil_EN_escp.pdf
+2025-04-14 12:03:33,903 - INFO - Added document type to filename: P170850_Brazil_EN_escp_01.pdf
+2025-04-14 12:03:33,909 - INFO - Added document type to filename: P171066_Albania_EN_escp.pdf
+2025-04-14 12:03:33,915 - INFO - Added document type to filename: P171144_Bangladesh_EN_escp.pdf
+2025-04-14 12:03:33,920 - INFO - Added document type to filename: P171144_Bangladesh_EN_escp_01.pdf
+2025-04-14 12:03:33,928 - INFO - Added document type to filename: P171150_Bosnia_and_Herzegovina_EN_escp.pdf
+2025-04-14 12:03:33,934 - INFO - Added document type to filename: P171150_Bosnia_and_Herzegovina_EN_escp_01.pdf
+2025-04-14 12:03:33,940 - INFO - Added document type to filename: P171250_Azerbaijan_EN_escp.pdf
+2025-04-14 12:03:33,945 - INFO - Added document type to filename: P171250_Azerbaijan_EN_escp_01.pdf
+2025-04-14 12:03:33,951 - INFO - Added document type to filename: P171250_Azerbaijan_EN_escp_02.pdf
+2025-04-14 12:03:33,956 - INFO - Added document type to filename: P171250_Azerbaijan_EN_escp_03.pdf
+2025-04-14 12:03:33,962 - INFO - Added document type to filename: P171266_Bosnia_and_Herzegovina_EN_escp.pdf
+2025-04-14 12:03:33,969 - INFO - Added document type to filename: P171266_Bosnia_and_Herzegovina_EN_escp_01.pdf
+2025-04-14 12:03:33,976 - INFO - Added document type to filename: P171266_Bosnia_and_Herzegovina_EN_escp_02.pdf
+2025-04-14 12:03:33,983 - INFO - Added document type to filename: P171433_Bosnia_and_Herzegovina_EN_escp.pdf
+2025-04-14 12:03:33,989 - INFO - Added document type to filename: P171657_Afghanistan_EN_escp.pdf
+2025-04-14 12:03:33,996 - INFO - Added document type to filename: P171886_Afghanistan_EN_escp.pdf
+2025-04-14 12:03:34,002 - INFO - Added document type to filename: P172247_Benin_EN_escp.pdf
+2025-04-14 12:03:34,008 - INFO - Added document type to filename: P172497_Brazil_EN_escp.pdf
+2025-04-14 12:03:34,014 - INFO - Added document type to filename: P172497_Brazil_EN_escp_01.pdf
+2025-04-14 12:03:34,020 - INFO - Added document type to filename: P172497_Brazil_EN_escp_02.pdf
+2025-04-14 12:03:34,026 - INFO - Added document type to filename: P172499_Bangladesh_EN_escp.pdf
+2025-04-14 12:03:34,032 - INFO - Added document type to filename: P172499_Bangladesh_EN_escp_01.pdf
+2025-04-14 12:03:34,037 - INFO - Added document type to filename: P172592_Belize_EN_escp.pdf
+2025-04-14 12:03:34,042 - INFO - Added document type to filename: P172592_Belize_EN_escp_01.pdf
+2025-04-14 12:03:34,047 - INFO - Added document type to filename: P172592_Belize_EN_escp_02.pdf
+2025-04-14 12:03:34,052 - INFO - Added document type to filename: P172592_Belize_EN_escp_03.pdf
+2025-04-14 12:03:34,057 - INFO - Added document type to filename: P172817_Bangladesh_EN_escp.pdf
+2025-04-14 12:03:34,063 - INFO - Added document type to filename: P172817_Bangladesh_EN_escp_01.pdf
+2025-04-14 12:03:34,069 - INFO - Added document type to filename: P173019_Bangladesh_EN_escp.pdf
+2025-04-14 12:03:34,075 - INFO - Added document type to filename: P173019_Bangladesh_EN_escp_01.pdf
+2025-04-14 12:03:34,081 - INFO - Added document type to filename: P173312_Bangladesh_EN_escp.pdf
+2025-04-14 12:03:34,087 - INFO - Added document type to filename: P173387_Afghanistan_EN_escp.pdf
+2025-04-14 12:03:34,093 - INFO - Added document type to filename: P173387_Afghanistan_EN_escp_01.pdf
+2025-04-14 12:03:34,099 - INFO - Added document type to filename: P173686_Armenia_EN_escp.pdf
+2025-04-14 12:03:34,106 - INFO - Added document type to filename: P173749_Benin_EN_escp.pdf
+2025-04-14 12:03:34,112 - INFO - Added document type to filename: P173749_Benin_NON_escp.pdf
+2025-04-14 12:03:34,119 - INFO - Added document type to filename: P173749_Benin_NON_escp_01.pdf
+2025-04-14 12:03:34,125 - INFO - Added document type to filename: P173757_Bangladesh_EN_escp.pdf
+2025-04-14 12:03:34,132 - INFO - Added document type to filename: P173757_Bangladesh_EN_escp_01.pdf
+2025-04-14 12:03:34,139 - INFO - Added document type to filename: P173775_Afghanistan_EN_escp.pdf
+2025-04-14 12:03:34,146 - INFO - Added document type to filename: P173775_Afghanistan_EN_escp_01.pdf
+2025-04-14 12:03:34,152 - INFO - Added document type to filename: P173787_Bhutan_EN_escp.pdf
+2025-04-14 12:03:34,158 - INFO - Added document type to filename: P173828_Belarus_EN_escp.pdf
+2025-04-14 12:03:34,165 - INFO - Added document type to filename: P174085_Bangladesh_EN_escp.pdf
+2025-04-14 12:03:34,172 - INFO - Added document type to filename: P174119_Afghanistan_EN_escp.pdf
+2025-04-14 12:03:34,181 - INFO - Added document type to filename: P174186_Benin_EN_escp.pdf
+2025-04-14 12:03:34,187 - INFO - Added document type to filename: P174327_Bhutan_EN_escp.pdf
+2025-04-14 12:03:34,193 - INFO - Added document type to filename: P174327_Bhutan_EN_escp_01.pdf
+2025-04-14 12:03:34,203 - INFO - Added document type to filename: P174348_Afghanistan_EN_escp.pdf
+2025-04-14 12:03:34,210 - INFO - Added document type to filename: P174379_Azerbaijan_EN_escp.pdf
+2025-04-14 12:03:34,216 - INFO - Added document type to filename: P174379_Azerbaijan_EN_escp_01.pdf
+2025-04-14 12:03:34,221 - INFO - Added document type to filename: P174379_Azerbaijan_EN_escp_02.pdf
+2025-04-14 12:03:34,228 - INFO - Added document type to filename: P174595_Albania_EN_escp.pdf
+2025-04-14 12:03:34,234 - INFO - Added document type to filename: P174595_Albania_EN_escp_01.pdf
+2025-04-14 12:03:34,343 - INFO - Added document type to filename: P174604_Bosnia_and_Herzegovina_EN_escp.pdf
+2025-04-14 12:03:34,350 - INFO - Added document type to filename: P174937_Bangladesh_EN_escp.pdf
+2025-04-14 12:03:34,357 - INFO - Added document type to filename: P174937_Bangladesh_EN_escp_01.pdf
+2025-04-14 12:03:34,364 - INFO - Added document type to filename: P174937_Bangladesh_EN_escp_02.pdf
+2025-04-14 12:03:34,370 - INFO - Added document type to filename: P174946_Argentina_EN_escp.pdf
+2025-04-14 12:03:34,375 - INFO - Added document type to filename: P174946_Argentina_EN_escp_01.pdf
+2025-04-14 12:03:34,381 - INFO - Added document type to filename: P175081_Bhutan_EN_escp.pdf
+2025-04-14 12:03:34,388 - INFO - Added document type to filename: P175081_Bhutan_EN_escp_01.pdf
+2025-04-14 12:03:34,395 - INFO - Added document type to filename: P175138_Argentina_EN_escp.pdf
+2025-04-14 12:03:34,403 - INFO - Added document type to filename: P175138_Argentina_EN_escp_01.pdf
+2025-04-14 12:03:34,410 - INFO - Added document type to filename: P175143_Argentina_EN_escp.pdf
+2025-04-14 12:03:34,418 - INFO - Added document type to filename: P175143_Argentina_EN_escp_01.pdf
+2025-04-14 12:03:34,426 - INFO - Added document type to filename: P175669_Argentina_EN_escp.pdf
+2025-04-14 12:03:34,432 - INFO - Added document type to filename: P175669_Argentina_EN_escp_01.pdf
+2025-04-14 12:03:34,439 - INFO - Added document type to filename: P175672_Bolivia_NON_escp.pdf
+2025-04-14 12:03:34,445 - INFO - Added document type to filename: P175768_Benin_EN_escp.pdf
+2025-04-14 12:03:34,452 - INFO - Added document type to filename: P176012_Afghanistan_EN_escp.pdf
+2025-04-14 12:03:34,459 - INFO - Added document type to filename: P176012_Afghanistan_EN_escp_01.pdf
+2025-04-14 12:03:34,466 - INFO - Added document type to filename: P176163_Albania_EN_escp.pdf
+2025-04-14 12:03:34,473 - INFO - Added document type to filename: P176163_Albania_EN_escp_01.pdf
+2025-04-14 12:03:34,480 - INFO - Added document type to filename: P176429_Bangladesh_EN_escp.pdf
+2025-04-14 12:03:34,486 - INFO - Added document type to filename: P176454_Armenia_EN_escp.pdf
+2025-04-14 12:03:34,492 - INFO - Added document type to filename: P176549_Bangladesh_EN_escp.pdf
+2025-04-14 12:03:34,499 - INFO - Added document type to filename: P176549_Bangladesh_EN_escp_01.pdf
+2025-04-14 12:03:34,604 - INFO - Added document type to filename: P176549_Bangladesh_EN_escp_02.pdf
+2025-04-14 12:03:34,610 - INFO - Added document type to filename: P176630_Angola_EN_escp.pdf
+2025-04-14 12:03:34,617 - INFO - Added document type to filename: P176781_Argentina_EN_escp.pdf
+2025-04-14 12:03:34,622 - INFO - Added document type to filename: P176781_Argentina_EN_escp_01.pdf
+2025-04-14 12:03:34,629 - INFO - Added document type to filename: P176781_Argentina_NON_escp.pdf
+2025-04-14 12:03:34,634 - INFO - Added document type to filename: P176781_Argentina_NON_escp_01.pdf
+2025-04-14 12:03:34,640 - INFO - Added document type to filename: P176803_Armenia_EN_escp.pdf
+2025-04-14 12:03:34,646 - INFO - Added document type to filename: P176803_Armenia_EN_escp_01.pdf
+2025-04-14 12:03:34,652 - INFO - Added document type to filename: P176812_Bangladesh_EN_escp.pdf
+2025-04-14 12:03:34,658 - INFO - Added document type to filename: P176812_Bangladesh_EN_escp_01.pdf
+2025-04-14 12:03:34,664 - INFO - Added document type to filename: P176895_Bosnia_and_Herzegovina_EN_escp.pdf
+2025-04-14 12:03:34,670 - INFO - Added document type to filename: P176905_Argentina_EN_escp.pdf
+2025-04-14 12:03:34,677 - INFO - Added document type to filename: P176905_Argentina_EN_escp_01.pdf
+2025-04-14 12:03:34,683 - INFO - Added document type to filename: P176905_Argentina_EN_escp_02.pdf
+2025-04-14 12:03:34,689 - INFO - Added document type to filename: P176905_Argentina_EN_escp_03.pdf
+2025-04-14 12:03:34,695 - INFO - Added document type to filename: P177004_Angola_EN_escp.pdf
+2025-04-14 12:03:34,702 - INFO - Added document type to filename: P177130_Albania_EN_escp.pdf
+2025-04-14 12:03:34,709 - INFO - Added document type to filename: P177305_Angola_EN_escp.pdf
+2025-04-14 12:03:34,716 - INFO - Added document type to filename: P177305_Angola_EN_escp_01.pdf
+2025-04-14 12:03:34,722 - INFO - Added document type to filename: P177987_Belize_EN_escp.pdf
+2025-04-14 12:03:34,728 - INFO - Added document type to filename: P177987_Belize_EN_escp_01.pdf
+2025-04-14 12:03:34,734 - INFO - Added document type to filename: P177987_Belize_EN_escp_02.pdf
+2025-04-14 12:03:34,739 - INFO - Added document type to filename: P178035_Angola_EN_escp.pdf
+2025-04-14 12:03:34,744 - INFO - Added document type to filename: P178035_Angola_EN_escp_01.pdf
+2025-04-14 12:03:34,750 - INFO - Added document type to filename: P178040_Angola_EN_escp.pdf
+2025-04-14 12:03:34,757 - INFO - Added document type to filename: P178040_Angola_EN_escp_01.pdf
+2025-04-14 12:03:34,763 - INFO - Added document type to filename: P178040_Angola_EN_escp_02.pdf
+2025-04-14 12:03:34,770 - INFO - Added document type to filename: P178043_Angola_EN_escp.pdf
+2025-04-14 12:03:34,777 - INFO - Added document type to filename: P178043_Angola_EN_escp_01.pdf
+2025-04-14 12:03:34,784 - INFO - Added document type to filename: P178067_Argentina_EN_escp.pdf
+2025-04-14 12:03:34,791 - INFO - Added document type to filename: P178067_Argentina_NON_escp.pdf
+2025-04-14 12:03:34,798 - INFO - Added document type to filename: P178067_Argentina_NON_escp_01.pdf
+2025-04-14 12:03:34,805 - INFO - Added document type to filename: P178077_Bangladesh_EN_escp.pdf
+2025-04-14 12:03:34,812 - INFO - Added document type to filename: P178077_Bangladesh_EN_escp_01.pdf
+2025-04-14 12:03:34,818 - INFO - Added document type to filename: P178077_Bangladesh_EN_escp_02.pdf
+2025-04-14 12:03:34,825 - INFO - Added document type to filename: P178125_Azerbaijan_EN_escp.pdf
+2025-04-14 12:03:34,830 - INFO - Added document type to filename: P178133_Bangladesh_EN_escp.pdf
+2025-04-14 12:03:34,835 - INFO - Added document type to filename: P178133_Bangladesh_EN_escp_01.pdf
+2025-04-14 12:03:34,840 - INFO - Added document type to filename: P178133_Bangladesh_EN_escp_02.pdf
+2025-04-14 12:03:34,847 - INFO - Added document type to filename: P178245_Benin_EN_escp.pdf
+2025-04-14 12:03:34,854 - INFO - Added document type to filename: P178245_Benin_EN_escp_01.pdf
+2025-04-14 12:03:34,861 - INFO - Added document type to filename: P178280_Afghanistan_EN_escp.pdf
+2025-04-14 12:03:34,867 - INFO - Added document type to filename: P178280_Afghanistan_EN_escp_01.pdf
+2025-04-14 12:03:34,874 - INFO - Added document type to filename: P178280_Afghanistan_EN_escp_02.pdf
+2025-04-14 12:03:34,880 - INFO - Added document type to filename: P178455_Bosnia_and_Herzegovina_EN_escp.pdf
+2025-04-14 12:03:34,886 - INFO - Added document type to filename: P178534_Argentina_EN_escp.pdf
+2025-04-14 12:03:34,892 - INFO - Added document type to filename: P178534_Argentina_EN_escp_01.pdf
+2025-04-14 12:03:34,898 - INFO - Added document type to filename: P178553_Argentina_EN_escp.pdf
+2025-04-14 12:03:34,905 - INFO - Added document type to filename: P178553_Argentina_EN_escp_01.pdf
+2025-04-14 12:03:34,912 - INFO - Added document type to filename: P178609_Argentina_EN_escp.pdf
+2025-04-14 12:03:34,918 - INFO - Added document type to filename: P178609_Argentina_EN_escp_01.pdf
+2025-04-14 12:03:34,924 - INFO - Added document type to filename: P178656_Bhutan_EN_escp.pdf
+2025-04-14 12:03:34,930 - INFO - Added document type to filename: P178715_Albania_EN_escp.pdf
+2025-04-14 12:03:34,936 - INFO - Added document type to filename: P178715_Albania_EN_escp_01.pdf
+2025-04-14 12:03:34,944 - INFO - Added document type to filename: P178758_Afghanistan_EN_escp.pdf
+2025-04-14 12:03:34,950 - INFO - Added document type to filename: P178758_Afghanistan_EN_escp_01.pdf
+2025-04-14 12:03:34,956 - INFO - Added document type to filename: P178758_Afghanistan_EN_escp_02.pdf
+2025-04-14 12:03:34,962 - INFO - Added document type to filename: P178760_Afghanistan_EN_escp.pdf
+2025-04-14 12:03:34,968 - INFO - Added document type to filename: P178775_Afghanistan_EN_escp.pdf
+2025-04-14 12:03:34,974 - INFO - Added document type to filename: P178775_Afghanistan_EN_escp_01.pdf
+2025-04-14 12:03:34,981 - INFO - Added document type to filename: P178775_Afghanistan_EN_escp_02.pdf
+2025-04-14 12:03:34,986 - INFO - Added document type to filename: P178775_Afghanistan_EN_escp_03.pdf
+2025-04-14 12:03:34,993 - INFO - Added document type to filename: P178822_Botswana_EN_escp.pdf
+2025-04-14 12:03:34,998 - INFO - Added document type to filename: P178822_Botswana_EN_escp_01.pdf
+2025-04-14 12:03:35,003 - INFO - Added document type to filename: P178861_Bolivia_EN_escp.pdf
+2025-04-14 12:03:35,008 - INFO - Added document type to filename: P178861_Bolivia_NON_escp.pdf
+2025-04-14 12:03:35,014 - INFO - Added document type to filename: P178933_Afghanistan_EN_escp.pdf
+2025-04-14 12:03:35,020 - INFO - Added document type to filename: P178985_Bangladesh_EN_escp.pdf
+2025-04-14 12:03:35,026 - INFO - Added document type to filename: P178985_Bangladesh_EN_escp_01.pdf
+2025-04-14 12:03:35,033 - INFO - Added document type to filename: P178996_Bangladesh_EN_escp.pdf
+2025-04-14 12:03:35,040 - INFO - Added document type to filename: P179009_Bangladesh_EN_escp.pdf
+2025-04-14 12:03:35,045 - INFO - Added document type to filename: P179009_Bangladesh_EN_escp_01.pdf
+2025-04-14 12:03:35,050 - INFO - Added document type to filename: P179154_Angola_EN_escp.pdf
+2025-04-14 12:03:35,056 - INFO - Added document type to filename: P179311_Afghanistan_EN_escp.pdf
+2025-04-14 12:03:35,063 - INFO - Added document type to filename: P179311_Afghanistan_EN_escp_01.pdf
+2025-04-14 12:03:35,070 - INFO - Added document type to filename: P179311_Afghanistan_EN_escp_02.pdf
+2025-04-14 12:03:35,076 - INFO - Added document type to filename: P179534_Argentina_EN_escp.pdf
+2025-04-14 12:03:35,082 - INFO - Added document type to filename: P179534_Argentina_EN_escp_01.pdf
+2025-04-14 12:03:35,089 - INFO - Added document type to filename: P179636_Argentina_EN_escp.pdf
+2025-04-14 12:03:35,095 - INFO - Added document type to filename: P179636_Argentina_EN_escp_01.pdf
+2025-04-14 12:03:35,101 - INFO - Added document type to filename: P179988_Armenia_EN_escp.pdf
+2025-04-14 12:03:35,105 - INFO - Added document type to filename: P179988_Armenia_EN_escp_01.pdf
+2025-04-14 12:03:35,111 - INFO - Added document type to filename: P180027_Bolivia_EN_escp.pdf
+2025-04-14 12:03:35,117 - INFO - Added document type to filename: P180027_Bolivia_NON_escp.pdf
+2025-04-14 12:03:35,124 - INFO - Added document type to filename: P180027_Bolivia_NON_escp_01.pdf
+2025-04-14 12:03:35,131 - INFO - Added document type to filename: P180027_Bolivia_NON_escp_02.pdf
+2025-04-14 12:03:35,137 - INFO - Added document type to filename: P180092_Argentina_EN_escp.pdf
+2025-04-14 12:03:35,146 - INFO - Added document type to filename: P180092_Argentina_NON_escp.pdf
+2025-04-14 12:03:35,153 - INFO - Added document type to filename: P180409_Bosnia_and_Herzegovina_EN_escp.pdf
+2025-04-14 12:03:35,161 - INFO - Added document type to filename: P180409_Bosnia_and_Herzegovina_EN_escp_01.pdf
+2025-04-14 12:03:35,169 - INFO - Added document type to filename: P180456_Argentina_EN_escp.pdf
+2025-04-14 12:03:35,176 - INFO - Added document type to filename: P180456_Argentina_EN_escp_01.pdf
+2025-04-14 12:03:35,182 - INFO - Added document type to filename: P180505_Benin_EN_escp.pdf
+2025-04-14 12:03:35,188 - INFO - Added document type to filename: P180505_Benin_EN_escp_01.pdf
+2025-04-14 12:03:35,194 - INFO - Added document type to filename: P180505_Benin_EN_escp_02.pdf
+2025-04-14 12:03:35,200 - INFO - Added document type to filename: P180631_Angola_EN_escp.pdf
+2025-04-14 12:03:35,206 - INFO - Added document type to filename: P180631_Angola_EN_escp_01.pdf
+2025-04-14 12:03:35,211 - INFO - Added document type to filename: P180693_Angola_EN_escp.pdf
+2025-04-14 12:03:35,218 - INFO - Added document type to filename: P180693_Angola_NON_escp.pdf
+2025-04-14 12:03:35,225 - INFO - Added document type to filename: P180770_Bolivia_EN_escp.pdf
+2025-04-14 12:03:35,232 - INFO - Added document type to filename: P180770_Bolivia_EN_escp_01.pdf
+2025-04-14 12:03:35,237 - INFO - Added document type to filename: P180770_Bolivia_EN_escp_02.pdf
+2025-04-14 12:03:35,242 - INFO - Added document type to filename: P180770_Bolivia_NON_escp.pdf
+2025-04-14 12:03:35,249 - INFO - Added document type to filename: P180904_Bhutan_EN_escp.pdf
+2025-04-14 12:03:35,255 - INFO - Added document type to filename: P181221_Botswana_EN_escp.pdf
+2025-04-14 12:03:35,261 - INFO - Added document type to filename: P181378_Afghanistan_EN_escp.pdf
+2025-04-14 12:03:35,267 - INFO - Added document type to filename: P181384_Bangladesh_EN_escp.pdf
+2025-04-14 12:03:35,274 - INFO - Added document type to filename: P181384_Bangladesh_EN_escp_01.pdf
+2025-04-14 12:03:35,281 - INFO - Added document type to filename: P181384_Bangladesh_EN_escp_02.pdf
+2025-04-14 12:03:35,286 - INFO - Added document type to filename: P181495_Angola_EN_escp.pdf
+2025-04-14 12:03:35,292 - INFO - Added document type to filename: P181563_Bangladesh_EN_escp.pdf
+2025-04-14 12:03:35,298 - INFO - Added document type to filename: P181563_Bangladesh_EN_escp_01.pdf
+2025-04-14 12:03:35,306 - INFO - Added document type to filename: P181563_Bangladesh_EN_escp_02.pdf
+2025-04-14 12:03:35,311 - INFO - Added document type to filename: P181622_Afghanistan_EN_escp.pdf
+2025-04-14 12:03:35,317 - INFO - Added document type to filename: P181622_Afghanistan_EN_escp_01.pdf
+2025-04-14 12:03:35,322 - INFO - Added document type to filename: P500727_Bangladesh_EN_escp.pdf
+2025-04-14 12:03:35,327 - INFO - Added document type to filename: P501274_Bangladesh_EN_escp.pdf
+2025-04-14 12:03:35,333 - INFO - Added document type to filename: P504220_Afghanistan_EN_escp.pdf
+2025-04-14 12:03:35,340 - INFO - Added document type to filename: P504220_Afghanistan_EN_escp_01.pdf
+2025-04-14 12:03:35,347 - INFO - Added document type to filename: P504701_Armenia_EN_escp.pdf
+2025-04-14 12:03:35,352 - INFO - Added document type to filename: P505675_Argentina_EN_escp.pdf
+2025-04-14 12:03:35,357 - INFO - Added document type to filename: P505675_Argentina_EN_escp_01.pdf
+2025-04-14 12:03:35,362 - INFO - Added document type to filename: P506430_Argentina_EN_escp.pdf
+2025-04-14 12:03:35,368 - INFO - Added document type to filename: P506430_Argentina_EN_escp_01.pdf
+2025-04-14 12:03:35,374 - INFO - Added document type to filename: P506846_Argentina_EN_escp.pdf
+2025-04-14 12:03:35,380 - INFO - Added document type to filename: P507190_Barbados_EN_escp.pdf
+2025-04-14 12:03:35,385 - INFO - Added document type to filename: P507190_Barbados_EN_escp_01.pdf
+2025-04-14 12:03:35,391 - INFO - Added document type to filename: P507190_Barbados_EN_escp_02.pdf
+2025-04-14 12:03:35,396 - INFO - Added document type to filename: SCAN_OCR_DOCUMENT_escp.pdf
+2025-04-14 12:03:35,401 - INFO - Added document type to filename: SCAN_OCR_DOCUMENT_escp_01.pdf
+2025-04-14 12:03:35,407 - INFO - Added document type to filename: UNKNOWN_EN_escp.pdf
+2025-04-14 12:03:35,414 - INFO - Added document type to filename: UNKNOWN_NON_escp.pdf
+2025-04-14 12:03:35,422 - INFO - Added document type to filename: UNKNOWN_NON_escp_01.pdf
+2025-04-14 12:03:35,430 - INFO - Added document type to filename: UNKNOWN_NON_escp_02.pdf
+2025-04-14 12:03:35,435 - INFO - Added document type to filename: UNKNOWN_NON_escp_03.pdf
+2025-04-14 12:03:35,442 - INFO - Added document type to filename: UNKNOWN_NON_escp_04.pdf
+2025-04-14 12:03:35,447 - INFO - Added document type to filename: UNKNOWN_NON_escp_05.pdf
+2025-04-14 12:03:35,452 - INFO - Added document type to filename: UNKNOWN_NON_escp_06.pdf
+2025-04-14 12:03:35,458 - INFO - Added document type to filename: UNKNOWN_NON_escp_07.pdf
+2025-04-14 12:03:35,465 - INFO - Added document type to filename: UNKNOWN_NON_escp_08.pdf
+2025-04-14 12:04:10,730 - INFO - Found project ID: P506846, corrected to: P506846
+2025-04-14 12:04:10,924 - INFO - Found country 'Argentina' for project ID: P506846
+2025-04-14 12:04:10,928 - INFO - Renamed to: P506846_Argentina_NON.pdf
+2025-04-14 12:04:12,297 - INFO - Found project ID: P180092, corrected to: P180092
+2025-04-14 12:04:12,545 - INFO - Found project ID: P178125, corrected to: P178125
+2025-04-14 12:04:12,697 - INFO - Found country 'Argentina' for project ID: P180092
+2025-04-14 12:04:12,753 - INFO - Found country 'Azerbaijan' for project ID: P178125
+2025-04-14 12:04:12,756 - INFO - Renamed to: P178125_Azerbaijan_EN.pdf
+2025-04-14 12:04:12,997 - INFO - Found project ID: P171657, corrected to: P171657
+2025-04-14 12:04:13,100 - INFO - Found country 'Afghanistan' for project ID: P171657
+2025-04-14 12:04:13,103 - INFO - Renamed to: P171657_Afghanistan_EN.pdf
+2025-04-14 12:04:14,155 - INFO - Renamed to: P180092_Argentina_NON.pdf
+2025-04-14 12:04:18,179 - INFO - Found project ID: P174186, corrected to: P174186
+2025-04-14 12:04:18,326 - INFO - Found country 'Benin' for project ID: P174186
+2025-04-14 12:04:18,329 - INFO - Renamed to: P174186_Benin_EN.pdf
+2025-04-14 12:04:19,954 - INFO - Found project ID: P174268, corrected to: P174268
+2025-04-14 12:04:20,091 - INFO - Found country 'Bangladesh' for project ID: P174268
+2025-04-14 12:04:20,115 - INFO - Renamed to: P174268_Bangladesh_EN.pdf
+2025-04-14 12:04:38,851 - INFO - Found project ID: P178760, corrected to: P178760
+2025-04-14 12:04:38,955 - INFO - Found country 'Afghanistan' for project ID: P178760
+2025-04-14 12:04:38,958 - INFO - Renamed to: P178760_Afghanistan_EN.pdf
+2025-04-14 12:04:41,133 - INFO - Found project ID: P178775, corrected to: P178775
+2025-04-14 12:04:41,284 - INFO - Found country 'Afghanistan' for project ID: P178775
+2025-04-14 12:04:41,289 - INFO - Renamed to: P178775_Afghanistan_EN.pdf
+2025-04-14 12:04:44,543 - INFO - Found project ID: P179311, corrected to: P179311
+2025-04-14 12:04:44,722 - INFO - Found country 'Afghanistan' for project ID: P179311
+2025-04-14 12:04:44,726 - INFO - Renamed to: P179311_Afghanistan_EN.pdf
+2025-04-14 12:04:51,808 - INFO - Found project ID: P181384, corrected to: P181384
+2025-04-14 12:04:52,022 - INFO - Found country 'Bangladesh' for project ID: P181384
+2025-04-14 12:04:52,025 - INFO - Renamed to: P181384_Bangladesh_EN.pdf
+2025-04-14 12:04:52,053 - INFO - Found project ID: P180027, corrected to: P180027
+2025-04-14 12:04:52,269 - INFO - Found country 'Bolivia' for project ID: P180027
+2025-04-14 12:04:53,582 - INFO - Renamed to: P180027_Bolivia_EN.pdf
+2025-04-14 12:04:54,600 - INFO - Found project ID: P178280, corrected to: P178280
+2025-04-14 12:04:54,705 - INFO - Found country 'Afghanistan' for project ID: P178280
+2025-04-14 12:04:54,709 - INFO - Renamed to: P178280_Afghanistan_EN.pdf
+2025-04-14 12:04:55,402 - INFO - Found project ID: P504220, corrected to: P504220
+2025-04-14 12:04:55,487 - INFO - Found country 'Afghanistan' for project ID: P504220
+2025-04-14 12:04:56,133 - INFO - Renamed to: P504220_Afghanistan_EN.pdf
+2025-04-14 12:04:57,927 - INFO - Found project ID: P163610, corrected to: P163610
+2025-04-14 12:04:58,096 - INFO - Copied with project ID: P163610_Angola_EN.pdf
+2025-04-14 12:04:58,473 - INFO - Found project ID: P169779, corrected to: P169779
+2025-04-14 12:04:58,602 - INFO - Copied with project ID: P169779_Angola_EN.pdf
+2025-04-14 12:04:58,827 - INFO - Found project ID: P170329, corrected to: P170329
+2025-04-14 12:04:58,930 - INFO - Copied with project ID: P170329_Argentina_EN.pdf
+2025-04-14 12:04:59,196 - INFO - Found project ID: P157827, corrected to: P157827
+2025-04-14 12:04:59,349 - INFO - Copied with project ID: P157827_Afghanistan_EN.pdf
+2025-04-14 12:04:59,636 - INFO - Found project ID: P166405, corrected to: P166405
+2025-04-14 12:04:59,724 - INFO - Copied with project ID: P166405_Afghanistan_EN.pdf
+2025-04-14 12:05:00,145 - INFO - Found project ID: P172109, corrected to: P172109
+2025-04-14 12:05:00,314 - INFO - Copied with project ID: P172109_Afghanistan_EN.pdf
+2025-04-14 12:05:00,635 - INFO - Found project ID: P170329, corrected to: P170329
+2025-04-14 12:05:00,775 - INFO - Copied with project ID: P170329_Argentina_NON.pdf
+2025-04-14 12:05:00,942 - INFO - Found project ID: P171250, corrected to: P171250
+2025-04-14 12:05:01,102 - INFO - Copied with project ID: P171250_Azerbaijan_EN.pdf
+2025-04-14 12:05:01,679 - INFO - Found project ID: P170682, corrected to: P170682
+2025-04-14 12:05:01,819 - INFO - Copied with project ID: P170682_Brazil_EN.pdf
+2025-04-14 12:05:01,967 - INFO - Found project ID: P169134, corrected to: P169134
+2025-04-14 12:05:02,122 - INFO - Copied with project ID: P169134_Brazil_EN.pdf
+2025-04-14 12:05:02,307 - INFO - Found project ID: P173775, corrected to: P173775
+2025-04-14 12:05:02,389 - INFO - Copied with project ID: P173775_Afghanistan_EN.pdf
+2025-04-14 12:05:02,526 - INFO - Found project ID: P173767, corrected to: P173767
+2025-04-14 12:05:02,604 - INFO - Copied with project ID: P173767_Argentina_EN.pdf
+2025-04-14 12:05:03,018 - INFO - Found project ID: P169140, corrected to: P169140
+2025-04-14 12:05:03,187 - INFO - Copied with project ID: P169140_Brazil_EN.pdf
+2025-04-14 12:05:03,358 - INFO - Found project ID: P173757, corrected to: P173757
+2025-04-14 12:05:03,464 - INFO - Copied with project ID: P173757_Bangladesh_EN.pdf
+2025-04-14 12:05:03,542 - INFO - Found project ID: P173787, corrected to: P173787
+2025-04-14 12:05:03,589 - INFO - Copied with project ID: P173787_Bhutan_EN.pdf
+2025-04-14 12:05:03,862 - INFO - Found project ID: P173839, corrected to: P173839
+2025-04-14 12:05:03,950 - INFO - Copied with project ID: P173839_Benin_EN.pdf
+2025-04-14 12:05:04,180 - INFO - Found project ID: P173809, corrected to: P173809
+2025-04-14 12:05:04,278 - INFO - Copied with project ID: P173809_Bosnia_and_Herzegovina_EN.pdf
+2025-04-14 12:05:04,475 - INFO - Found project ID: P170850, corrected to: P170850
+2025-04-14 12:05:04,543 - INFO - Copied with project ID: P170850_Brazil_EN.pdf
+2025-04-14 12:05:04,866 - INFO - Found project ID: P173984, corrected to: P173984
+2025-04-14 12:05:04,980 - INFO - Copied with project ID: P173984_Bolivia_EN.pdf
+2025-04-14 12:05:05,540 - INFO - Found project ID: P168132, corrected to: P168132
+2025-04-14 12:05:05,714 - INFO - Copied with project ID: P168132_Benin_EN.pdf
+2025-04-14 12:05:05,913 - INFO - Found project ID: P173828, corrected to: P173828
+2025-04-14 12:05:05,999 - INFO - Copied with project ID: P173828_Belarus_EN.pdf
+2025-04-14 12:05:06,445 - INFO - Found project ID: P170688, corrected to: P170688
+2025-04-14 12:05:06,632 - INFO - Copied with project ID: P170688_Bangladesh_EN.pdf
+2025-04-14 12:05:07,072 - INFO - Found project ID: P169880, corrected to: P169880
+2025-04-14 12:05:07,234 - INFO - Copied with project ID: P169880_Bangladesh_EN.pdf
+2025-04-14 12:05:07,383 - INFO - Found project ID: P173767, corrected to: P173767
+2025-04-14 12:05:07,472 - INFO - Copied with project ID: P173767_Argentina_NON.pdf
+2025-04-14 12:05:07,864 - INFO - Found project ID: P174119, corrected to: P174119
+2025-04-14 12:05:08,022 - INFO - Copied with project ID: P174119_Afghanistan_EN.pdf
+2025-04-14 12:05:08,390 - INFO - Found project ID: P174348, corrected to: P174348
+2025-04-14 12:05:08,488 - INFO - Copied with project ID: P174348_Afghanistan_EN.pdf
+2025-04-14 12:05:08,910 - INFO - Found project ID: P174101, corrected to: P174101
+2025-04-14 12:05:09,003 - INFO - Copied with project ID: P174101_Albania_EN.pdf
+2025-04-14 12:05:09,812 - INFO - Found project ID: P171886, corrected to: P171886
+2025-04-14 12:05:09,906 - INFO - Copied with project ID: P171886_Afghanistan_EN.pdf
+2025-04-14 12:05:10,284 - INFO - Found project ID: P174604, corrected to: P174604
+2025-04-14 12:05:10,426 - INFO - Copied with project ID: P174604_Bosnia_and_Herzegovina_EN.pdf
+2025-04-14 12:05:10,581 - INFO - Found project ID: P169970, corrected to: P169970
+2025-04-14 12:05:10,729 - INFO - Copied with project ID: P169970_Afghanistan_EN.pdf
+2025-04-14 12:05:11,128 - INFO - Found project ID: P132667, corrected to: P132667
+2025-04-14 12:05:11,285 - INFO - Copied with project ID: P132667_EN.pdf
+2025-04-14 12:05:12,212 - INFO - Found project ID: P173387, corrected to: P173387
+2025-04-14 12:05:12,331 - INFO - Copied with project ID: P173387_Afghanistan_EN.pdf
+2025-04-14 12:05:12,833 - INFO - Found project ID: P166805, corrected to: P166805
+2025-04-14 12:05:12,985 - INFO - Copied with project ID: P166805_Angola_EN.pdf
+2025-04-14 12:05:13,253 - INFO - Found project ID: P174085, corrected to: P174085
+2025-04-14 12:05:13,478 - INFO - Copied with project ID: P174085_Bangladesh_EN.pdf
+2025-04-14 12:05:13,994 - INFO - Found project ID: P170850, corrected to: P170850
+2025-04-14 12:05:14,108 - INFO - Copied with project ID: P170850_Brazil_NON.pdf
+2025-04-14 12:05:15,057 - INFO - Found project ID: P175138, corrected to: P175138
+2025-04-14 12:05:15,210 - INFO - Copied with project ID: P175138_Argentina_EN.pdf
+2025-04-14 12:05:15,668 - INFO - Found project ID: P168699, corrected to: P168699
+2025-04-14 12:05:15,858 - INFO - Copied with project ID: P168699_Angola_EN.pdf
+2025-04-14 12:05:16,896 - INFO - Found project ID: P175820, corrected to: P175820
+2025-04-14 12:05:17,008 - INFO - Copied with project ID: P175820_Bangladesh_EN.pdf
+2025-04-14 12:05:17,222 - INFO - Found project ID: P118023, corrected to: P118023
+2025-04-14 12:05:17,351 - INFO - Copied with project ID: P118023_EN.pdf
+2025-04-14 12:05:18,391 - INFO - Found project ID: P167506, corrected to: P167506
+2025-04-14 12:05:18,510 - INFO - Copied with project ID: P167506_Bangladesh_EN.pdf
+2025-04-14 12:05:18,813 - INFO - Found project ID: P175138, corrected to: P175138
+2025-04-14 12:05:19,068 - INFO - Copied with project ID: P175138_Argentina_NON.pdf
+2025-04-14 12:05:19,424 - INFO - Found project ID: P173749, corrected to: P173749
+2025-04-14 12:05:19,592 - INFO - Copied with project ID: P173749_Benin_EN.pdf
+2025-04-14 12:05:20,512 - INFO - Found project ID: P168961, corrected to: P168961
+2025-04-14 12:05:20,641 - INFO - Copied with project ID: P168961_Bangladesh_EN.pdf
+2025-04-14 12:05:21,102 - INFO - Found project ID: P176630, corrected to: P176630
+2025-04-14 12:05:21,242 - INFO - Copied with project ID: P176630_Angola_EN.pdf
+2025-04-14 12:05:21,544 - INFO - Found project ID: P168943, corrected to: P168943
+2025-04-14 12:05:21,793 - INFO - Copied with project ID: P168943_Bosnia_and_Herzegovina_EN.pdf
+2025-04-14 12:05:21,938 - INFO - Found project ID: P176905, corrected to: P176905
+2025-04-14 12:05:22,075 - INFO - Copied with project ID: P176905_Argentina_EN.pdf
+2025-04-14 12:05:22,500 - INFO - Found project ID: P175768, corrected to: P175768
+2025-04-14 12:05:22,669 - INFO - Copied with project ID: P175768_Benin_EN.pdf
+2025-04-14 12:05:23,000 - INFO - Found project ID: P175669, corrected to: P175669
+2025-04-14 12:05:23,190 - INFO - Copied with project ID: P175669_Argentina_EN.pdf
+2025-04-14 12:05:23,438 - INFO - Found project ID: P174937, corrected to: P174937
+2025-04-14 12:05:23,549 - INFO - Copied with project ID: P174937_Bangladesh_EN.pdf
+2025-04-14 12:05:23,760 - INFO - Found project ID: P176803, corrected to: P176803
+2025-04-14 12:05:23,878 - INFO - Copied with project ID: P176803_Armenia_EN.pdf
+2025-04-14 12:05:24,875 - INFO - Found project ID: P172592, corrected to: P172592
+2025-04-14 12:05:25,008 - INFO - Copied with project ID: P172592_Belize_EN.pdf
+2025-04-14 12:05:26,019 - INFO - Found project ID: P177987, corrected to: P177987
+2025-04-14 12:05:26,128 - INFO - Copied with project ID: P177987_Belize_EN.pdf
+2025-04-14 12:05:27,042 - INFO - Found project ID: P178043, corrected to: P178043
+2025-04-14 12:05:27,300 - INFO - Copied with project ID: P178043_Angola_EN.pdf
+2025-04-14 12:05:27,654 - INFO - Found project ID: P177004, corrected to: P177004
+2025-04-14 12:05:27,896 - INFO - Copied with project ID: P177004_Angola_EN.pdf
+2025-04-14 12:05:28,629 - INFO - Found project ID: P173019, corrected to: P173019
+2025-04-14 12:05:28,728 - INFO - Copied with project ID: P173019_Bangladesh_EN.pdf
+2025-04-14 12:05:29,101 - INFO - Found project ID: P171150, corrected to: P171150
+2025-04-14 12:05:29,262 - INFO - Copied with project ID: P171150_Bosnia_and_Herzegovina_EN.pdf
+2025-04-14 12:05:29,663 - INFO - Found project ID: P171266, corrected to: P171266
+2025-04-14 12:05:29,825 - INFO - Copied with project ID: P171266_Bosnia_and_Herzegovina_EN.pdf
+2025-04-14 12:05:30,729 - INFO - Found project ID: P178067, corrected to: P178067
+2025-04-14 12:05:30,942 - INFO - Copied with project ID: P178067_Argentina_EN.pdf
+2025-04-14 12:05:31,217 - INFO - Found project ID: P173312, corrected to: P173312
+2025-04-14 12:05:31,334 - INFO - Copied with project ID: P173312_Bangladesh_EN.pdf
+2025-04-14 12:05:32,268 - INFO - Found project ID: P176549, corrected to: P176549
+2025-04-14 12:05:32,388 - INFO - Copied with project ID: P176549_Bangladesh_EN.pdf
+2025-04-14 12:05:32,539 - INFO - Found project ID: P176895, corrected to: P176895
+2025-04-14 12:05:32,622 - INFO - Copied with project ID: P176895_Bosnia_and_Herzegovina_EN.pdf
+2025-04-14 12:05:32,746 - INFO - Found project ID: P505675, corrected to: P505675
+2025-04-14 12:05:32,878 - INFO - Copied with project ID: P505675_Argentina_EN.pdf
+2025-04-14 12:05:33,143 - INFO - Found project ID: P176040, corrected to: P176040
+2025-04-14 12:05:33,215 - INFO - Copied with project ID: P176040_Bosnia_and_Herzegovina_EN.pdf
+2025-04-14 12:05:34,031 - INFO - Found project ID: P174595, corrected to: P174595
+2025-04-14 12:05:34,148 - INFO - Copied with project ID: P174595_Albania_EN.pdf
+2025-04-14 12:05:34,528 - INFO - Found project ID: P180770, corrected to: P180770
+2025-04-14 12:05:34,659 - INFO - Copied with project ID: P180770_Bolivia_EN.pdf
+2025-04-14 12:05:35,559 - INFO - Found project ID: P172817, corrected to: P172817
+2025-04-14 12:05:35,703 - INFO - Copied with project ID: P172817_Bangladesh_EN.pdf
+2025-04-14 12:05:36,656 - INFO - Found project ID: P178035, corrected to: P178035
+2025-04-14 12:05:36,857 - INFO - Copied with project ID: P178035_Angola_EN.pdf
+2025-04-14 12:05:37,610 - INFO - Found project ID: P178534, corrected to: P178534
+2025-04-14 12:05:37,720 - INFO - Copied with project ID: P178534_Argentina_EN.pdf
+2025-04-14 12:05:37,844 - INFO - Found project ID: P180027, corrected to: P180027
+2025-04-14 12:05:37,977 - INFO - Copied with project ID: P180027_Bolivia_EN_01.pdf
+2025-04-14 12:05:38,311 - INFO - Found project ID: P181221, corrected to: P181221
+2025-04-14 12:05:38,415 - INFO - Copied with project ID: P181221_Botswana_EN.pdf
+2025-04-14 12:05:38,719 - INFO - Found project ID: P176163, corrected to: P176163
+2025-04-14 12:05:38,841 - INFO - Copied with project ID: P176163_Albania_EN.pdf
+2025-04-14 12:05:39,438 - INFO - Found project ID: P502532, corrected to: P502532
+2025-04-14 12:05:39,592 - INFO - Copied with project ID: P502532_Eastern_and_Southern_Africa_EN.pdf
+2025-04-14 12:05:40,423 - INFO - Found project ID: P178133, corrected to: P178133
+2025-04-14 12:05:40,524 - INFO - Copied with project ID: P178133_Bangladesh_EN.pdf
+2025-04-14 12:05:40,763 - INFO - Found project ID: P176812, corrected to: P176812
+2025-04-14 12:05:40,870 - INFO - Copied with project ID: P176812_Bangladesh_EN.pdf
+2025-04-14 12:05:41,456 - INFO - Found project ID: P179988, corrected to: P179988
+2025-04-14 12:05:41,642 - INFO - Copied with project ID: P179988_Armenia_EN.pdf
+2025-04-14 12:05:42,573 - INFO - Found project ID: P179636, corrected to: P179636
+2025-04-14 12:05:42,719 - INFO - Copied with project ID: P179636_Argentina_EN.pdf
+2025-04-14 12:05:43,055 - INFO - Found project ID: P180456, corrected to: P180456
+2025-04-14 12:05:43,188 - INFO - Copied with project ID: P180456_Argentina_EN.pdf
+2025-04-14 12:05:43,387 - INFO - Found project ID: P175672, corrected to: P175672
+2025-04-14 12:05:43,513 - INFO - Copied with project ID: P175672_Bolivia_EN.pdf
+2025-04-14 12:05:44,208 - INFO - Found project ID: P178996, corrected to: P178996
+2025-04-14 12:05:44,311 - INFO - Copied with project ID: P178996_Bangladesh_EN.pdf
+2025-04-14 12:05:44,503 - INFO - Found project ID: P507190, corrected to: P507190
+2025-04-14 12:05:44,632 - INFO - Copied with project ID: P507190_Barbados_EN.pdf
+2025-04-14 12:05:44,879 - INFO - Found project ID: P178553, corrected to: P178553
+2025-04-14 12:05:45,122 - INFO - Copied with project ID: P178553_Argentina_EN.pdf
+2025-04-14 12:05:45,992 - INFO - Found project ID: P179154, corrected to: P179154
+2025-04-14 12:05:46,106 - INFO - Copied with project ID: P179154_Angola_EN.pdf
+2025-04-14 12:05:46,962 - INFO - Found project ID: P176429, corrected to: P176429
+2025-04-14 12:05:47,057 - INFO - Copied with project ID: P176429_Bangladesh_EN.pdf
+2025-04-14 12:05:47,286 - INFO - Found project ID: P506430, corrected to: P506430
+2025-04-14 12:05:47,414 - INFO - Copied with project ID: P506430_Argentina_EN.pdf
+2025-04-14 12:05:47,776 - INFO - Found project ID: P501274, corrected to: P501274
+2025-04-14 12:05:47,922 - INFO - Copied with project ID: P501274_Bangladesh_EN.pdf
+2025-04-14 12:05:48,276 - INFO - Found project ID: P172497, corrected to: P172497
+2025-04-14 12:05:48,528 - INFO - Copied with project ID: P172497_Brazil_EN.pdf
+2025-04-14 12:05:48,891 - INFO - Found project ID: P180631, corrected to: P180631
+2025-04-14 12:05:49,007 - INFO - Copied with project ID: P180631_Angola_EN.pdf
+2025-04-14 12:05:49,255 - INFO - Found project ID: P180092, corrected to: P180092
+2025-04-14 12:05:49,313 - INFO - Copied with project ID: P180092_Argentina_EN.pdf
+2025-04-14 12:05:50,391 - INFO - Found project ID: P181495, corrected to: P181495
+2025-04-14 12:05:50,501 - INFO - Copied with project ID: P181495_Angola_EN.pdf
+2025-04-14 12:05:50,938 - INFO - Found project ID: P178861, corrected to: P178861
+2025-04-14 12:05:51,112 - INFO - Copied with project ID: P178861_Bolivia_EN.pdf
+2025-04-14 12:05:51,460 - INFO - Found project ID: P178077, corrected to: P178077
+2025-04-14 12:05:51,584 - INFO - Copied with project ID: P178077_Bangladesh_EN.pdf
+2025-04-14 12:05:51,803 - INFO - Found project ID: P171144, corrected to: P171144
+2025-04-14 12:05:51,902 - INFO - Copied with project ID: P171144_Bangladesh_EN.pdf
+2025-04-14 12:05:52,236 - INFO - Found project ID: P500727, corrected to: P500727
+2025-04-14 12:05:52,352 - INFO - Copied with project ID: P500727_Bangladesh_EN.pdf
+2025-04-14 12:05:52,579 - INFO - Found project ID: P179009, corrected to: P179009
+2025-04-14 12:05:52,688 - INFO - Copied with project ID: P179009_Bangladesh_EN.pdf
+2025-04-14 12:05:53,569 - INFO - Found project ID: P172499, corrected to: P172499
+2025-04-14 12:05:53,653 - INFO - Copied with project ID: P172499_Bangladesh_EN.pdf
+2025-04-14 12:05:54,314 - INFO - Found project ID: P178609, corrected to: P178609
+2025-04-14 12:05:54,526 - INFO - Copied with project ID: P178609_Argentina_EN.pdf
+2025-04-14 12:05:54,643 - INFO - Found project ID: P178715, corrected to: P178715
+2025-04-14 12:05:54,772 - INFO - Copied with project ID: P178715_Albania_EN.pdf
+2025-04-14 12:05:55,414 - INFO - Found project ID: P179534, corrected to: P179534
+2025-04-14 12:05:55,632 - INFO - Copied with project ID: P179534_Argentina_EN.pdf
+2025-04-14 12:05:56,407 - INFO - Found project ID: P178985, corrected to: P178985
+2025-04-14 12:05:56,512 - INFO - Copied with project ID: P178985_Bangladesh_EN.pdf
+2025-04-14 12:05:57,147 - INFO - Found project ID: P180409, corrected to: P180409
+2025-04-14 12:05:57,271 - INFO - Copied with project ID: P180409_Bosnia_and_Herzegovina_EN.pdf
+2025-04-14 12:05:57,977 - INFO - Found project ID: P506846, corrected to: P506846
+2025-04-14 12:05:58,107 - INFO - Copied with project ID: P506846_Argentina_EN.pdf
+2025-04-14 12:05:59,191 - INFO - Found project ID: P178040, corrected to: P178040
+2025-04-14 12:05:59,313 - INFO - Copied with project ID: P178040_Angola_EN.pdf
+2025-04-14 12:05:59,754 - INFO - Found project ID: P175669, corrected to: P175669
+2025-04-14 12:05:59,994 - INFO - Copied with project ID: P175669_Argentina_NON.pdf
+2025-04-14 12:06:00,134 - INFO - Found project ID: P180027, corrected to: P180027
+2025-04-14 12:06:00,283 - INFO - Copied with project ID: P180027_Bolivia_NON.pdf
+2025-04-14 12:06:00,403 - INFO - Found project ID: P179534, corrected to: P179534
+2025-04-14 12:06:00,532 - INFO - Copied with project ID: P179534_Argentina_NON.pdf
+2025-04-14 12:06:00,899 - INFO - Found project ID: P178760, corrected to: P178760
+2025-04-14 12:06:01,021 - INFO - Copied with project ID: P178760_Afghanistan_EN_01.pdf
+2025-04-14 12:06:01,077 - INFO - Found project ID: P174595, corrected to: P174595
+2025-04-14 12:06:01,219 - INFO - Copied with project ID: P174595_Albania_EN_01.pdf
+2025-04-14 12:06:01,233 - INFO - Added document type to filename: P118023_EN_pad.pdf
+2025-04-14 12:06:01,240 - INFO - Added document type to filename: P132667_EN_pad.pdf
+2025-04-14 12:06:01,245 - INFO - Added document type to filename: P157827_Afghanistan_EN_pad.pdf
+2025-04-14 12:06:01,252 - INFO - Added document type to filename: P163610_Angola_EN_pad.pdf
+2025-04-14 12:06:01,257 - INFO - Added document type to filename: P166405_Afghanistan_EN_pad.pdf
+2025-04-14 12:06:01,263 - INFO - Added document type to filename: P166805_Angola_EN_pad.pdf
+2025-04-14 12:06:01,268 - INFO - Added document type to filename: P167506_Bangladesh_EN_pad.pdf
+2025-04-14 12:06:01,272 - INFO - Added document type to filename: P168132_Benin_EN_pad.pdf
+2025-04-14 12:06:01,277 - INFO - Added document type to filename: P168699_Angola_EN_pad.pdf
+2025-04-14 12:06:01,282 - INFO - Added document type to filename: P168943_Bosnia_and_Herzegovina_EN_pad.pdf
+2025-04-14 12:06:01,288 - INFO - Added document type to filename: P168961_Bangladesh_EN_pad.pdf
+2025-04-14 12:06:01,293 - INFO - Added document type to filename: P169134_Brazil_EN_pad.pdf
+2025-04-14 12:06:01,298 - INFO - Added document type to filename: P169140_Brazil_EN_pad.pdf
+2025-04-14 12:06:01,303 - INFO - Added document type to filename: P169779_Angola_EN_pad.pdf
+2025-04-14 12:06:01,308 - INFO - Added document type to filename: P169880_Bangladesh_EN_pad.pdf
+2025-04-14 12:06:01,313 - INFO - Added document type to filename: P169970_Afghanistan_EN_pad.pdf
+2025-04-14 12:06:01,318 - INFO - Added document type to filename: P170329_Argentina_EN_pad.pdf
+2025-04-14 12:06:01,324 - INFO - Added document type to filename: P170329_Argentina_NON_pad.pdf
+2025-04-14 12:06:01,329 - INFO - Added document type to filename: P170682_Brazil_EN_pad.pdf
+2025-04-14 12:06:01,334 - INFO - Added document type to filename: P170688_Bangladesh_EN_pad.pdf
+2025-04-14 12:06:01,339 - INFO - Added document type to filename: P170850_Brazil_EN_pad.pdf
+2025-04-14 12:06:01,343 - INFO - Added document type to filename: P170850_Brazil_NON_pad.pdf
+2025-04-14 12:06:01,348 - INFO - Added document type to filename: P171144_Bangladesh_EN_pad.pdf
+2025-04-14 12:06:01,352 - INFO - Added document type to filename: P171150_Bosnia_and_Herzegovina_EN_pad.pdf
+2025-04-14 12:06:01,358 - INFO - Added document type to filename: P171250_Azerbaijan_EN_pad.pdf
+2025-04-14 12:06:01,363 - INFO - Added document type to filename: P171266_Bosnia_and_Herzegovina_EN_pad.pdf
+2025-04-14 12:06:01,368 - INFO - Added document type to filename: P171657_Afghanistan_EN_pad.pdf
+2025-04-14 12:06:01,373 - INFO - Added document type to filename: P171886_Afghanistan_EN_pad.pdf
+2025-04-14 12:06:01,377 - INFO - Added document type to filename: P172109_Afghanistan_EN_pad.pdf
+2025-04-14 12:06:01,382 - INFO - Added document type to filename: P172497_Brazil_EN_pad.pdf
+2025-04-14 12:06:01,387 - INFO - Added document type to filename: P172499_Bangladesh_EN_pad.pdf
+2025-04-14 12:06:01,392 - INFO - Added document type to filename: P172592_Belize_EN_pad.pdf
+2025-04-14 12:06:01,397 - INFO - Added document type to filename: P172817_Bangladesh_EN_pad.pdf
+2025-04-14 12:06:01,403 - INFO - Added document type to filename: P173019_Bangladesh_EN_pad.pdf
+2025-04-14 12:06:01,408 - INFO - Added document type to filename: P173312_Bangladesh_EN_pad.pdf
+2025-04-14 12:06:01,413 - INFO - Added document type to filename: P173387_Afghanistan_EN_pad.pdf
+2025-04-14 12:06:01,420 - INFO - Added document type to filename: P173749_Benin_EN_pad.pdf
+2025-04-14 12:06:01,426 - INFO - Added document type to filename: P173757_Bangladesh_EN_pad.pdf
+2025-04-14 12:06:01,432 - INFO - Added document type to filename: P173767_Argentina_EN_pad.pdf
+2025-04-14 12:06:01,437 - INFO - Added document type to filename: P173767_Argentina_NON_pad.pdf
+2025-04-14 12:06:01,442 - INFO - Added document type to filename: P173775_Afghanistan_EN_pad.pdf
+2025-04-14 12:06:01,448 - INFO - Added document type to filename: P173787_Bhutan_EN_pad.pdf
+2025-04-14 12:06:01,453 - INFO - Added document type to filename: P173809_Bosnia_and_Herzegovina_EN_pad.pdf
+2025-04-14 12:06:01,458 - INFO - Added document type to filename: P173828_Belarus_EN_pad.pdf
+2025-04-14 12:06:01,464 - INFO - Added document type to filename: P173839_Benin_EN_pad.pdf
+2025-04-14 12:06:01,470 - INFO - Added document type to filename: P173984_Bolivia_EN_pad.pdf
+2025-04-14 12:06:01,476 - INFO - Added document type to filename: P174085_Bangladesh_EN_pad.pdf
+2025-04-14 12:06:01,481 - INFO - Added document type to filename: P174101_Albania_EN_pad.pdf
+2025-04-14 12:06:01,486 - INFO - Added document type to filename: P174119_Afghanistan_EN_pad.pdf
+2025-04-14 12:06:01,492 - INFO - Added document type to filename: P174186_Benin_EN_pad.pdf
+2025-04-14 12:06:01,497 - INFO - Added document type to filename: P174268_Bangladesh_EN_pad.pdf
+2025-04-14 12:06:01,502 - INFO - Added document type to filename: P174348_Afghanistan_EN_pad.pdf
+2025-04-14 12:06:01,508 - INFO - Added document type to filename: P174595_Albania_EN_pad.pdf
+2025-04-14 12:06:01,514 - INFO - Added document type to filename: P174595_Albania_EN_pad_01.pdf
+2025-04-14 12:06:01,519 - INFO - Added document type to filename: P174604_Bosnia_and_Herzegovina_EN_pad.pdf
+2025-04-14 12:06:01,525 - INFO - Added document type to filename: P174937_Bangladesh_EN_pad.pdf
+2025-04-14 12:06:01,530 - INFO - Added document type to filename: P175138_Argentina_EN_pad.pdf
+2025-04-14 12:06:01,537 - INFO - Added document type to filename: P175138_Argentina_NON_pad.pdf
+2025-04-14 12:06:01,544 - INFO - Added document type to filename: P175669_Argentina_EN_pad.pdf
+2025-04-14 12:06:01,549 - INFO - Added document type to filename: P175669_Argentina_NON_pad.pdf
+2025-04-14 12:06:01,554 - INFO - Added document type to filename: P175672_Bolivia_EN_pad.pdf
+2025-04-14 12:06:01,560 - INFO - Added document type to filename: P175768_Benin_EN_pad.pdf
+2025-04-14 12:06:01,565 - INFO - Added document type to filename: P175820_Bangladesh_EN_pad.pdf
+2025-04-14 12:06:01,570 - INFO - Added document type to filename: P176040_Bosnia_and_Herzegovina_EN_pad.pdf
+2025-04-14 12:06:01,577 - INFO - Added document type to filename: P176163_Albania_EN_pad.pdf
+2025-04-14 12:06:01,583 - INFO - Added document type to filename: P176429_Bangladesh_EN_pad.pdf
+2025-04-14 12:06:01,588 - INFO - Added document type to filename: P176549_Bangladesh_EN_pad.pdf
+2025-04-14 12:06:01,593 - INFO - Added document type to filename: P176630_Angola_EN_pad.pdf
+2025-04-14 12:06:01,599 - INFO - Added document type to filename: P176803_Armenia_EN_pad.pdf
+2025-04-14 12:06:01,605 - INFO - Added document type to filename: P176812_Bangladesh_EN_pad.pdf
+2025-04-14 12:06:01,611 - INFO - Added document type to filename: P176895_Bosnia_and_Herzegovina_EN_pad.pdf
+2025-04-14 12:06:01,616 - INFO - Added document type to filename: P176905_Argentina_EN_pad.pdf
+2025-04-14 12:06:01,622 - INFO - Added document type to filename: P177004_Angola_EN_pad.pdf
+2025-04-14 12:06:01,626 - INFO - Added document type to filename: P177987_Belize_EN_pad.pdf
+2025-04-14 12:06:01,631 - INFO - Added document type to filename: P178035_Angola_EN_pad.pdf
+2025-04-14 12:06:01,635 - INFO - Added document type to filename: P178040_Angola_EN_pad.pdf
+2025-04-14 12:06:01,641 - INFO - Added document type to filename: P178043_Angola_EN_pad.pdf
+2025-04-14 12:06:01,646 - INFO - Added document type to filename: P178067_Argentina_EN_pad.pdf
+2025-04-14 12:06:01,651 - INFO - Added document type to filename: P178077_Bangladesh_EN_pad.pdf
+2025-04-14 12:06:01,657 - INFO - Added document type to filename: P178125_Azerbaijan_EN_pad.pdf
+2025-04-14 12:06:01,662 - INFO - Added document type to filename: P178133_Bangladesh_EN_pad.pdf
+2025-04-14 12:06:01,668 - INFO - Added document type to filename: P178280_Afghanistan_EN_pad.pdf
+2025-04-14 12:06:01,672 - INFO - Added document type to filename: P178534_Argentina_EN_pad.pdf
+2025-04-14 12:06:01,678 - INFO - Added document type to filename: P178553_Argentina_EN_pad.pdf
+2025-04-14 12:06:01,683 - INFO - Added document type to filename: P178609_Argentina_EN_pad.pdf
+2025-04-14 12:06:01,689 - INFO - Added document type to filename: P178715_Albania_EN_pad.pdf
+2025-04-14 12:06:01,694 - INFO - Added document type to filename: P178760_Afghanistan_EN_pad.pdf
+2025-04-14 12:06:04,291 - INFO - Added document type to filename: P178760_Afghanistan_EN_pad_01.pdf
+2025-04-14 12:06:04,297 - INFO - Added document type to filename: P178775_Afghanistan_EN_pad.pdf
+2025-04-14 12:06:04,302 - INFO - Added document type to filename: P178861_Bolivia_EN_pad.pdf
+2025-04-14 12:06:04,307 - INFO - Added document type to filename: P178985_Bangladesh_EN_pad.pdf
+2025-04-14 12:06:04,312 - INFO - Added document type to filename: P178996_Bangladesh_EN_pad.pdf
+2025-04-14 12:06:04,317 - INFO - Added document type to filename: P179009_Bangladesh_EN_pad.pdf
+2025-04-14 12:06:04,322 - INFO - Added document type to filename: P179154_Angola_EN_pad.pdf
+2025-04-14 12:06:04,327 - INFO - Added document type to filename: P179311_Afghanistan_EN_pad.pdf
+2025-04-14 12:06:04,332 - INFO - Added document type to filename: P179534_Argentina_EN_pad.pdf
+2025-04-14 12:06:04,337 - INFO - Added document type to filename: P179534_Argentina_NON_pad.pdf
+2025-04-14 12:06:04,343 - INFO - Added document type to filename: P179636_Argentina_EN_pad.pdf
+2025-04-14 12:06:04,348 - INFO - Added document type to filename: P179988_Armenia_EN_pad.pdf
+2025-04-14 12:06:04,353 - INFO - Added document type to filename: P180027_Bolivia_EN_pad.pdf
+2025-04-14 12:06:04,358 - INFO - Added document type to filename: P180027_Bolivia_EN_pad_01.pdf
+2025-04-14 12:06:04,364 - INFO - Added document type to filename: P180027_Bolivia_NON_pad.pdf
+2025-04-14 12:06:04,369 - INFO - Added document type to filename: P180092_Argentina_EN_pad.pdf
+2025-04-14 12:06:04,374 - INFO - Added document type to filename: P180092_Argentina_NON_pad.pdf
+2025-04-14 12:06:04,380 - INFO - Added document type to filename: P180409_Bosnia_and_Herzegovina_EN_pad.pdf
+2025-04-14 12:06:04,385 - INFO - Added document type to filename: P180456_Argentina_EN_pad.pdf
+2025-04-14 12:06:04,390 - INFO - Added document type to filename: P180631_Angola_EN_pad.pdf
+2025-04-14 12:06:04,396 - INFO - Added document type to filename: P180770_Bolivia_EN_pad.pdf
+2025-04-14 12:06:04,401 - INFO - Added document type to filename: P181221_Botswana_EN_pad.pdf
+2025-04-14 12:06:04,406 - INFO - Added document type to filename: P181384_Bangladesh_EN_pad.pdf
+2025-04-14 12:06:04,411 - INFO - Added document type to filename: P181495_Angola_EN_pad.pdf
+2025-04-14 12:06:04,417 - INFO - Added document type to filename: P500727_Bangladesh_EN_pad.pdf
+2025-04-14 12:06:04,425 - INFO - Added document type to filename: P501274_Bangladesh_EN_pad.pdf
+2025-04-14 12:06:04,430 - INFO - Added document type to filename: P502532_Eastern_and_Southern_Africa_EN_pad.pdf
+2025-04-14 12:06:04,435 - INFO - Added document type to filename: P504220_Afghanistan_EN_pad.pdf
+2025-04-14 12:06:04,440 - INFO - Added document type to filename: P505675_Argentina_EN_pad.pdf
+2025-04-14 12:06:04,445 - INFO - Added document type to filename: P506430_Argentina_EN_pad.pdf
+2025-04-14 12:06:04,450 - INFO - Added document type to filename: P506846_Argentina_EN_pad.pdf
+2025-04-14 12:06:04,455 - INFO - Added document type to filename: P506846_Argentina_NON_pad.pdf
+2025-04-14 12:06:04,460 - INFO - Added document type to filename: P507190_Barbados_EN_pad.pdf
