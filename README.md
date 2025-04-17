@@ -122,10 +122,11 @@ Provides country name variants for better country detection:
 
 ## Troubleshooting
 
-### Common Issues
-- **Missing country detection**: Check country_variants.py for comprehensive country names
-- **Project IDs not recognized**: Ensure they follow the P###### format
-- **Document types not detected**: Ensure document type is included in filenames
+### Major Cases with Issues that cannot be fixed or mitigated
+- **First Project ID mentioned in document text or the filename is not the Project ID of the World Bank document**
+- **No Project ID found in document text or the filename**
+- **Country first detected in project text is not the country of the World Bank document**
+- **No Country found in document text or the filename**
 
 ### Logs
 The system generates several log files:
@@ -135,7 +136,7 @@ The system generates several log files:
 
 ## Examples
 
-### Example 1: Processing ICR Documents
+### Example 1: Single-Folder Processing
 
  python main.py
 > n # Single folder mode
