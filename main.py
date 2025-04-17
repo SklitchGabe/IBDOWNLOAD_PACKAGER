@@ -1079,10 +1079,10 @@ def load_project_country_mapping(spreadsheet_path, pid_column=None, country_colu
         Dictionary mapping project IDs to countries
     """
     try:
-        # Check file extension
+        # Check file extension to determine the appropriate loading method
         file_ext = os.path.splitext(spreadsheet_path)[1].lower()
         
-        # Load the spreadsheet based on file type
+        # Load the spreadsheet based on file type - supports both Excel and CSV formats
         if file_ext in ['.xlsx', '.xls']:
             df = pd.read_excel(spreadsheet_path)
         elif file_ext == '.csv':
@@ -1091,38 +1091,41 @@ def load_project_country_mapping(spreadsheet_path, pid_column=None, country_colu
             logging.error(f"Unsupported file format: {file_ext}")
             return {}
         
-        # Convert all column names to strings to avoid any type issues
+        # Convert all column names to strings to ensure consistent handling
+        # This prevents issues when column names are numeric or other non-string types
         df.columns = [str(col) for col in df.columns]
         
-        # Show the column names to the user if not specified
+        # Interactive column selection - display available columns when not specified
         if pid_column is None or country_column is None:
             print("\nAvailable columns in the spreadsheet:")
             for i, col in enumerate(df.columns):
                 print(f"{i}: {col}")
             
+            # Let the user select the Project ID column by number or name
             if pid_column is None:
                 pid_column = input("\nEnter the number or name of the column containing Project IDs: ").strip()
-                # Try to convert to integer if it's a number
+                # Try to convert input to integer for index-based selection
                 try:
                     pid_column = int(pid_column)
-                    pid_column = df.columns[pid_column]
+                    pid_column = df.columns[pid_column]  # Convert index to actual column name
                 except ValueError:
-                    # If not an integer, use as column name
+                    # If not an integer, use input as direct column name
                     pass
                 print(f"Using column '{pid_column}' for Project IDs")
             
+            # Let the user select the Country column by number or name
             if country_column is None:
                 country_column = input("Enter the number or name of the column containing Countries: ").strip()
-                # Try to convert to integer if it's a number
+                # Try to convert input to integer for index-based selection
                 try:
                     country_column = int(country_column)
-                    country_column = df.columns[country_column]
+                    country_column = df.columns[country_column]  # Convert index to actual column name
                 except ValueError:
-                    # If not an integer, use as column name
+                    # If not an integer, use input as direct column name
                     pass
                 print(f"Using column '{country_column}' for Countries")
         
-        # Ensure the columns exist
+        # Validate that the specified columns exist in the dataframe
         if pid_column not in df.columns:
             logging.error(f"Project ID column '{pid_column}' not found in spreadsheet")
             print(f"Error: Project ID column '{pid_column}' not found in spreadsheet")
@@ -1133,32 +1136,34 @@ def load_project_country_mapping(spreadsheet_path, pid_column=None, country_colu
             print(f"Error: Country column '{country_column}' not found in spreadsheet")
             return {}
         
-        # Create the mapping
+        # Create a mapping dictionary from project IDs to countries
         mapping = {}
         for _, row in df.iterrows():
-            # Convert to string and strip whitespace to ensure consistency
+            # Convert values to strings and strip whitespace for consistency
             project_id = str(row[pid_column]).strip()
             country = str(row[country_column]).strip()
             
-            # Skip empty values
+            # Skip empty or NaN values to prevent mapping issues
             if not project_id or not country or project_id.lower() == 'nan' or country.lower() == 'nan':
                 continue
             
-            # Handle project IDs that may not start with 'P'
+            # Handle project IDs that may not have the standard 'P' prefix
+            # Adds 'P' prefix to numeric project IDs for consistency (format: P######)
             if project_id and not project_id.startswith('P') and project_id.isdigit():
                 project_id = f"P{project_id}"
             
-            # Clean project ID to ensure it follows the P###### format
-            # Remove any non-alphanumeric characters
+            # Clean up project ID by removing any non-alphanumeric characters
+            # Ensures project IDs follow the P###### format
             project_id = re.sub(r'[^P0-9]', '', project_id)
             
-            # Make sure it matches our expected format
+            # Only add properly formatted project IDs to the mapping
             if re.match(r'P\d{6}', project_id):
                 mapping[project_id] = country
         
+        # Output summary of the mapping process
         print(f"Loaded {len(mapping)} project ID to country mappings")
         
-        # Show a sample of the mappings
+        # Show a sample of the mappings to verify correctness
         if mapping:
             sample_size = min(5, len(mapping))
             print("Sample mappings:")
@@ -1169,6 +1174,7 @@ def load_project_country_mapping(spreadsheet_path, pid_column=None, country_colu
         return mapping
     
     except Exception as e:
+        # Catch and log any exceptions during the mapping process
         logging.error(f"Error loading project country mapping: {str(e)}")
         print(f"Error loading spreadsheet: {str(e)}")
         return {}
@@ -1182,32 +1188,33 @@ def get_optimal_worker_count(file_count):
     Returns:
         Optimal number of worker processes
     """
-    # Get system information
-    cpu_count = os.cpu_count() or 4  # Default to 4 if we can't determine
+    # Get available system resources to intelligently determine worker count
+    cpu_count = os.cpu_count() or 4  # Default to 4 if CPU count detection fails
     mem = psutil.virtual_memory()
     
-    # Base worker count on CPU cores
-    # Start with a base value of CPU cores with some headroom for system
+    # Start with CPU cores minus 1 to leave resources for the system
+    # This prevents overloading the system while maximizing parallel processing
     base_workers = max(1, cpu_count - 1)
     
-    # Adjust for memory constraints - Word can use significant memory
-    # For systems with less memory, reduce worker count
-    if mem.total < 8 * 1024 * 1024 * 1024:  # 8 GB
-        mem_factor = 0.5
-    elif mem.total < 16 * 1024 * 1024 * 1024:  # 16 GB
-        mem_factor = 0.75
+    # Adjust worker count based on available memory to prevent OOM errors
+    # Word/document processing can be very memory intensive
+    if mem.total < 8 * 1024 * 1024 * 1024:  # Less than 8 GB
+        mem_factor = 0.5  # Use only half the workers on low-memory systems
+    elif mem.total < 16 * 1024 * 1024 * 1024:  # Less than 16 GB
+        mem_factor = 0.75  # Use 75% of workers on medium-memory systems
     else:
-        mem_factor = 1.0
+        mem_factor = 1.0  # Use full worker count on high-memory systems
     
-    # Consider the number of files - no need for many workers with few files
-    # Don't create more workers than there are files to process
+    # Limit workers based on file count - no need for many workers with few files
+    # Use at most 1 worker per 2 files to prevent overhead with small batches
     file_limit = max(1, file_count // 2)
     
-    # Calculate final worker count, ensuring we have at least 1
+    # Calculate final worker count using all constraints
+    # Take the minimum of base_workers, file_limit, and memory-adjusted count
     worker_count = max(1, min(base_workers, file_limit, int(base_workers * mem_factor)))
     
-    # Cap at a reasonable maximum to prevent system overload
-    # Word processing can be very resource-intensive
+    # Cap at a reasonable maximum (8) to prevent system overload
+    # Document processing (especially Word conversion) is very resource-intensive
     return min(worker_count, 8)
 
 def is_selectable_text_pdf(pdf_path):
@@ -1221,39 +1228,46 @@ def is_selectable_text_pdf(pdf_path):
         True if the PDF has selectable text, False if it appears to be scanned/image-based
     """
     try:
+        # Open and parse the PDF file
         with open(pdf_path, 'rb') as file:
             reader = PyPDF2.PdfReader(file)
             
-            # Check up to 3 pages or all pages if fewer
+            # Limit check to first 3 pages for efficiency
+            # Most documents will show text content in the first few pages
             pages_to_check = min(len(reader.pages), 3)
             
-            # If document has no pages, return True (not our concern)
+            # Empty documents are not our concern - return True
             if pages_to_check == 0:
                 return True
                 
-            # Keep track of text content
+            # Track the total amount of text found across all checked pages
             total_text = 0
             
-            # Check each page for text content
+            # Check each page for meaningful text content
             for i in range(pages_to_check):
                 page = reader.pages[i]
                 text = page.extract_text()
                 
-                if text and len(text.strip()) > 50:  # A reasonable text page should have more than 50 chars
+                # If any single page has substantial text (>50 chars), consider it selectable
+                if text and len(text.strip()) > 50:  # 50 chars is a reasonable threshold
                     return True  # Found a page with significant text
                     
+                # Keep track of total text across all checked pages
                 total_text += len(text.strip())
             
-            # If we checked multiple pages and found very little text, it's likely a scanned document
+            # If we found very little text across multiple pages, likely a scanned document
+            # Less than 100 chars across multiple pages suggests image-based content
             if total_text < 100 and pages_to_check > 0:
                 return False
                 
-            # Default to True if we can't be sure
+            # Default to True if we can't make a definitive determination
+            # Better to attempt processing than to skip potentially valid documents
             return True
             
     except Exception as e:
+        # Log errors but default to True to allow processing attempts
         logging.error(f"Error checking if PDF has selectable text: {str(e)}")
-        return True  # Default to True on error
+        return True  # Default to True on error - attempt processing anyway
 
 def extract_unique_countries(country_mapping):
     """
@@ -1269,10 +1283,12 @@ def extract_unique_countries(country_mapping):
     if not country_mapping:
         return set()
         
-    # Extract all unique country names from the mapping
+    # Create a set of unique country names from the mapping values
+    # Using a set automatically eliminates duplicates
     countries = set()
     for country in country_mapping.values():
-        # Skip any variant of "World" (case-insensitive)
+        # Skip 'World' as it's not a specific country and should be excluded
+        # Case-insensitive check to catch variations like 'world', 'WORLD', etc.
         if country.lower().strip() != "world":
             countries.add(country)
     
@@ -1294,24 +1310,28 @@ def extract_country_from_pdf(pdf_path, country_names, max_pages=10, country_vari
     if not country_names:
         return None
     
-    # Combine standard names with variants
+    # Prepare search patterns for all country names and their variants
+    # We'll use regex with word boundaries for accurate matching
     all_country_patterns = {}
     variant_to_standard = {}
     
-    # First add all standard country names
+    # Sort countries by length (longest first) to prioritize specific matches
+    # e.g., "United States of America" before "United States"
     sorted_countries = sorted(country_names, key=len, reverse=True)
     for country in sorted_countries:
+        # Create regex pattern with word boundaries for exact matching
         pattern = r'\b' + re.escape(country) + r'\b'
         all_country_patterns[country] = re.compile(pattern, re.IGNORECASE)
         
-        # Add space variant
+        # Add space variant for countries with underscores
+        # This handles cases where countries might be written with spaces instead of underscores
         space_country = country.replace('_', ' ')
         if space_country != country:
             pattern = r'\b' + re.escape(space_country) + r'\b'
             all_country_patterns[space_country] = re.compile(pattern, re.IGNORECASE)
             variant_to_standard[space_country.lower()] = country
     
-    # Add all variants if provided
+    # Add country variants if provided (e.g., local language names, alternative names)
     if country_variants:
         for variant, standard in country_variants.items():
             if variant.lower() not in variant_to_standard:  # Avoid duplicates
@@ -1319,29 +1339,32 @@ def extract_country_from_pdf(pdf_path, country_names, max_pages=10, country_vari
                 all_country_patterns[variant] = re.compile(pattern, re.IGNORECASE)
                 variant_to_standard[variant.lower()] = standard
     
-    # Now search the PDF using all patterns
+    # Search the PDF for country names using all patterns
     try:
         with open(pdf_path, 'rb') as file:
             reader = PyPDF2.PdfReader(file)
             pages_to_search = min(len(reader.pages), max_pages)
             
+            # Iterate through pages up to max_pages limit
             for page_num in range(pages_to_search):
                 page = reader.pages[page_num]
                 text = page.extract_text()
                 if not text:
                     continue
                 
-                # Check each pattern
+                # Check each pattern against the page text
                 for name, pattern in all_country_patterns.items():
                     if pattern.search(text):
-                        # Map variant back to standard name if needed
+                        # If found, map variant back to standard name if needed
                         standard_name = variant_to_standard.get(name.lower(), name)
                         logging.info(f"Found country: {name} (standard: {standard_name}) in document: {pdf_path}")
                         return standard_name
                         
+        # No country names found after checking all pages
         return None
         
     except Exception as e:
+        # Log errors during country extraction
         logging.error(f"Error searching for country in {pdf_path}: {str(e)}")
         return None
 
@@ -1361,17 +1384,19 @@ def load_country_variants(variants_file):
     
     # Dictionary to store standard name → variants mapping
     standard_to_variants = {}
-    # Dictionary to store variant → standard name mapping
+    # Dictionary to store variant → standard name mapping (what we'll return)
     variant_to_standard = {}
     
     try:
+        # Load the country variants dictionary from file
         with open(variants_file, 'r', encoding='utf-8') as f:
             content = f.read()
             
             # Extract the dictionary content from the file
-            # Remove the "COUNTRY_VARIANTS = {" at the beginning and the "}" at the end
+            # The file format is expected to be a Python dictionary assignment
+            # like: COUNTRY_VARIANTS = { "USA": ["United States", ...], ... }
             if content.strip().startswith("COUNTRY_VARIANTS = {"):
-                # Remove the variable assignment and parse just the dictionary
+                # Extract just the dictionary part, removing the variable assignment
                 dict_start = content.find("{") + 1
                 dict_end = content.rfind("}")
                 content = content[dict_start:dict_end].strip()
@@ -1393,6 +1418,7 @@ def load_country_variants(variants_file):
         return variant_to_standard
             
     except Exception as e:
+        # Log any errors when loading variants file
         logging.error(f"Error loading country variants file: {str(e)}")
         return {}
 
@@ -1405,7 +1431,7 @@ def process_multiple_folders():
     print(" MULTI-FOLDER DOCUMENT PROCESSING ".center(80, "="))
     print("="*80 + "\n")
     
-    # Prompt for number of input folders
+    # Get the number of input folders to process from user
     while True:
         try:
             num_folders = int(input("How many input folders do you want to process? "))
@@ -1416,43 +1442,48 @@ def process_multiple_folders():
         except ValueError:
             print("Please enter a valid number.")
     
-    # Collect folder information
+    # Collect folder information and document types for each folder
     input_folders = []
     for i in range(num_folders):
         print(f"\n{'-'*80}")
         print(f" FOLDER {i+1} DETAILS ".center(80, "-"))
         print(f"{'-'*80}")
         
+        # Get folder path from user
         print(f"\nPlease enter the path to input folder #{i+1}:")
-        folder_path = input().strip().strip('"\'')
+        folder_path = input().strip().strip('"\'')  # Strip quotes if user copied from explorer
         
+        # Validate the folder exists
         if not os.path.isdir(folder_path):
             print(f"Error: '{folder_path}' is not a valid directory. Please try again.")
             i -= 1  # Retry this folder
             continue
             
+        # Get document type information from user
         print(f"What document type is in folder '{os.path.basename(folder_path)}'?")
         print("Examples: icrr, aidememoire, pad, esrs, etc.")
         doc_type = input("Enter document type: ").strip().lower()
         
+        # Use folder name as fallback if no type entered
         if not doc_type:
             print("Warning: No document type entered. Will use folder name as document type.")
             doc_type = os.path.basename(folder_path).lower()
         
         input_folders.append((folder_path, doc_type))
     
-    # Prompt for output directory
+    # Get main output directory from user
     print("\nPlease enter the path to the main output folder for all document types:")
     main_output_dir = input().strip().strip('"\'')
     os.makedirs(main_output_dir, exist_ok=True)
     
-    # Optional: Ask for country mapping file (use for all folders)
+    # Optional: Use a spreadsheet to map project IDs to countries (applies to all folders)
     country_mapping = None
     print("\nDo you want to use a spreadsheet to map project IDs to countries for all folders? (y/n):")
     if input().strip().lower() == 'y':
         print("Please enter the path to the spreadsheet file (Excel or CSV):")
         spreadsheet_path = input().strip().strip('"\'')
         
+        # Load the mapping if the spreadsheet exists
         if os.path.exists(spreadsheet_path):
             country_mapping = load_project_country_mapping(spreadsheet_path)
             if not country_mapping:
@@ -1460,7 +1491,7 @@ def process_multiple_folders():
         else:
             print(f"Warning: Spreadsheet file not found: {spreadsheet_path}")
     
-    # Process each folder sequentially
+    # Process each input folder sequentially
     all_temp_outputs = []
     for i, (folder_path, doc_type) in enumerate(input_folders):
         print(f"\n{'-'*80}")
@@ -1468,6 +1499,7 @@ def process_multiple_folders():
         print(f"{'-'*80}")
         
         # Create a temporary output folder for this document type
+        # Each folder gets processed independently first
         temp_output_dir = os.path.join(main_output_dir, f"temp_{doc_type}_{i}")
         os.makedirs(temp_output_dir, exist_ok=True)
         
@@ -1478,6 +1510,7 @@ def process_multiple_folders():
         # Call the existing conversion function
         try:
             # Store original sys.argv and replace with our parameters for this run
+            # This allows us to reuse the existing conversion function without modifying it
             original_argv = sys.argv.copy()
             sys.argv = [sys.argv[0]]  # Keep just the script name
             
@@ -1496,6 +1529,7 @@ def process_multiple_folders():
             # Restore original sys.argv
             sys.argv = original_argv
             
+            # Check if processing was successful
             if exit_code == 0 and output_dir:
                 all_temp_outputs.append((output_dir, doc_type))
                 print(f"\nSuccessfully processed '{doc_type}' documents from {folder_path}")
@@ -1505,12 +1539,13 @@ def process_multiple_folders():
         except Exception as e:
             print(f"Error processing folder {folder_path}: {str(e)}")
     
-    # Merge all processed outputs
+    # Merge all processed outputs into a unified structure
     if all_temp_outputs:
         print(f"\n{'-'*80}")
         print(" MERGING ALL DOCUMENT TYPES ".center(80, "-"))
         print(f"{'-'*80}")
         
+        # Combine all document types into a single organized structure
         merge_all_country_folders(all_temp_outputs, main_output_dir)
         
         print("\nAll document types have been processed and merged.")
@@ -1529,6 +1564,7 @@ def merge_all_country_folders(processed_outputs, main_output_dir):
         main_output_dir: Main output directory where the final merged structure will be created
     """
     # Create the three main category folders in the final output
+    # This maintains the same structure as the individual processing results
     final_country_folder = os.path.join(main_output_dir, "Country Associated Documents")
     final_unknown_folder = os.path.join(main_output_dir, "Unknown Countries")
     final_failed_folder = os.path.join(main_output_dir, "Failed Conversions and Renaming")
@@ -1537,28 +1573,29 @@ def merge_all_country_folders(processed_outputs, main_output_dir):
     os.makedirs(final_unknown_folder, exist_ok=True)
     os.makedirs(final_failed_folder, exist_ok=True)
     
-    # Keep track of statistics
+    # Track statistics for final reporting
     stats = {
-        "countries": set(),
-        "country_files": 0,
-        "unknown_files": 0,
-        "failed_files": 0,
+        "countries": set(),  # Set of unique countries found
+        "country_files": 0,  # Count of files with identified countries
+        "unknown_files": 0,  # Count of files with unknown countries
+        "failed_files": 0,   # Count of files that failed processing
     }
     
-    # Process each output directory
+    # Process each output directory from individual folder processing
     for output_dir, doc_type in processed_outputs:
-        # Check for the three category folders
+        # Check for the three standard category folders
         country_src = os.path.join(output_dir, "Country Associated Documents")
         unknown_src = os.path.join(output_dir, "Unknown Countries")
         failed_src = os.path.join(output_dir, "Failed Conversions and Renaming")
         
-        # 1. Process Country Associated Documents
+        # 1. Process Country Associated Documents - preserving country structure
         if os.path.exists(country_src):
             # Look for country subfolders
             for country_folder in os.listdir(country_src):
                 country_path = os.path.join(country_src, country_folder)
                 if os.path.isdir(country_path):
                     # This is a country folder - copy to final structure
+                    # Create the country folder in the final structure if it doesn't exist
                     final_country_path = os.path.join(final_country_folder, country_folder)
                     os.makedirs(final_country_path, exist_ok=True)
                     stats["countries"].add(country_folder)
@@ -1569,7 +1606,7 @@ def merge_all_country_folders(processed_outputs, main_output_dir):
                             src_file = os.path.join(country_path, file)
                             dest_file = os.path.join(final_country_path, file)
                             
-                            # Handle file conflicts by adding a suffix if needed
+                            # Handle file conflicts by adding a numbered suffix if needed
                             if os.path.exists(dest_file):
                                 base, ext = os.path.splitext(file)
                                 counter = 1
@@ -1580,17 +1617,16 @@ def merge_all_country_folders(processed_outputs, main_output_dir):
                                         break
                                     counter += 1
                             
-                            # Copy the file
+                            # Copy the file to the final destination
                             shutil.copy2(src_file, dest_file)
                             stats["country_files"] += 1
                 elif os.path.isfile(country_path):
-                    # This is a file at the root of the country folder (shouldn't happen normally)
-                    # Copy it to the final country folder for handling
+                    # Handle files directly in country folder (shouldn't happen normally)
                     dest_file = os.path.join(final_country_folder, country_folder)
                     shutil.copy2(country_path, dest_file)
                     stats["country_files"] += 1
         
-        # 2. Process Unknown Countries folder
+        # 2. Process Unknown Countries folder - files without country information
         if os.path.exists(unknown_src):
             for file in os.listdir(unknown_src):
                 file_path = os.path.join(unknown_src, file)
@@ -1611,7 +1647,7 @@ def merge_all_country_folders(processed_outputs, main_output_dir):
                     shutil.copy2(file_path, dest_file)
                     stats["unknown_files"] += 1
         
-        # 3. Process Failed Conversions folder
+        # 3. Process Failed Conversions folder - files that couldn't be processed properly
         if os.path.exists(failed_src):
             for file in os.listdir(failed_src):
                 file_path = os.path.join(failed_src, file)
@@ -1632,20 +1668,21 @@ def merge_all_country_folders(processed_outputs, main_output_dir):
                     shutil.copy2(file_path, dest_file)
                     stats["failed_files"] += 1
     
-    # Print statistics
+    # Print statistics of the merging process
     print("\nMerging complete. Final statistics:")
     print(f"Total countries: {len(stats['countries'])}")
     print(f"Total country-associated files: {stats['country_files']}")
     print(f"Total unknown files: {stats['unknown_files']}")
     print(f"Total failed files: {stats['failed_files']}")
     
-    # Organize by document type within country folders
+    # Organize by document type within country folders (creates document type subfolders)
     try:
+        # Import and run the reorganization module
         import reorganize_output
         if os.path.exists(final_country_folder):
             reorganize_output.organize_by_document_type(final_country_folder)
             
-            # Add report generation after document type organization
+            # Generate document inventory reports after organization
             import generate_reports
             print("\nGenerating document reports...")
             # Try to find the portfolio spreadsheet path from earlier in the process
@@ -1658,7 +1695,7 @@ def merge_all_country_folders(processed_outputs, main_output_dir):
     except Exception as e:
         print(f"Error during document type organization or report generation: {str(e)}")
     
-    # Optionally, remove temp folders after successful merge
+    # Keep temporary folders for reference (could be modified to delete them)
     for output_dir, _ in processed_outputs:
         if output_dir.startswith(main_output_dir) and "temp_" in output_dir:
             try:
@@ -1673,16 +1710,16 @@ if __name__ == "__main__":
     exit_code = 0
     output_dir = None  # Initialize output_dir variable
     
-    # Check if we should use multi-folder mode
+    # Determine whether to use single-folder or multi-folder processing
     print("\nDo you want to process multiple folders with different document types? (y/n):")
     use_multi_mode = input().strip().lower() == 'y'
     
     if use_multi_mode:
-        # Use the new multi-folder processing function
+        # Use the multi-folder processing function for processing multiple document types
         exit_code = process_multiple_folders()
     else:
         # Continue with the original single-folder flow
-        # Prompt for document type at the beginning
+        # Prompt for document type at the beginning to categorize files
         print("\n" + "-"*80)
         print(" DOCUMENT TYPE ".center(80, "-"))
         print("-"*80)
@@ -1691,19 +1728,22 @@ if __name__ == "__main__":
         print("This will be added to the filenames for better tracking.")
         document_type = input("Enter document type: ").strip().lower()
         
-        # Validate input
+        # Validate document type input
         if not document_type:
             print("No document type entered. Proceeding without adding document type to filenames.")
         else:
             print(f"Using '{document_type}' as the document type identifier.")
         
+        # Handle command-line mode vs. interactive mode
         if args.input and args.output:
             # TODO: Add command-line mode implementation
             output_dir = args.output  # Use output directory from command line arguments
         else:
-            # Modify convert_folder_to_pdf to return both exit_code and output_dir
+            # Process folder using interactive mode
+            # convert_folder_to_pdf returns both exit code and output directory
             exit_code, output_dir = convert_folder_to_pdf(rename_with_pid=True, workers=args.workers)
         
+        # After conversion, reorganize files and generate reports
         try:
             import reorganize_output
             if output_dir and os.path.exists(output_dir):
@@ -1711,9 +1751,10 @@ if __name__ == "__main__":
                 # Pass document_type to reorganize_output_folder
                 reorganize_output.reorganize_output_folder(output_dir, document_type)
                 
-                # Add report generation after reorganization
+                # Generate document inventory reports
                 print("\nGenerating document reports...")
                 portfolio_path = None
+                # Try to find the portfolio spreadsheet path if it exists
                 for var_name in globals():
                     if var_name == 'spreadsheet_path' and 'spreadsheet_path' in globals():
                         portfolio_path = globals()['spreadsheet_path']
@@ -1724,4 +1765,5 @@ if __name__ == "__main__":
         except Exception as e:
             print(f"Error during reorganization or report generation: {str(e)}")
     
+    # Exit with the appropriate code
     sys.exit(exit_code) 
