@@ -1,7 +1,7 @@
 # IBDOWNLOAD_PACKAGER
 
 ## Overview
-IBDOWNLOAD_PACKAGER is a comprehensive document processing system designed to organize World Bank project documents by country and document type. It automates the processing, categorization, and reporting of project documents for improved document management.
+IBDOWNLOAD_PACKAGER is a comprehensive document processing system designed to organize World Bank project documents by country and document type. It automates the conversion, processing, categorization, and reporting of project documents for improved document management.
 
 ## Features
 - Converts various document formats (Word, PDF, etc.) to searchable PDFs
