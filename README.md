@@ -61,25 +61,27 @@ The system will prompt you to identify these columns in your spreadsheet.
 ## Output Folder Structure
 After processing, documents are organized as follows:
 
+```
 Output Directory/
 ├── Country Associated Documents/
-│ ├── Country Name 1/
-│ │ ├── DOCUMENT_TYPE_1/
-│ │ │ ├── P123456_Country Name 1_EN_document_type_1.pdf
-│ │ │ └── ...
-│ │ ├── DOCUMENT_TYPE_2/
-│ │ │ └── ...
-│ │ └── Country Name 1_documents_YYYY-MM-DD.xlsx (report)
-│ ├── Country Name 2/
-│ │ └── ...
-│ └── ...
+│   ├── Country Name 1/
+│   │   ├── DOCUMENT_TYPE_1/
+│   │   │   ├── P123456_Country Name 1_EN_document_type_1.pdf
+│   │   │   └── ...
+│   │   ├── DOCUMENT_TYPE_2/
+│   │   │   └── ...
+│   │   └── Country Name 1_documents_YYYY-MM-DD.xlsx (report)
+│   ├── Country Name 2/
+│   │   └── ...
+│   └── ...
 ├── Unknown Countries/
-│ ├── UNKNOWN_file1.pdf
-│ └── ...
+│   ├── UNKNOWN_file1.pdf
+│   └── ...
 ├── Failed Conversions and Renaming/
-│ ├── failed_file1.pdf
-│ └── ...
+│   ├── failed_file1.pdf
+│   └── ...
 └── document_inventory_YYYY-MM-DD.xlsx (master report)
+```
  
 ## Main Components
 
@@ -138,19 +140,22 @@ The system generates several log files:
 
 ### Example 1: Single-Folder Processing
 
- python main.py
-> n # Single folder mode
-> icrr # Document type
+```
+python main.py
+> n  # Single folder mode
+> icrr  # Document type
 > [input folder path]
 > [output folder path]
-> y # Use project mapping
+> y  # Use project mapping
 > [spreadsheet path]
+```
 
 ### Example 2: Multi-Folder Processing
 
-> python main.py
-> y # Multi-folder mode
-> 3 # Process 3 folders
+```
+python main.py
+> y  # Multi-folder mode
+> 3  # Process 3 folders
 > [folder1 path]
 > icrr
 > [folder2 path]
@@ -158,3 +163,4 @@ The system generates several log files:
 > [folder3 path]
 > esrs
 > [main output folder path]
+```
